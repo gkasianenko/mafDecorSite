@@ -1,0 +1,25 @@
+#main .info {
+  background-color: #f8f8f8;
+  border-left: 22px solid #f37833;
+
+  background-image: url(../img/main/lavochka.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+#main .info .info__content {
+  padding-bottom: 80px;
+  padding-top: 30px;
+}
+
+#main .info .info__content p {
+  font-size: 23px;
+}
+
+#main .info .info__content p:not(:first-child) {
+  width: 80%;
+}
+
+#main .info .info__content > p + p {
+  margin-top: 40px;
+}

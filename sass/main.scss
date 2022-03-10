@@ -1,0 +1,19 @@
+//Base
+@import "./base/base.scss";
+@import "./base/media.scss";
+@import "./base/vars.scss";
+@import "./base/mixins.scss";
+
+//Blocks
+@import "./blocks/header-nav.scss";
+@import "./blocks/buttons.scss";
+@import "./blocks/titles.scss";
+@import "./blocks/category-pattern.scss";
+@import "./blocks/socials.scss";
+
+//Sections
+@import "./sections/header-img.scss";
+@import "./sections/category-cards.scss";
+@import "./sections/info.scss";
+@import "./sections/text.scss";
+@import "./sections/footer.scss";

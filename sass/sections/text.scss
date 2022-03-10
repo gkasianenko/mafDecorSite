@@ -1,0 +1,16 @@
+#main .text {
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+
+#main .text .text__content p {
+  font-size: 23px;
+}
+
+#main .text .text__content p:not(:first-child) {
+  width: 80%;
+}
+
+#main .text .text__content > p + p {
+  margin-top: 40px;
+}

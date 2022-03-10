@@ -1,0 +1,11 @@
+.button {
+  padding: 10px 16px;
+}
+
+.button--light {
+  border: 1px solid #f37833;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
