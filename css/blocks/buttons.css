@@ -1,0 +1,16 @@
+.button {
+  padding: 10px 16px; }
+
+.button--light {
+  border: 1px solid #f37833; }
+  .button--light:hover {
+    opacity: 0.8; }
+
+.button--bold {
+  padding: 12px 19px;
+  border: none;
+  outline: none;
+  background: #FF5C00;
+  color: white; }
+
+/*# sourceMappingURL=buttons.css.map */

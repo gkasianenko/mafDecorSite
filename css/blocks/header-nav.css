@@ -3,13 +3,11 @@
   top: o;
   width: 100%;
   z-index: 999;
-  background-color: #fff;
-}
+  background-color: #fff; }
 
-.header-nav{
+.header-nav {
   display: flex;
-  justify-content: flex-end;
-}
+  justify-content: flex-end; }
 
 .header-nav__wrapper {
   width: 100%;
@@ -19,34 +17,26 @@
   padding-right: 75px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .header-nav__wrapper > * + * {
-  margin-left: 31px;
-}
+  margin-left: 31px; }
 
 .header-nav__menu {
   padding-left: 32px;
   padding-right: 32px;
   display: flex;
   align-items: center;
-
   min-height: 41px;
-  border-right: 1px solid #d4d4d4;
-
-  & ul {
-    display: flex;
-  }
-
-  & a {
+  border-right: 1px solid #d4d4d4; }
+  .header-nav__menu ul {
+    display: flex; }
+  .header-nav__menu a {
     position: relative;
     display: block;
     text-decoration: none;
-    color: black;
-  }
-
-  & a::before {
+    color: black; }
+  .header-nav__menu a::before {
     content: "";
     height: 2px;
     width: 0%;
@@ -54,55 +44,41 @@
     bottom: -5px;
     z-index: -1;
     background-color: #f37833;
-    transition: 0.5s;
-  }
-
-  & a:hover::before {
+    transition: 0.5s; }
+  .header-nav__menu a:hover::before {
     width: 40%;
-    transition: 0.5s;
-  }
-}
+    transition: 0.5s; }
 
 .header-nav__logo {
-  width: 230px;
-}
+  width: 230px; }
 
 .header-nav__right {
-  display: flex;
-}
+  display: flex; }
 
 .header-nav__right > * + * {
-  margin-left: 32px;
-}
+  margin-left: 32px; }
 
 .header-nav__contacts {
   display: flex;
-  align-items: center;
-
-  & a {
-    color: black;
-  }
-}
+  align-items: center; }
+  .header-nav__contacts a {
+    color: black; }
 
 .header-nav__contacts > * + * {
-  margin-left: 32px;
-}
+  margin-left: 32px; }
 
 .header-nav__menu > * + * {
-  margin-left: 38px;
-}
+  margin-left: 38px; }
 
 .header-nav__menu ul > * + * {
-  margin-left: 38px;
-}
+  margin-left: 38px; }
 
 .nav-menu__icon {
-  cursor: pointer;
-  & svg {
-    margin-bottom: 3px;
-  }
-}
+  cursor: pointer; }
+  .nav-menu__icon svg {
+    margin-bottom: 3px; }
 
-#preload .header-nav__wrapper{
-  width: auto;
-}
+#preload .header-nav__wrapper {
+  width: auto; }
+
+/*# sourceMappingURL=header-nav.css.map */

@@ -1,0 +1,17 @@
+.title-h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1.2;
+  color: #ffffff; }
+
+.title-h2 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 0.8;
+  color: #000000; }
+
+/*# sourceMappingURL=titles.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,qBAAsB;EACpB,cAAc,EAAE,IAAI;EACpB,UAAU,EAAE,MAAM",
+"sources": ["../../sass/sections/category-cards.scss"],
+"names": [],
+"file": "category-cards.css"
+}
