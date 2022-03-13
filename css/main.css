@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset and base styles  */
 *,
 *::before,
@@ -108,7 +109,8 @@ legend {
 
 .header-nav {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  font-weight: 500; }
 
 .header-nav__wrapper {
   width: 100%;
@@ -186,7 +188,7 @@ legend {
   padding: 10px 16px; }
 
 .button--light {
-  border: 1px solid #f37833; }
+  border: 2.5px solid #F37833; }
   .button--light:hover {
     opacity: 0.8; }
 
@@ -201,7 +203,7 @@ legend {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 96px;
+  font-size: 64px;
   line-height: 1.2;
   color: #ffffff; }
 
@@ -465,6 +467,7 @@ legend {
   flex-direction: column; }
 
 #sidebar .sidebar-menu .sidebar-menu__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -478,6 +481,28 @@ legend {
   line-height: 1.1;
   transition: transform 0.3s; }
 
+#sidebar .sidebar-menu .sidebar-menu__item.new::after {
+  position: absolute;
+  padding: 3px 7px;
+  content: "Новинки";
+  top: 0;
+  right: 0;
+  background-color: #F5C8FD;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1; }
+
+#sidebar .sidebar-menu .sidebar-menu__item.discount::after {
+  position: absolute;
+  padding: 3px 7px;
+  content: "Акция";
+  top: 0;
+  right: 0;
+  background-color: #C8DAFD;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1; }
+
 #sidebar .sidebar-menu .sidebar-menu__item a > * + * {
   margin-top: 8px; }
 
@@ -486,18 +511,102 @@ legend {
   margin-right: auto; }
 
 #sidebar .sidebar-menu .sidebar-menu__item:hover {
-  transform: scale(1.1);
+  transform: scale(0.9);
   transition: transform 0.3s; }
 
 #sidebar .sidebar-menu .sidebar-menu__item a {
   color: #000; }
 
+#main header {
+  position: fixed;
+  top: o;
+  width: 100%;
+  z-index: 999;
+  background-color: unset; }
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end; }
+
+.header-nav__wrapper {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  padding-left: 75px;
+  padding-right: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.header-nav__wrapper > * + * {
+  margin-left: 31px; }
+
+.header-nav__menu {
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  align-items: center;
+  min-height: 41px;
+  border-right: 1px solid #d4d4d4; }
+  .header-nav__menu ul {
+    display: flex; }
+  .header-nav__menu a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: black; }
+  .header-nav__menu a::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    z-index: -1;
+    background-color: #f37833;
+    transition: 0.5s; }
+  .header-nav__menu a:hover::before {
+    width: 40%;
+    transition: 0.5s; }
+
+.header-nav__logo {
+  width: 230px; }
+
+.header-nav__right {
+  display: flex; }
+
+.header-nav__right > * + * {
+  margin-left: 32px; }
+
+.header-nav__contacts {
+  display: flex;
+  align-items: center; }
+  .header-nav__contacts a {
+    color: black; }
+
+.header-nav__contacts > * + * {
+  margin-left: 32px; }
+
+.header-nav__menu > * + * {
+  margin-left: 38px; }
+
+.header-nav__menu ul > * + * {
+  margin-left: 38px; }
+
+.nav-menu__icon {
+  cursor: pointer; }
+  .nav-menu__icon svg {
+    margin-bottom: 3px; }
+
+#main .header-nav a {
+  color: #fff; }
+
 #main .header-img {
-  background-image: url(../img/main/header-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../img/main/header-img.png);
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  clip-path: ellipse(1920px 450px at 50% 30%); }
   #main .header-img h1 {
     margin-top: 181px; }
 
@@ -510,9 +619,9 @@ legend {
   margin-left: 32px; }
 
 #main .header-img__arrow {
-  margin-bottom: 15px;
-  width: 63px;
-  height: 63px;
+  margin-bottom: 10px;
+  width: 43px;
+  height: 43px;
   display: flex;
   justify-content: center;
   align-items: center;

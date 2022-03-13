@@ -27,6 +27,7 @@
 }
 
 #sidebar .sidebar-menu .sidebar-menu__item{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +45,32 @@ transition: transform 0.3s;
 
 }
 
+#sidebar .sidebar-menu .sidebar-menu__item.new::after{
+    position: absolute;
+    padding: 3px 7px;
+    content: "Новинки";
+    top:0;
+    right: 0;
+    background-color: #F5C8FD;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+#sidebar .sidebar-menu .sidebar-menu__item.discount::after{
+    position: absolute;
+    padding: 3px 7px;
+    content: "Акция";
+    top:0;
+    right: 0;
+    background-color: #C8DAFD;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1;
+}
+
 #sidebar .sidebar-menu .sidebar-menu__item a > * + * {
     margin-top: 8px;
 }
@@ -55,7 +82,7 @@ transition: transform 0.3s;
 
 
 #sidebar .sidebar-menu .sidebar-menu__item:hover{
-    transform: scale(1.1);
+    transform: scale(0.9);
     transition: transform 0.3s;
 }
 
