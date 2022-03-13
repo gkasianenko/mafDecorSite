@@ -1,0 +1,98 @@
+#category-ledders #catalog-pattern {
+    padding-top: 150px;
+    
+}
+
+#catalog-pattern .catalog-pattern__navigation {
+    margin-bottom: 28px;
+    font-weight: 300;
+font-size: 14px;
+line-height: 1.1;
+
+
+color: #D4D4D4;
+}
+
+#catalog-pattern .catalog-pattern__show {
+    margin-bottom: 16px;
+}
+
+#catalog-pattern .catalog-pattern__filter-wrapper > * + * {
+margin-top: 28px;
+
+}
+
+#catalog-pattern .catalog-pattern__filter h3{
+    text-align: center;
+    font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+cursor: pointer;
+}
+
+
+#catalog-pattern .catalog-pattern__filter{
+    width: 228px;
+
+    & p{
+        margin-bottom: 16px;
+        font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    color: #00365B;
+    }
+}
+
+#catalog-pattern .catalog-pattern__filter label{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & i{
+        
+        margin-left: 5px;
+    }
+    
+}
+
+
+#catalog-pattern .catalog-pattern__filter ul > li + li {
+margin-top: 12px;
+}
+
+#catalog-pattern .catalog-pattern__category, #catalog-pattern .catalog-pattern__type, #catalog-pattern .catalog-pattern__carcas, #catalog-pattern .catalog-pattern__stages, #catalog-pattern .catalog-pattern__railing {
+    
+    padding-bottom: 30px;
+}
+
+#catalog-pattern .catalog-pattern__category, #catalog-pattern .catalog-pattern__type, #catalog-pattern .catalog-pattern__carcas, #catalog-pattern .catalog-pattern__stages {
+    border-bottom: 0.8px solid #D4D4D4;
+
+}
+
+#catalog-pattern .catalog-pattern__content {
+    display: flex;
+    
+}
+
+#catalog-pattern .catalog-pattern__content > * + *{
+    margin-left: 40px;
+}
+
+#catalog-pattern .catalog-pattern__product{
+    width: 270px;
+}
+
+
+#catalog-pattern .catalog-pattern__product .catalog-pattern__text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#catalog-pattern .catalog-pattern__product .catalog-pattern__title{
+width: 165px;
+}
+
+
+

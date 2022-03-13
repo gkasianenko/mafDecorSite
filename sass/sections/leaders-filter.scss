@@ -1,4 +1,5 @@
 #preload .leaders-filter{
+    
     padding-bottom: 120px;
     text-align: center;
 
@@ -7,6 +8,10 @@
         font-size: 24px;
         line-height: 28px;
     }
+}
+
+#preload form#ledders-filter{
+    position: relative;
 }
 
 #preload .leaders-filter__types{
@@ -33,6 +38,9 @@
 
 #preload .leaders-filter__item label{
     display: block;
+    font-weight: 300;
+font-size: 24px;
+line-height: 1.1;
 }
 
 #preload .leaders-filter__item input{
@@ -79,4 +87,17 @@
 #preload .leaders-filter__carcases-row .leaders-filter__item{
     width: 32%;
     height: 366px;
+}
+
+#preload .leaders-filter button.button--catalog {
+    position: absolute;
+    top: 465px;
+    right: -70px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#preload .leaders-filter button.button--catalog > * + *{
+margin-left: 35px;
 }

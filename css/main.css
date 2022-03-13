@@ -112,7 +112,7 @@ legend {
   justify-content: flex-end;
   font-weight: 500; }
 
-#preload .header-nav__wrapper {
+#preload .header-nav__wrapper, #category-ledders .header-nav__wrapper {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 25px;
@@ -180,7 +180,7 @@ legend {
   .nav-menu__icon svg {
     margin-bottom: 3px; }
 
-#preload .header-nav__wrapper {
+#preload .header-nav__wrapper, #category-ledders .header-nav__wrapper {
   width: auto; }
 
 .button {
@@ -197,6 +197,16 @@ legend {
   outline: none;
   background: #FF5C00;
   color: white; }
+
+.button--catalog {
+  padding: 25px 64px;
+  background-color: #F37833;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.1; }
 
 .title-h1 {
   font-family: "Roboto", sans-serif;
@@ -216,6 +226,11 @@ legend {
 
 #main .category-pattern > * + * {
   margin-top: 20px; }
+
+#main .category-pattern label {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.1; }
 
 #main .category-pattern .category-pattern__bottom {
   display: flex;
@@ -599,6 +614,71 @@ legend {
 #main .header-nav a {
   color: #fff; }
 
+#category-ledders #catalog-pattern {
+  padding-top: 150px; }
+
+#catalog-pattern .catalog-pattern__navigation {
+  margin-bottom: 28px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.1;
+  color: #D4D4D4; }
+
+#catalog-pattern .catalog-pattern__show {
+  margin-bottom: 16px; }
+
+#catalog-pattern .catalog-pattern__filter-wrapper > * + * {
+  margin-top: 28px; }
+
+#catalog-pattern .catalog-pattern__filter h3 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  cursor: pointer; }
+
+#catalog-pattern .catalog-pattern__filter {
+  width: 228px; }
+  #catalog-pattern .catalog-pattern__filter p {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    color: #00365B; }
+
+#catalog-pattern .catalog-pattern__filter label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  #catalog-pattern .catalog-pattern__filter label i {
+    margin-left: 5px; }
+
+#catalog-pattern .catalog-pattern__filter ul > li + li {
+  margin-top: 12px; }
+
+#catalog-pattern .catalog-pattern__category, #catalog-pattern .catalog-pattern__type, #catalog-pattern .catalog-pattern__carcas, #catalog-pattern .catalog-pattern__stages, #catalog-pattern .catalog-pattern__railing {
+  padding-bottom: 30px; }
+
+#catalog-pattern .catalog-pattern__category, #catalog-pattern .catalog-pattern__type, #catalog-pattern .catalog-pattern__carcas, #catalog-pattern .catalog-pattern__stages {
+  border-bottom: 0.8px solid #D4D4D4; }
+
+#catalog-pattern .catalog-pattern__content {
+  display: flex; }
+
+#catalog-pattern .catalog-pattern__content > * + * {
+  margin-left: 40px; }
+
+#catalog-pattern .catalog-pattern__product {
+  width: 270px; }
+
+#catalog-pattern .catalog-pattern__product .catalog-pattern__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#catalog-pattern .catalog-pattern__product .catalog-pattern__title {
+  width: 165px; }
+
 #main .header-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../img/main/header-img.png);
   height: 100%;
@@ -630,7 +710,7 @@ legend {
 
 #main .category-cards {
   padding-bottom: 80px;
-  margin-top: -200px; }
+  margin-top: -240px; }
 
 #main .info {
   background-color: #f8f8f8;
@@ -730,6 +810,9 @@ legend {
     font-size: 24px;
     line-height: 28px; }
 
+#preload form#ledders-filter {
+  position: relative; }
+
 #preload .leaders-filter__types h2 {
   margin-bottom: 102px; }
 
@@ -746,7 +829,10 @@ legend {
   width: 32%; }
 
 #preload .leaders-filter__item label {
-  display: block; }
+  display: block;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.1; }
 
 #preload .leaders-filter__item input {
   position: absolute;
@@ -780,5 +866,16 @@ legend {
 #preload .leaders-filter__carcases-row .leaders-filter__item {
   width: 32%;
   height: 366px; }
+
+#preload .leaders-filter button.button--catalog {
+  position: absolute;
+  top: 465px;
+  right: -70px;
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+
+#preload .leaders-filter button.button--catalog > * + * {
+  margin-left: 35px; }
 
 /*# sourceMappingURL=main.css.map */

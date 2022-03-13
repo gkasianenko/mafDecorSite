@@ -10,7 +10,7 @@
   justify-content: flex-end;
   font-weight: 500; }
 
-#preload .header-nav__wrapper {
+#preload .header-nav__wrapper, #category-ledders .header-nav__wrapper {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 25px;
@@ -78,7 +78,7 @@
   .nav-menu__icon svg {
     margin-bottom: 3px; }
 
-#preload .header-nav__wrapper {
+#preload .header-nav__wrapper, #category-ledders .header-nav__wrapper {
   width: auto; }
 
 /*# sourceMappingURL=header-nav.css.map */

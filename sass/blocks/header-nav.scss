@@ -13,7 +13,7 @@
   font-weight: 500;
 }
 
-#preload .header-nav__wrapper {
+#preload .header-nav__wrapper, #category-ledders .header-nav__wrapper{
   width: 100%;
   padding-top: 15px;
   padding-bottom: 25px;
@@ -105,6 +105,6 @@
   }
 }
 
-#preload .header-nav__wrapper{
+#preload .header-nav__wrapper, #category-ledders .header-nav__wrapper{
   width: auto;
 }
