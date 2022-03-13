@@ -112,15 +112,14 @@ legend {
   justify-content: flex-end;
   font-weight: 500; }
 
-.header-nav__wrapper {
+#preload .header-nav__wrapper {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 25px;
   padding-left: 75px;
-  padding-right: 75px;
+  padding-right: 150px;
   display: flex;
-  align-items: center;
-  justify-content: space-between; }
+  align-items: center; }
 
 .header-nav__wrapper > * + * {
   margin-left: 31px; }
@@ -450,7 +449,7 @@ legend {
   left: 0;
   background-color: #fff;
   /* Black */
-  overflow-x: hidden;
+  overflow: hidden;
   /* Disable horizontal scroll */
   padding-top: 20px; }
 
@@ -606,7 +605,7 @@ legend {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  clip-path: ellipse(1920px 450px at 50% 30%); }
+  clip-path: ellipse(1580px 480px at 50% 32%); }
   #main .header-img h1 {
     margin-top: 181px; }
 
