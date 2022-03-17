@@ -184,10 +184,11 @@ legend {
   width: auto; }
 
 .button {
-  padding: 10px 16px; }
+  padding: 10px 16px;
+  transition: all 0.2s ease-in; }
 
 .button--light {
-  border: 2.5px solid #F37833; }
+  border: 2.5px solid #f37833; }
   .button--light:hover {
     opacity: 0.8; }
 
@@ -195,12 +196,12 @@ legend {
   padding: 12px 19px;
   border: none;
   outline: none;
-  background: #FF5C00;
+  background: #ff5c00;
   color: white; }
 
 .button--catalog {
   padding: 25px 64px;
-  background-color: #F37833;
+  background-color: #f37833;
   border: none;
   outline: none;
   color: #fff;
@@ -989,7 +990,10 @@ legend {
   justify-content: space-between; }
 
 #preload .leaders-filter__item .leaders-filter__img {
-  border: 0.5px solid #D4D4D4; }
+  border: 0.5px solid #d4d4d4; }
+
+#preload .leaders-filter__item .leaders-filter__img.active {
+  border: 0.5px solid #000; }
 
 #preload .leaders-filter__item {
   position: relative;
@@ -1003,11 +1007,15 @@ legend {
 
 #preload .leaders-filter__item input {
   position: absolute;
-  top: -15px;
+  top: 0;
   right: 0; }
 
-#preload .leaders-filter__item > * + * {
+#preload .leaders-filter__item label > * + * {
   margin-top: 18px; }
+
+#preload .leaders-filter__item label input,
+#preload .leaders-filter__item label span {
+  margin-top: unset; }
 
 #preload .leaders-filter__content > * + * {
   margin-top: 90px; }
@@ -1044,6 +1052,42 @@ legend {
 
 #preload .leaders-filter button.button--catalog > * + * {
   margin-left: 35px; }
+
+.real-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -1; }
+
+.custom-checkbox {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  display: block; }
+
+.custom-checkbox--small {
+  top: 11px;
+  right: 11px; }
+
+.custom-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 19px;
+  background-image: url(../img/preload/form/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in; }
+
+.real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, -50%) scale(1); }
 
 #catalog-item {
   margin-left: 128px; }
