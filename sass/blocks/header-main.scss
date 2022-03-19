@@ -6,9 +6,10 @@
   background-color: unset;
 }
 
-.header-nav {
+#main .header-nav {
   display: flex;
   justify-content: flex-end;
+  font-weight: 500;
 }
 
 #main .header-nav__wrapper {

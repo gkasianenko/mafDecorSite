@@ -110,7 +110,7 @@ legend {
 .header-nav {
   display: flex;
   justify-content: flex-end;
-  font-weight: 500; }
+  font-weight: 300; }
 
 #preload .header-nav__wrapper,
 #category-ledders .header-nav__wrapper {
@@ -550,9 +550,10 @@ legend {
   z-index: 999;
   background-color: unset; }
 
-.header-nav {
+#main .header-nav {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  font-weight: 500; }
 
 #main .header-nav__wrapper {
   width: 100%;
@@ -637,7 +638,18 @@ legend {
   color: #d4d4d4; }
 
 #catalog-pattern .catalog-pattern__show {
-  margin-bottom: 16px; }
+  position: relative;
+  padding-bottom: 16px;
+  border-bottom: 0.8px solid #d4d4d4; }
+
+#catalog-pattern .catalog-pattern__show::after {
+  content: "";
+  width: 74px;
+  height: 3px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  background-image: url(../img/ledders/line.svg); }
 
 #catalog-pattern .catalog-pattern__filter-wrapper {
   padding-top: 20px;
@@ -726,6 +738,43 @@ legend {
 
 #catalog-pattern .catalog-pattern__product .catalog-pattern__title {
   width: 165px; }
+
+.catalog-pattern__filter label {
+  position: relative; }
+
+.catalog-pattern__filter .real-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -1; }
+
+.catalog-pattern__filter .custom-checkbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border: 0.5px solid #7a7a7a;
+  border-radius: 4px;
+  display: block; }
+
+.catalog-pattern__filter .custom-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/ledders/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in; }
+
+.catalog-pattern__filter .real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, -50%) scale(1); }
 
 #catalog-item #product {
   padding-top: 150px; }
@@ -1066,13 +1115,13 @@ legend {
 #preload .leaders-filter button.button--catalog > * + * {
   margin-left: 35px; }
 
-.real-checkbox {
+#preload .leaders-filter .real-checkbox {
   width: 0;
   height: 0;
   opacity: 0;
   z-index: -1; }
 
-.custom-checkbox {
+.leaders-filter .custom-checkbox {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -1081,11 +1130,11 @@ legend {
   border-radius: 4px;
   display: block; }
 
-.custom-checkbox--small {
+.leaders-filter .custom-checkbox--small {
   top: 11px;
   right: 11px; }
 
-.custom-checkbox::before {
+.leaders-filter .custom-checkbox::before {
   content: "";
   display: inline-block;
   width: 25px;
