@@ -95,9 +95,10 @@
 }
 
 #catalog-pattern .catalog-pattern__products-wrapper {
+  margin-right: -10px;
+  margin-left: -10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 #catalog-pattern .catalog-pattern__show,
@@ -113,41 +114,40 @@
 }
 
 #catalog-pattern .catalog-pattern__more {
-  margin-top: 53px;
   cursor: pointer;
 }
 
 #catalog-pattern .catalog-pattern__product {
   position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 48px;
+
   display: flex;
   flex-direction: column;
   width: 270px;
 
-  &:hover .catalog-pattern__info {
+  
+
+  &:hover .overlay {
     visibility: visible;
-    opacity: 1;
-    transition: visibility 0s, opacity 0.2s ease-in-out;
+    transition: none; 
   }
 }
 
 #catalog-pattern .catalog-pattern__img {
   position: relative;
-
-  &:hover .overlay {
-    opacity: 1;
-    visibility: visible;
-  }
 }
 
 #catalog-pattern .catalog-pattern__img .overlay {
   position: absolute;
   visibility: hidden;
-  opacity: 0;
+  
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  transition: opacity 0.2s ease-in;
+  
 
   & .button--catalog {
     position: absolute;
@@ -161,9 +161,13 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 1.1;
-
-    transition: opacity 0.2s ease-in;
+    
+    
   }
+}
+
+#catalog-pattern .catalog-pattern__products {
+  width: 100%;
 }
 
 #catalog-pattern .catalog-pattern__product > * + * {
@@ -226,10 +230,6 @@
 }
 
 #catalog-pattern .catalog-pattern__info {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.2s ease-in-out;
-
   position: absolute;
   bottom: -230px;
   padding-bottom: 18px;

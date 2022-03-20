@@ -16,18 +16,18 @@ export function render(params){
     <ul>
         <li><label>
             ${params.kind[0]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value=${params.kind[0]}>
             <span class="custom-checkbox"></span>
         </label>
             
         </li>
         <li><label>${params.kind[1]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value=${params.kind[1]}>
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.kind[2]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value=${params.kind[2]}>
             <span class="custom-checkbox"></span>
         </label>
         </li>
@@ -37,32 +37,32 @@ export function render(params){
     <p>Тип лестницы</р>
     <ul>
         <li><label>${params.type[0]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.type[0]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[1]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.type[1]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[2]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.type[2]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[3]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.type[3]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[4]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.type[4]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[5]}
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.type[5]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
@@ -73,19 +73,19 @@ export function render(params){
     <ul>
         <li><label><div class="carcas-item">${params.carcas[0]}
         <i class="fa-solid fa-circle-question"></i></div> 
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.carcas[0]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label><div class="carcas-item">${params.carcas[1]}
         <i class="fa-solid fa-circle-question"></i></div> 
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.carcas[1]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label><div class="carcas-item">${params.carcas[2]}
         <i class="fa-solid fa-circle-question"></i></div> 
-            <input type="checkbox" class="real-checkbox">
+            <input type="checkbox" class="real-checkbox" value="${params.carcas[2]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
@@ -95,12 +95,12 @@ export function render(params){
     <p>Материал ступеней</р>
         <ul>
             <li><label>${params.stages[0]}
-                <input type="checkbox" class="real-checkbox">
+                <input type="checkbox" class="real-checkbox" value="${params.stages[0]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
             <li><label>${params.stages[1]}
-                <input type="checkbox" class="real-checkbox">
+                <input type="checkbox" class="real-checkbox" value="${params.stages[1]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
@@ -111,25 +111,25 @@ export function render(params){
         <ul>
             <li><label>${params.material[0]}
                 
-                <input type="checkbox" class="real-checkbox">
+                <input type="checkbox" class="real-checkbox" value="${params.material[0]}">
             <span class="custom-checkbox"></span>
             </label>
             </li>
             <li><label>${params.material[1]}
                 
-                <input type="checkbox" class="real-checkbox">
+                <input type="checkbox" class="real-checkbox" value="${params.material[1]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
             <li><label>${params.material[2]}
                 
-                <input type="checkbox" class="real-checkbox">
+                <input type="checkbox" class="real-checkbox" value="${params.material[2]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
             <li><label>${params.material[3]}
                 
-                <input type="checkbox" class="real-checkbox">
+                <input type="checkbox" class="real-checkbox" value="${params.material[3]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
@@ -140,4 +140,114 @@ export function render(params){
 
     document.querySelector('#catalog-pattern').querySelector('.catalog-pattern__filter').insertAdjacentHTML('afterbegin', markup);
 
+}
+
+export const catalogWrapper = document.querySelector('.catalog-pattern__products-wrapper');
+
+
+export function grabCheckboxes(){
+
+    const filter = document.querySelector('.catalog-pattern__filter');
+
+    const checkboxes = filter.querySelectorAll("input[type='checkbox']");
+
+    const checkboxValues = [];
+
+    checkboxes.forEach((checkbox) => {
+        if(checkbox.checked) checkboxValues.push(checkbox.value);
+    })
+
+    console.log(checkboxes)
+
+    return checkboxValues;
+}
+
+export function populateCards(data){
+
+
+    const time = 0;
+
+    data.forEach((element) => {
+        const card = `
+        <div class="catalog-pattern__product">
+                            
+                            <div class="catalog-pattern__text">
+                                <div class="catalog-pattern__title">
+                                    <p>${element.title}</p> 
+                                </div>
+                                <div class="catalog-pattern__number">
+                                   <p>${element.id}.</p>
+                                </div>
+                            </div>
+                            <div class="catalog-pattern__img">
+                                <img src=${element.src}>
+                                <div class="overlay">
+                                    <a href="./catalog-item.html" class="button button--catalog">Подробнее</a>
+                                    <div class="catalog-pattern__info">
+                                <div class="catalog-pattern__price">
+                                    <p><span>Цена:</span>${element.price}</p>
+                                </div>
+                                <div class="catalog-pattern__label">
+                                    <p>Арт: <span>${element.art}</span></p>
+                                </div>
+                                <div class="catalog-pattern__chars">
+                                    <ul>
+                                        <li><span>Вид:</span>${element.kind}</li>
+                                        <li><span>Тип:</span>${element.type}</li>
+                                        <li><span>Каркас:</span>${element.carcas}</li>
+                                        <li><span>Ступени:</span>${element.stages}</li>
+                                        <li><span>Перила:</span>${element.material}</li>
+                                    </ul>
+                                </div>   
+                            </div>
+                                </div>  
+                            </div>
+                           
+                            
+                        </div>`;
+
+        catalogWrapper.innerHTML += card;
+    });
+
+
+}
+
+export function renderCard(element, number){
+    const card = `
+        <div class="catalog-pattern__product">
+                            
+                            <div class="catalog-pattern__text">
+                                <div class="catalog-pattern__title">
+                                    <p>${element.title}</p> 
+                                </div>
+                                <div class="catalog-pattern__number">
+                                   <p>${number}.</p>
+                                </div>
+                            </div>
+                            <div class="catalog-pattern__img">
+                                <img src=${element.src}>
+                                <div class="overlay">
+                                    <a href="#" class="button button--catalog">Подробнее</a>
+                                </div>  
+                            </div>
+                           
+                            <div class="catalog-pattern__info">
+                                <div class="catalog-pattern__price">
+                                    <p><span>Цена:</span>${element.price}</p>
+                                </div>
+                                <div class="catalog-pattern__label">
+                                    <p>Арт: <span>${element.art}</span></p>
+                                </div>
+                                <div class="catalog-pattern__chars">
+                                    <ul>
+                                        <li><span>Вид:</span>${element.kind}</li>
+                                        <li><span>Тип:</span>${element.type}</li>
+                                        <li><span>Каркас:</span>${element.carcas}</li>
+                                        <li><span>Ступени:</span>${element.stages}</li>
+                                        <li><span>Перила:</span>${element.material}</li>
+                                    </ul>
+                                </div>   
+                            </div>
+                        </div>`;
+    return card;
 }

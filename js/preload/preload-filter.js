@@ -9,6 +9,17 @@ const items = document.querySelectorAll(".leaders-filter__item");
 const catalogButton = document.querySelector(".button.button--catalog");
 //positionCatalogButton);
 
+const uploadInput = document.querySelector("#input-upload");
+
+const uploadButton = document.querySelector(".contacts-form__file");
+
+
+uploadButton.addEventListener("click", initUpload);
+
+function initUpload(){
+    uploadInput.click();
+}
+
 
 
 items.forEach((item) => {
@@ -73,3 +84,6 @@ function selectedItemStyle(item){
    img.classList.add("active");
 
 }
+
+
+

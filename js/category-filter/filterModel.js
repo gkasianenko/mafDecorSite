@@ -6,26 +6,26 @@ export default class Filter {
     getParams(){
         const staticParams = {
             kind: [
-                "Открытого типа",
-                "Закрытого типа",
-                "Уличные лестницы"
+                "Открытая",
+                "Закрытая",
+                "Уличная"
             ],
             type: [
                 "П-образная",
                 "Г-образная",
-                "Прямые",
-                "Трехмаршевые",
+                "Прямая",
+                "Трехмаршевая",
                 "Винтовая",
                 "Модульная"
             ],
             carcas: [
-                "На монокосоурах",
+                "На монокосоуре",
                 "На косоурах",
-                "На тетивах"
+                "На тетиве"
             ],
             stages: [
-                "Из металла",
-                "Из дерева"
+                "Металл",
+                "Дерево"
             ],
             material: [
                 "Из металла",
@@ -43,6 +43,8 @@ export default class Filter {
             {
                 "id": 1,    
                 "title": "Винтовая лестница 'Лиссабон'",
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "Винтовая",
@@ -53,8 +55,9 @@ export default class Filter {
             },
             {
                 "id": 2,
-          
                 "title": "Винтовая лестница 'Авиньон'",
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "Винтовая",
@@ -65,9 +68,11 @@ export default class Filter {
             },
             {
                 "id": 3,
-      
                 "title": "Винтовая лестница 'Утрехт'",
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
+                "art": 159887,
                 "kind": "Открытая",
                 "type": "Винтовая",
                 "carcas": "На монокосоуре",
@@ -78,6 +83,8 @@ export default class Filter {
             {
                 "id": 4,
                 "title": "Винтовая лестница 'Осло'",
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "П-образная",
@@ -88,10 +95,12 @@ export default class Filter {
             },
             {
                 "id": 5,
-                "title": "Винтовая лестница 'Осло'",
+                "title": '"Винтовая лестница "Осло"',
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Закрытая",
-                "type": "Винтовая",
+                "type": "Г-образная",
                 "carcas": "На монокосоуре",
                 "stages": "Дерево",
                 "material": "Металлические",
@@ -99,18 +108,22 @@ export default class Filter {
             },
             {
                 "id": 6,
-                "title": "Винтовая лестница 'Авиньон'",
+                "title": 'Винтовая лестница "Авиньон"',
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Уличная",
                 "type": "Винтовая",
-                "carcas": "На монокосоуре",
+                "carcas": "На тетиве",
                 "stages": "Дерево",
                 "material": "Металлические",
 
             },
             {
                 "id": 7,
-                "title": "Винтовая лестница 'Авиньон'",
+                "title": 'Винтовая лестница "Авиньон"',
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "Винтовая",
@@ -121,7 +134,9 @@ export default class Filter {
             },
             {
                 "id": 8,
-                "title": "Винтовая лестница 'Авиньон'",
+                "title": 'Винтовая лестница "Авиньон"',
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "Винтовая",
@@ -132,7 +147,9 @@ export default class Filter {
             },
             {
                 "id": 9,
-                "title": "Винтовая лестница 'Авиньон'",
+                "title": 'Винтовая лестница "Авиньон"',
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "Винтовая",
@@ -143,18 +160,22 @@ export default class Filter {
             },
             {
                 "id": 10,
-                "title": "Винтовая лестница 'Авиньон'",
+                "title": 'Винтовая лестница "Авиньон"',
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "Винтовая",
-                "carcas": "На монокосоуре",
+                "carcas": "На тетиве",
                 "stages": "Дерево",
                 "material": "Металлические",
 
             },
             {
                 "id": 11,
-                "title": "Винтовая лестница 'Авиньон'",
+                "title": 'Винтовая лестница "Авиньон"',
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "Винтовая",
@@ -165,7 +186,9 @@ export default class Filter {
             },
             {
                 "id": 12,
-                "title": "Винтовая лестница 'Авиньон'",
+                "title": 'Винтовая лестница "Авиньон"',
+                "src": '"./img/ledders/ledder-1.jpg" alt="Лиссабон"',
+                "art": 159887,
                 "price": "По запросу",
                 "kind": "Открытая",
                 "type": "Винтовая",
@@ -178,5 +201,7 @@ export default class Filter {
 
         this.results = staticResults;
     }
+
+    
 
 }
