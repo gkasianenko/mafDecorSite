@@ -171,40 +171,40 @@ export function populateCards(data){
         const card = `
         <div class="catalog-pattern__product">
                             
-                            <div class="catalog-pattern__text">
+                        <div class="catalog-pattern__text">
                                 <div class="catalog-pattern__title">
                                     <p>${element.title}</p> 
                                 </div>
                                 <div class="catalog-pattern__number">
                                    <p>${element.id}.</p>
                                 </div>
-                            </div>
-                            <div class="catalog-pattern__img">
-                                <img src=${element.src}>
-                                <div class="overlay">
+                        </div>
+                        <div class="catalog-pattern__img">
+                            <img src=${element.src}>
+                            <div class="overlay">
                                     <a href="./catalog-item.html" class="button button--catalog">Подробнее</a>
                                     <div class="catalog-pattern__info">
-                                <div class="catalog-pattern__price">
-                                    <p><span>Цена:</span>${element.price}</p>
-                                </div>
-                                <div class="catalog-pattern__label">
-                                    <p>Арт: <span>${element.art}</span></p>
-                                </div>
-                                <div class="catalog-pattern__chars">
-                                    <ul>
-                                        <li><span>Вид:</span>${element.kind}</li>
-                                        <li><span>Тип:</span>${element.type}</li>
-                                        <li><span>Каркас:</span>${element.carcas}</li>
-                                        <li><span>Ступени:</span>${element.stages}</li>
-                                        <li><span>Перила:</span>${element.material}</li>
-                                    </ul>
-                                </div>   
+                                        <div class="catalog-pattern__price">
+                                        <p><span>Цена:</span>${element.price}</p>
+                                    </div>
+                                    <div class="catalog-pattern__label">
+                                        <p>Арт: <span>${element.art}</span></p>
+                                    </div>
+                                    <div class="catalog-pattern__chars">
+                                        <ul>
+                                            <li><span>Вид:</span>${element.kind}</li>
+                                            <li><span>Тип:</span>${element.type}</li>
+                                            <li><span>Каркас:</span>${element.carcas}</li>
+                                            <li><span>Ступени:</span>${element.stages}</li>
+                                            <li><span>Перила:</span>${element.material}</li>
+                                        </ul>
+                                    </div>   
                             </div>
-                                </div>  
-                            </div>
+                        </div>  
+                     </div>
                            
                             
-                        </div>`;
+        </div>`;
 
         catalogWrapper.innerHTML += card;
     });
@@ -228,10 +228,8 @@ export function renderCard(element, number){
                                 <img src=${element.src}>
                                 <div class="overlay">
                                     <a href="#" class="button button--catalog">Подробнее</a>
-                                </div>  
-                            </div>
-                           
-                            <div class="catalog-pattern__info">
+
+                                    <div class="catalog-pattern__info">
                                 <div class="catalog-pattern__price">
                                     <p><span>Цена:</span>${element.price}</p>
                                 </div>
@@ -248,6 +246,10 @@ export function renderCard(element, number){
                                     </ul>
                                 </div>   
                             </div>
+                                </div>  
+                            </div>
+                           
+                            
                         </div>`;
     return card;
 }
