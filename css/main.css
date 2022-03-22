@@ -75,6 +75,9 @@ legend {
   padding-left: 15px;
   padding-right: 15px; }
 
+@media (min-width: 2000px) {
+  .container--large {
+    width: 1480px; } }
 /* Utility */
 .none {
   display: none !important; }

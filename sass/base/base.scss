@@ -29,7 +29,6 @@ button {
   font-family: inherit;
   padding: 0;
   outline: none;
-  
 }
 
 label {
@@ -82,6 +81,12 @@ legend {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media (min-width: 2000px) {
+  .container--large {
+    width: 1480px;
+  }
 }
 
 /* Utility */
