@@ -23,9 +23,7 @@
   justify-content: space-between;
 }
 
-.header-nav__wrapper > * + * {
-  margin-left: 31px;
-}
+
 
 .header-nav__menu {
   padding-left: 32px;
@@ -34,7 +32,6 @@
   align-items: center;
 
   min-height: 41px;
-  border-right: 1px solid #d4d4d4;
 
   & ul {
     display: flex;
@@ -77,8 +74,11 @@
 }
 
 .header-nav__contacts {
+  padding-left: 32px;
   display: flex;
   align-items: center;
+
+  border-left: 1px solid #d4d4d4;
 
   & a {
     color: black;
