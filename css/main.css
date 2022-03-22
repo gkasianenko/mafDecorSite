@@ -236,12 +236,19 @@ legend {
   color: #ffffff; }
 
 .title-h2 {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
   line-height: 0.8;
   color: #000000; }
+
+.title-category {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1.1; }
 
 #main .category-pattern > * + * {
   margin-top: 20px; }
@@ -348,6 +355,13 @@ legend {
 
 #preload .benefits {
   padding-bottom: 196px; }
+
+.contacts-form {
+  background-image: url(../img/preload/form/bg-form.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+  padding-top: 78px; }
 
 .contacts-form__wrapper {
   display: flex; }
@@ -542,6 +556,12 @@ legend {
 #sidebar .sidebar__content .sidebar__logo {
   margin-left: auto;
   margin-right: auto; }
+  #sidebar .sidebar__content .sidebar__logo svg:hover path:nth-child(1),
+  #sidebar .sidebar__content .sidebar__logo svg:hover path:nth-child(2) {
+    fill: #f37833; }
+  #sidebar .sidebar__content .sidebar__logo svg:hover path:nth-child(3),
+  #sidebar .sidebar__content .sidebar__logo svg:hover path:nth-child(4) {
+    fill: #00365b; }
 
 #sidebar .sidebar-menu {
   display: flex;
@@ -555,7 +575,7 @@ legend {
   align-items: center;
   width: 128px;
   height: 128px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
   font-size: 18px;
@@ -568,7 +588,7 @@ legend {
   content: "Новинки";
   top: 0;
   right: 0;
-  background-color: #F5C8FD;
+  background-color: #f5c8fd;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.1; }
@@ -579,7 +599,7 @@ legend {
   content: "Акция";
   top: 0;
   right: 0;
-  background-color: #C8DAFD;
+  background-color: #c8dafd;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.1; }
@@ -681,7 +701,7 @@ legend {
   color: #fff; }
 
 #category-ledders #catalog-pattern {
-  padding-top: 150px; }
+  padding-top: 90px; }
 
 #catalog-pattern .catalog-pattern__navigation {
   margin-bottom: 28px;
@@ -689,6 +709,8 @@ legend {
   font-size: 14px;
   line-height: 1.1;
   color: #d4d4d4; }
+  #catalog-pattern .catalog-pattern__navigation span {
+    color: #000; }
 
 #catalog-pattern .catalog-pattern__show {
   position: relative;
@@ -723,7 +745,7 @@ legend {
 
 #catalog-pattern .catalog-pattern__filter p {
   margin-bottom: 16px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
   line-height: 1.1;
   color: #00365b; }
@@ -811,6 +833,9 @@ legend {
 
 #catalog-pattern .catalog-pattern__products {
   width: 100%; }
+  #catalog-pattern .catalog-pattern__products h1 {
+    text-align: center;
+    margin-bottom: 20px; }
 
 #catalog-pattern .catalog-pattern__product > * + * {
   margin-top: 12px; }
@@ -904,6 +929,8 @@ legend {
   font-size: 14px;
   line-height: 1.1;
   color: #d4d4d4; }
+  #product .product__pagination span {
+    color: #000; }
 
 #product .product__wrapper {
   display: flex;

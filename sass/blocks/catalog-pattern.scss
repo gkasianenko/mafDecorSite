@@ -1,5 +1,5 @@
 #category-ledders #catalog-pattern {
-  padding-top: 150px;
+  padding-top: 90px;
 }
 
 #catalog-pattern .catalog-pattern__navigation {
@@ -9,6 +9,10 @@
   line-height: 1.1;
 
   color: #d4d4d4;
+
+  & span {
+    color: #000;
+  }
 }
 
 #catalog-pattern .catalog-pattern__show {
@@ -50,7 +54,7 @@
 #catalog-pattern .catalog-pattern__filter {
   & p {
     margin-bottom: 16px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 18px;
     line-height: 1.1;
     color: #00365b;
@@ -127,11 +131,9 @@
   flex-direction: column;
   width: 270px;
 
-  
-
   &:hover .overlay {
     visibility: visible;
-    transition: none; 
+    transition: none;
   }
 }
 
@@ -142,12 +144,11 @@
 #catalog-pattern .catalog-pattern__img .overlay {
   position: absolute;
   visibility: hidden;
-  
+
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  
 
   & .button--catalog {
     position: absolute;
@@ -161,13 +162,16 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 1.1;
-    
-    
   }
 }
 
 #catalog-pattern .catalog-pattern__products {
   width: 100%;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 #catalog-pattern .catalog-pattern__product > * + * {
