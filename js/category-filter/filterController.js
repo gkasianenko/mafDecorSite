@@ -20,35 +20,68 @@ export default async function(state){
 
     //прослушка формы
 
-    const filter = document.querySelector('.catalog-pattern__filter');
-
-    filter.addEventListener('change', filterCards);
     
+    
+    view.filter.addEventListener('change', filterCards);
+
+    //Прослушка чекбоксов
+
+    view.checkboxes.forEach((checkbox) => checkbox.addEventListener('click', resetPageNumber))
+    
+    //Рендер всех карточек первичный
     view.populateCards(state.filter.results);
-
-
+    
+    //прослушка кнопки "показать еще"
+    
+    view.showMoreButton.addEventListener('click', expandProducts)
+    
     
 }
 
+let pageNumber = 1;
+
 function filterCards(){
+    
     view.catalogWrapper.innerHTML = "";
 
+    //Сбор данных чекбоксов
     const checkboxValues = view.grabCheckboxes();
-    let number = 1;
+    let productNumber = 1;
+    let productQuantity = pageNumber*6;
 
+    //Рендер отфильтрованных карточек
     state.filter.results.forEach((element) => {
         let params = Object.values(element);
         let result = (arr, target) => target.every((v) => arr.includes(v));
 
         let isMatch = result(params, checkboxValues);
-        
-        if(isMatch){
+        console.log(isMatch)
+
+
+        if(isMatch && productQuantity != 0){
             
-            view.catalogWrapper.innerHTML += view.renderCard(element, number);
+            view.catalogWrapper.innerHTML += view.renderCard(element, productNumber);
             
-            number += 1;
+           productNumber += 1;
+           productQuantity -=1;
+            
         }
+
+        view.renderShowButton(view.checkProductsNumber(), productQuantity);
     });
+
+    //Проверка кол-ва продуктов и изменение кнопки "показать больше"
 }
 
+function expandProducts(){
+    pageNumber++;
+    filterCards();
+    
+}
+
+function resetPageNumber(){
+    
+    pageNumber = 1;
+    console.log("fired")
+}
 

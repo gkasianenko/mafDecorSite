@@ -8,7 +8,6 @@
   left: 0;
   background-color: #fff; /* Black */
   overflow: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
 }
 
 #sidebar .sidebar__content {
@@ -19,17 +18,16 @@
 #sidebar .sidebar__content .sidebar__logo {
   margin-left: auto;
   margin-right: auto;
+  width: 128px;
+  height: 128px;
+  background-repeat: no-repeat;
+  background-size: 78px 78px;
+  background-image: url(../img/sidebar/logo-blue.png);
+  background-position: center;
 
-  & svg:hover {
-    path:nth-child(1),
-    path:nth-child(2) {
-      fill: #f37833;
-    }
-
-    path:nth-child(3),
-    path:nth-child(4) {
-      fill: #00365b;
-    }
+  &:hover {
+    background-image: url(../img/sidebar/logo-white.png);
+    background-color: #f37833;
   }
 }
 

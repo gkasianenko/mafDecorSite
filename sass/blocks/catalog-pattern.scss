@@ -54,7 +54,7 @@
 #catalog-pattern .catalog-pattern__filter {
   & p {
     margin-bottom: 16px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.1;
     color: #00365b;
@@ -65,6 +65,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-weight: 300;
 
   & i {
     margin-left: 5px;

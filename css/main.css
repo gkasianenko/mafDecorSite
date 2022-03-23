@@ -396,7 +396,8 @@ legend {
   outline: none;
   border: none;
   height: 21px;
-  margin-left: 36px; }
+  margin-left: 36px;
+  background: transparent; }
 
 .contacts-form__left .contacts-form__fields input::placeholder {
   font-weight: 300;
@@ -546,8 +547,7 @@ legend {
   background-color: #fff;
   /* Black */
   overflow: hidden;
-  /* Disable horizontal scroll */
-  padding-top: 20px; }
+  /* Disable horizontal scroll */ }
 
 #sidebar .sidebar__content {
   display: flex;
@@ -555,13 +555,16 @@ legend {
 
 #sidebar .sidebar__content .sidebar__logo {
   margin-left: auto;
-  margin-right: auto; }
-  #sidebar .sidebar__content .sidebar__logo svg:hover path:nth-child(1),
-  #sidebar .sidebar__content .sidebar__logo svg:hover path:nth-child(2) {
-    fill: #f37833; }
-  #sidebar .sidebar__content .sidebar__logo svg:hover path:nth-child(3),
-  #sidebar .sidebar__content .sidebar__logo svg:hover path:nth-child(4) {
-    fill: #00365b; }
+  margin-right: auto;
+  width: 128px;
+  height: 128px;
+  background-repeat: no-repeat;
+  background-size: 78px 78px;
+  background-image: url(../img/sidebar/logo-blue.png);
+  background-position: center; }
+  #sidebar .sidebar__content .sidebar__logo:hover {
+    background-image: url(../img/sidebar/logo-white.png);
+    background-color: #f37833; }
 
 #sidebar .sidebar-menu {
   display: flex;
@@ -745,7 +748,7 @@ legend {
 
 #catalog-pattern .catalog-pattern__filter p {
   margin-bottom: 16px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.1;
   color: #00365b; }
@@ -753,7 +756,8 @@ legend {
 #catalog-pattern .catalog-pattern__filter label {
   display: flex;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  font-weight: 300; }
   #catalog-pattern .catalog-pattern__filter label i {
     margin-left: 5px; }
 
