@@ -278,6 +278,7 @@ legend {
   position: relative;
   min-width: 560px;
   min-height: 350px;
+  color: #000;
   border: 0.8px solid #d4d4d4;
   font-weight: 300;
   font-size: 24px;
