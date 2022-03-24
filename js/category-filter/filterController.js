@@ -19,6 +19,7 @@ export default async function(state){
     await state.filter.getResults();
 
     //прослушка формы
+    const checkboxes = view.filter.querySelectorAll("input[type='checkbox']");
 
     
     
@@ -26,7 +27,7 @@ export default async function(state){
 
     //Прослушка чекбоксов
 
-    view.checkboxes.forEach((checkbox) => checkbox.addEventListener('click', resetPageNumber))
+    checkboxes.forEach((checkbox) => checkbox.addEventListener('click', resetPageNumber))
     
     //Рендер всех карточек первичный
     view.populateCards(state.filter.results);
@@ -40,22 +41,23 @@ export default async function(state){
 
 let pageNumber = 1;
 
-function filterCards(){
-    
+async function filterCards(){
+    console.log(pageNumber)
     view.catalogWrapper.innerHTML = "";
-
     //Сбор данных чекбоксов
     const checkboxValues = view.grabCheckboxes();
     let productNumber = 1;
     let productQuantity = pageNumber*6;
+    
+    
 
     //Рендер отфильтрованных карточек
-    state.filter.results.forEach((element) => {
+   await state.filter.results.forEach((element) => {
         let params = Object.values(element);
         let result = (arr, target) => target.every((v) => arr.includes(v));
 
         let isMatch = result(params, checkboxValues);
-        console.log(isMatch)
+        
 
 
         if(isMatch && productQuantity != 0){
@@ -63,13 +65,13 @@ function filterCards(){
             view.catalogWrapper.innerHTML += view.renderCard(element, productNumber);
             
            productNumber += 1;
-           productQuantity -=1;
+           productQuantity -= 1;
             
         }
 
-        view.renderShowButton(view.checkProductsNumber(), productQuantity);
     });
-
+   
+    view.renderShowButton(view.checkProductsNumber(), productQuantity);
     //Проверка кол-ва продуктов и изменение кнопки "показать больше"
 }
 
@@ -80,8 +82,8 @@ function expandProducts(){
 }
 
 function resetPageNumber(){
-    
-    pageNumber = 1;
     console.log("fired")
+    pageNumber = 1;
+    
 }
 
