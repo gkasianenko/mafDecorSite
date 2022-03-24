@@ -955,7 +955,7 @@ legend {
   justify-content: space-between; }
 
 #product .product__right {
-  width: 51%;
+  width: 46%;
   display: flex;
   flex-direction: column; }
   #product .product__right span {
