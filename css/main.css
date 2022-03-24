@@ -940,7 +940,6 @@ legend {
 #product .product__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-left: 118px;
   padding-bottom: 289px; }
 
 #product .product__left {
