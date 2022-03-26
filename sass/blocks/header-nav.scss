@@ -66,6 +66,28 @@
 
 .header-nav__logo {
   width: 230px;
+
+  & img:nth-child(1) {
+    display: block;
+  }
+
+  & img:nth-child(2) {
+    display: none;
+  }
+}
+
+.header-nav__logo img {
+  width: 186px;
+}
+
+#header.header-scroll-active .header-nav__logo {
+  & img:nth-child(2) {
+    display: block;
+  }
+
+  & img:nth-child(1) {
+    display: none;
+  }
 }
 
 .header-nav__icon {
