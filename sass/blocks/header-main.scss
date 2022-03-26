@@ -4,12 +4,14 @@
   width: 100%;
   z-index: 999;
   background-color: unset;
+  transition: 0.2s ease-in-out;
 }
 
 #main .header-nav {
   display: flex;
   justify-content: flex-end;
   font-weight: 500;
+  transition: 0.2s ease-in-out;
 }
 
 #main .header-nav__wrapper {
@@ -23,7 +25,29 @@
   justify-content: space-between;
 }
 
+#main #header.header-scroll-active {
+  color: #000;
+  background-color: #fff;
+  
+  transition: 0.2s ease-in-out;
 
+  & .header-nav{
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  & a {
+    color: #000;
+    transition: 0.2s ease-in-out;
+  }
+
+  & .header-nav__icon {
+    svg {
+      circle {
+        fill: #000;
+      }
+    }
+  }
+}
 
 .header-nav__menu {
   padding-left: 32px;
