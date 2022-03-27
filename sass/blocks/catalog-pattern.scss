@@ -32,6 +32,9 @@
 }
 
 #catalog-pattern .catalog-pattern__filter-wrapper {
+  position: sticky;
+  top: 150px;
+
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -39,7 +42,23 @@
   width: 270px;
 }
 
-#catalog-pattern .catalog-pattern__filter-wrapper > * + * {
+#catalog-pattern .show-arrow.show {
+  transform: rotate(180deg);
+}
+
+#catalog-pattern .catalog-pattern__inner {
+  margin-top: 28px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+#catalog-pattern .catalog-pattern__inner.show {
+  max-height: 1500px;
+  transition: all 0.4s;
+}
+
+#catalog-pattern .catalog-pattern__inner > * + * {
   margin-top: 28px;
 }
 
@@ -52,7 +71,9 @@
 }
 
 #catalog-pattern .catalog-pattern__filter {
-  margin-top: 60px;
+  margin-top: 5%;
+  position: sticky;
+  top: 150px;
   & p {
     margin-bottom: 16px;
     font-weight: 400;
@@ -123,38 +144,43 @@
   cursor: pointer;
 }
 
+#catalog-pattern .catalog-pattern__card {
+  position: relative;
+}
+
 #catalog-pattern .catalog-pattern__product {
   position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
+
+  padding-left: 10px;
+  padding-right: 10px;
   margin-bottom: 48px;
 
   display: flex;
   flex-direction: column;
   width: 270px;
-
-  &:hover .overlay {
-    visibility: visible;
-    transition: none;
-  }
 }
 
 #catalog-pattern .catalog-pattern__img {
   position: relative;
 }
 
-#catalog-pattern .catalog-pattern__img .overlay {
-  position: absolute;
-  visibility: hidden;
+#catalog-pattern .catalog-pattern__product:hover + .overlay-product {
+  display: block;
+}
 
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+#catalog-pattern .catalog-pattern__card .overlay-product {
+  display: none;
+  padding-top: 10px;
+
+  position: absolute;
+  top: -10px;
+
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 
   & .button--catalog {
     position: absolute;
-    top: 50%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -165,6 +191,24 @@
     font-size: 18px;
     line-height: 1.1;
   }
+
+  & img {
+    filter: brightness(40%);
+  }
+}
+
+#catalog-pattern .overlay-product .catalog-pattern__product {
+  margin-bottom: 0;
+}
+
+#catalog-pattern .catalog-pattern__img .overlay {
+  position: absolute;
+  // visibility: hidden;
+
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #catalog-pattern .catalog-pattern__products {
@@ -236,16 +280,12 @@
 }
 
 #catalog-pattern .catalog-pattern__info {
-  position: absolute;
-  bottom: -230px;
   padding-bottom: 18px;
   padding-top: 18px;
   padding-left: 9px;
+  padding-right: 9px;
   background: #fff;
   width: 100%;
-  z-index: 5;
-
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 #catalog-pattern .catalog-pattern__info .catalog-pattern__price {
