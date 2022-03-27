@@ -23,13 +23,15 @@ function initUpload(){
 
 
 items.forEach((item) => {
-    item.addEventListener("change", positionCatalogButton)
+    item.addEventListener("change", positionCatalogButton);
 })
 
 function positionCatalogButton(event){
     event.stopPropagation()
 
     if(isChecked(kindRow)){
+        catalogButton.style.top = "465px";
+    } else if(!isChecked(kindRow)){
         catalogButton.style.top = "465px";
     }
 
@@ -53,6 +55,7 @@ function isChecked(row){
     let isChecked = false;
     
    const items = row.querySelectorAll(".leaders-filter__item");
+   console.log(items)
 
     
     items.forEach((item) => {
