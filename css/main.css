@@ -1364,4 +1364,12 @@ legend {
 #catalog-item .header-nav__wrapper {
   padding-right: 150px; }
 
+#catalog-item .product__slider img {
+  width: 108px;
+  height: 108px; }
+
+#catalog-item .product__main-photo {
+  width: 588px;
+  height: 588px; }
+
 /*# sourceMappingURL=main.css.map */
