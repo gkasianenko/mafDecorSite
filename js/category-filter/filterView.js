@@ -1,12 +1,9 @@
-export const filter = document.querySelector('.catalog-pattern__filter');
+export const filter = document.querySelector(".catalog-pattern__filter");
 
-export const showMoreButton = document.querySelector('.catalog-pattern__more');
-    
-export function render(params){
+export const showMoreButton = document.querySelector(".catalog-pattern__more");
 
-   
-
-    const markup = `<div class="catalog-pattern__filter-wrapper">
+export function render(params) {
+  const markup = `<div class="catalog-pattern__filter-wrapper">
 <div class="catalog-pattern__show">
     <h3>Подобрать</h3>
     <svg class="show-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -153,36 +150,35 @@ export function render(params){
 
 </div>`;
 
-    document.querySelector('#catalog-pattern').querySelector('.catalog-pattern__filter').insertAdjacentHTML('afterbegin', markup);
-
+  document
+    .querySelector("#catalog-pattern")
+    .querySelector(".catalog-pattern__filter")
+    .insertAdjacentHTML("afterbegin", markup);
 }
 
-export const catalogWrapper = document.querySelector('.catalog-pattern__products-wrapper');
+export const catalogWrapper = document.querySelector(
+  ".catalog-pattern__products-wrapper"
+);
 
+export function grabCheckboxes() {
+  const filter = document.querySelector(".catalog-pattern__filter");
 
-export function grabCheckboxes(){
+  const checkboxes = filter.querySelectorAll("input[type='checkbox']");
 
-    const filter = document.querySelector('.catalog-pattern__filter');
+  const checkboxValues = [];
 
-    const checkboxes = filter.querySelectorAll("input[type='checkbox']");
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) checkboxValues.push(checkbox.value);
+  });
 
-    const checkboxValues = [];
-
-    checkboxes.forEach((checkbox) => {
-        if(checkbox.checked) checkboxValues.push(checkbox.value);
-    })
-
-
-    return checkboxValues;
+  return checkboxValues;
 }
 
-export function populateCards(data){
+export function populateCards(data) {
+  const time = 0;
 
-
-    const time = 0;
-
-    data.forEach((element) => {
-        const card = `
+  data.forEach((element) => {
+    const card = `
         <div class="catalog-pattern__card">
             <div class="catalog-pattern__product">
                             
@@ -200,53 +196,42 @@ export function populateCards(data){
                         </div>  
             </div>
             <div class="overlay-product">
-                <div class="catalog-pattern__product">
-                            
-                     <div class="catalog-pattern__text">
-                         <div class="catalog-pattern__title">
-                        <p>${element.title}</p> 
-                    </div>
-                    <div class="catalog-pattern__number">
-                       <p>${element.id}.</p>
-                    </div>
-            </div>
-            <div class="catalog-pattern__img">
-                <img src=${element.src}>
                 
-            </div>  
-</div>
-                <a href="./catalog-item.html" class="button button--catalog">Подробнее</a>
+                <a href="./catalog-item.html" class="button button--catalog"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.2828 11.2828C21.4391 11.1266 21.4391 10.8734 21.2828 10.7172L18.7373 8.17157C18.581 8.01536 18.3278 8.01536 18.1716 8.17157C18.0154 8.32778 18.0154 8.58105 18.1716 8.73726L20.4343 11L18.1716 13.2627C18.0154 13.419 18.0154 13.6722 18.1716 13.8284C18.3278 13.9846 18.581 13.9846 18.7373 13.8284L21.2828 11.2828ZM11 11.4H21V10.6H11V11.4Z" fill="white"/>
+                <path d="M0.717157 10.7172C0.560947 10.8734 0.560947 11.1266 0.717157 11.2828L3.26274 13.8284C3.41895 13.9846 3.67222 13.9846 3.82843 13.8284C3.98464 13.6722 3.98464 13.419 3.82843 13.2627L1.56569 11L3.82843 8.73726C3.98464 8.58105 3.98464 8.32778 3.82843 8.17157C3.67222 8.01536 3.41895 8.01536 3.26274 8.17157L0.717157 10.7172ZM11 10.6L1 10.6L1 11.4L11 11.4L11 10.6Z" fill="white"/>
+                <path d="M11.2828 0.717157C11.1266 0.560947 10.8734 0.560947 10.7172 0.717157L8.17157 3.26274C8.01536 3.41895 8.01536 3.67222 8.17157 3.82843C8.32778 3.98464 8.58105 3.98464 8.73726 3.82843L11 1.56569L13.2627 3.82843C13.419 3.98464 13.6722 3.98464 13.8284 3.82843C13.9846 3.67222 13.9846 3.41895 13.8284 3.26274L11.2828 0.717157ZM11.4 11L11.4 1L10.6 1L10.6 11L11.4 11Z" fill="white"/>
+                <path d="M10.7172 21.2828C10.8734 21.4391 11.1266 21.4391 11.2828 21.2828L13.8284 18.7373C13.9846 18.581 13.9846 18.3278 13.8284 18.1716C13.6722 18.0154 13.419 18.0154 13.2627 18.1716L11 20.4343L8.73726 18.1716C8.58105 18.0154 8.32778 18.0154 8.17157 18.1716C8.01536 18.3278 8.01536 18.581 8.17157 18.7373L10.7172 21.2828ZM10.6 11L10.6 21L11.4 21L11.4 11L10.6 11Z" fill="white"/>
+                </svg>
+                <p>Подробнее</p></a>
                 <div class="catalog-pattern__info">
                     <div class="catalog-pattern__price">
-                    <p><span>Цена:</span>${element.price}</p>
-                </div>
-                <div class="catalog-pattern__label">
-                    <p>Арт: <span>${element.art}</span></p>
-                </div>
-                <div class="catalog-pattern__chars">
-                    <ul>
-                        <li><span>Вид:</span>${element.kind}</li>
-                        <li><span>Тип:</span>${element.type}</li>
-                        <li><span>Каркас:</span>${element.carcas}</li>
-                        <li><span>Ступени:</span>${element.stages}</li>
-                        <li><span>Перила:</span>${element.material}</li>
-                    </ul>
-                </div>   
+                        <p><span>Цена:</span>${element.price}</p>
+                    </div>
+                    <div class="catalog-pattern__label">
+                        <p>Арт: <span>${element.art}</span></p>
+                    </div>
+                    <div class="catalog-pattern__chars">
+                        <ul>
+                            <li><span>Вид:</span>${element.kind}</li>
+                            <li><span>Тип:</span>${element.type}</li>
+                            <li><span>Каркас:</span>${element.carcas}</li>
+                            <li><span>Ступени:</span>${element.stages}</li>
+                            <li><span>Перила:</span>${element.material}</li>
+                        </ul>
+                    </div>
+                    <a href="./catalog-item.html" class="overlay-product-link">Заказать расчет?</a>
             </div>
+
         </div>
-        
-                           
-                            
-        </div>`;
+       `;
 
-        catalogWrapper.innerHTML += card;
-    });
-
-
+    catalogWrapper.innerHTML += card;
+  });
 }
 
-export function renderCard(element, number){
-    const card = `
+export function renderCard(element, number) {
+  const card = `
         <div class="catalog-pattern__product">
                             
                             <div class="catalog-pattern__text">
@@ -284,45 +269,44 @@ export function renderCard(element, number){
                            
                             
                         </div>`;
-    return card;
+  return card;
 }
 
-export function checkProductsNumber(){
-    const products = document.querySelectorAll('.catalog-pattern__product');
-    
-    return products.length;
+export function checkProductsNumber() {
+  const products = document.querySelectorAll(".catalog-pattern__product");
+
+  return products.length;
 }
 
-export function renderShowButton(productsNumber, productQuantity){
-    
-    console.log(productQuantity)
-    if(productsNumber === 0, productQuantity > 0){
-        console.log("нету")
-        showMoreButton.innerHTML = `<div class="catalog-pattern__more">
+export function renderShowButton(productsNumber, productQuantity) {
+  console.log(productQuantity);
+  if ((productsNumber === 0, productQuantity > 0)) {
+    console.log("нету");
+    showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p>Больше нет товаров по вашему запросу</p>
         
     </div>`;
-    } else if(productQuantity === 0) {
-        console.log("больше 6")
-        showMoreButton.innerHTML = `<div class="catalog-pattern__more">
+  } else if (productQuantity === 0) {
+    console.log("больше 6");
+    showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p>Показать еще</p>
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.77988 0.229439C9.6389 0.0825295 9.44771 -2.41412e-08 9.24837 -3.2855e-08C9.04902 -4.15688e-08 8.85783 0.0825295 8.71685 0.229439L4.99546 4.10846L1.27408 0.229439C1.13229 0.0866926 0.94238 0.00770571 0.745262 0.00949116C0.548143 0.0112766 0.359584 0.0936914 0.220195 0.238985C0.0808067 0.384278 0.00174138 0.580825 2.85759e-05 0.786293C-0.00168423 0.991761 0.0740928 1.18971 0.211038 1.33751L4.46394 5.77056C4.60492 5.91747 4.79611 6 4.99546 6C5.19481 6 5.386 5.91747 5.52698 5.77056L9.77988 1.33751C9.92082 1.19055 10 0.991266 10 0.783473C10 0.57568 9.92082 0.376394 9.77988 0.229439Z" fill="#FF5C00"/>
             </svg>
     </div>`;
-    } else if(productQuantity > 0){
-        console.log("меньше 6")
-        showMoreButton.innerHTML = `<div class="catalog-pattern__more">
+  } else if (productQuantity > 0) {
+    console.log("меньше 6");
+    showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p></p>
        
     </div>`;
-    } else if(productsNumber < productQuantity && productQuantity === 6){
-        console.log("меньше 6")
-        showMoreButton.innerHTML = `<div class="catalog-pattern__more">
+  } else if (productsNumber < productQuantity && productQuantity === 6) {
+    console.log("меньше 6");
+    showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p></p>
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.77988 0.229439C9.6389 0.0825295 9.44771 -2.41412e-08 9.24837 -3.2855e-08C9.04902 -4.15688e-08 8.85783 0.0825295 8.71685 0.229439L4.99546 4.10846L1.27408 0.229439C1.13229 0.0866926 0.94238 0.00770571 0.745262 0.00949116C0.548143 0.0112766 0.359584 0.0936914 0.220195 0.238985C0.0808067 0.384278 0.00174138 0.580825 2.85759e-05 0.786293C-0.00168423 0.991761 0.0740928 1.18971 0.211038 1.33751L4.46394 5.77056C4.60492 5.91747 4.79611 6 4.99546 6C5.19481 6 5.386 5.91747 5.52698 5.77056L9.77988 1.33751C9.92082 1.19055 10 0.991266 10 0.783473C10 0.57568 9.92082 0.376394 9.77988 0.229439Z" fill="#FF5C00"/>
             </svg>
     </div>`;
-    }
+  }
 }

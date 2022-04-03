@@ -146,11 +146,13 @@
 
 #catalog-pattern .catalog-pattern__card {
   position: relative;
+  transition: all 0.2s ease-in-out;
 }
 
 #catalog-pattern .catalog-pattern__product {
   position: relative;
 
+  padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 48px;
@@ -162,29 +164,48 @@
 
 #catalog-pattern .catalog-pattern__img {
   position: relative;
+  transition: all 0.2s ease-in-out;
 }
 
-#catalog-pattern .catalog-pattern__product:hover + .overlay-product {
-  display: block;
+#catalog-pattern .catalog-pattern__card:hover .overlay-product {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+#catalog-pattern .catalog-pattern__card:hover {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  & .catalog-pattern__img {
+    filter: brightness(40%);
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 #catalog-pattern .catalog-pattern__card .overlay-product {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   padding-top: 10px;
+  transition: all 0.2s ease-in-out;
 
   position: absolute;
-  top: -10px;
+  bottom: -67%;
+  width: 100%;
 
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   z-index: 5;
 
   & .button--catalog {
+    display: flex;
+
     position: absolute;
-    top: 33%;
+    bottom: 125%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
 
-    width: 155px;
+    width: 183px;
     padding: 13px 30px;
 
     font-weight: 300;
@@ -192,9 +213,25 @@
     line-height: 1.1;
   }
 
-  & img {
-    filter: brightness(40%);
+  & .button--catalog > * + * {
+    margin-left: 11px;
   }
+
+  & .overlay-product-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.1;
+    text-decoration-line: underline;
+    color: #00365b;
+    cursor: pointer;
+  }
+}
+
+#catalog-pattern .overlay-product .catalog-pattern__chars {
+  margin-bottom: 27px;
 }
 
 #catalog-pattern .overlay-product .catalog-pattern__product {
@@ -280,10 +317,11 @@
 }
 
 #catalog-pattern .catalog-pattern__info {
-  padding-bottom: 18px;
+  padding-bottom: 25px;
   padding-top: 18px;
-  padding-left: 9px;
-  padding-right: 9px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   background: #fff;
   width: 100%;
 }
