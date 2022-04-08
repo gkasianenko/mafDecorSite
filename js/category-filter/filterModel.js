@@ -202,6 +202,6 @@ export default class Filter {
         this.results = staticResults;
     }
 
-    
+    localData = [];
 
 }

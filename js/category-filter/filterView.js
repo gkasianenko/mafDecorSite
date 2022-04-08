@@ -17,18 +17,18 @@ export function render(params) {
     <ul>
         <li><label>
             ${params.kind[0]}
-            <input type="checkbox" class="real-checkbox" value=${params.kind[0]}>
+            <input type="checkbox" class="real-checkbox" value=${params.kind[0]}" data-name="${params.kind[0]}">
             <span class="custom-checkbox"></span>
         </label>
             
         </li>
         <li><label>${params.kind[1]}
-            <input type="checkbox" class="real-checkbox" value=${params.kind[1]}>
+            <input type="checkbox" class="real-checkbox" value=${params.kind[1]} data-name="${params.kind[1]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.kind[2]}
-            <input type="checkbox" class="real-checkbox" value=${params.kind[2]}>
+            <input type="checkbox" class="real-checkbox" value=${params.kind[2]} data-name="${params.kind[2]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
@@ -38,32 +38,32 @@ export function render(params) {
     <p>Тип лестницы</р>
     <ul>
         <li><label>${params.type[0]}
-            <input type="checkbox" class="real-checkbox" value="${params.type[0]}">
+            <input type="checkbox" class="real-checkbox" value="${params.type[0]}" data-name="${params.type[0]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[1]}
-            <input type="checkbox" class="real-checkbox" value="${params.type[1]}">
+            <input type="checkbox" class="real-checkbox" value="${params.type[1]}" data-name="${params.type[1]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[2]}
-            <input type="checkbox" class="real-checkbox" value="${params.type[2]}">
+            <input type="checkbox" class="real-checkbox" value="${params.type[2]}" data-name="${params.type[2]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[3]}
-            <input type="checkbox" class="real-checkbox" value="${params.type[3]}">
+            <input type="checkbox" class="real-checkbox" value="${params.type[3]} data-name="${params.type[3]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[4]}
-            <input type="checkbox" class="real-checkbox" value="${params.type[4]}">
+            <input type="checkbox" class="real-checkbox" value="${params.type[4]}" data-name="${params.type[4]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
         <li><label>${params.type[5]}
-            <input type="checkbox" class="real-checkbox" value="${params.type[5]}">
+            <input type="checkbox" class="real-checkbox" value="${params.type[5]}" data-name="${params.type[5]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
@@ -77,7 +77,7 @@ export function render(params) {
 <path d="M9 17.8838C6.91142 17.8838 4.90838 17.0045 3.43153 15.4394C1.95468 13.8742 1.125 11.7515 1.125 9.53802C1.125 7.32459 1.95468 5.20181 3.43153 3.63667C4.90838 2.07154 6.91142 1.19225 9 1.19225C11.0886 1.19225 13.0916 2.07154 14.5685 3.63667C16.0453 5.20181 16.875 7.32459 16.875 9.53802C16.875 11.7515 16.0453 13.8742 14.5685 15.4394C13.0916 17.0045 11.0886 17.8838 9 17.8838ZM9 19.076C11.3869 19.076 13.6761 18.0712 15.364 16.2824C17.0518 14.4937 18 12.0677 18 9.53802C18 7.00838 17.0518 4.58235 15.364 2.79362C13.6761 1.0049 11.3869 0 9 0C6.61305 0 4.32387 1.0049 2.63604 2.79362C0.948212 4.58235 0 7.00838 0 9.53802C0 12.0677 0.948212 14.4937 2.63604 16.2824C4.32387 18.0712 6.61305 19.076 9 19.076Z" fill="#464646"/>
 <path d="M5.91186 6.89845C5.91032 6.93695 5.91623 6.97538 5.92922 7.01137C5.94221 7.04737 5.96202 7.08016 5.98741 7.10775C6.0128 7.13533 6.04325 7.15711 6.07689 7.17176C6.11052 7.18641 6.14663 7.19362 6.18298 7.19293H7.11111C7.26636 7.19293 7.39011 7.05821 7.41036 6.89487C7.51161 6.11276 8.01786 5.54286 8.92011 5.54286C9.69185 5.54286 10.3984 5.9518 10.3984 6.93541C10.3984 7.69248 9.9776 8.04062 9.31273 8.56998C8.55561 9.15299 7.95598 9.83376 7.99873 10.939L8.00211 11.1977C8.00329 11.2759 8.03344 11.3505 8.08606 11.4054C8.13867 11.4602 8.20954 11.491 8.28336 11.491H9.19573C9.27032 11.491 9.34186 11.4596 9.3946 11.4037C9.44735 11.3478 9.47698 11.272 9.47698 11.1929V11.0677C9.47698 10.2117 9.7841 9.96252 10.6132 9.29605C11.2984 8.74404 12.0127 8.13123 12.0127 6.8448C12.0127 5.04331 10.5772 4.17297 9.00561 4.17297C7.58023 4.17297 6.01874 4.8764 5.91186 6.89845ZM7.66348 13.7694C7.66348 14.4048 8.14161 14.8746 8.79973 14.8746C9.48485 14.8746 9.95623 14.4048 9.95623 13.7694C9.95623 13.1112 9.48373 12.6487 8.79861 12.6487C8.14161 12.6487 7.66348 13.1112 7.66348 13.7694Z" fill="#464646"/>
 </svg></div> 
-            <input type="checkbox" class="real-checkbox" value="${params.carcas[0]}">
+            <input type="checkbox" class="real-checkbox" value="${params.carcas[0]}" data-name="${params.carcas[0]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
@@ -86,7 +86,7 @@ export function render(params) {
 <path d="M9 17.8838C6.91142 17.8838 4.90838 17.0045 3.43153 15.4394C1.95468 13.8742 1.125 11.7515 1.125 9.53802C1.125 7.32459 1.95468 5.20181 3.43153 3.63667C4.90838 2.07154 6.91142 1.19225 9 1.19225C11.0886 1.19225 13.0916 2.07154 14.5685 3.63667C16.0453 5.20181 16.875 7.32459 16.875 9.53802C16.875 11.7515 16.0453 13.8742 14.5685 15.4394C13.0916 17.0045 11.0886 17.8838 9 17.8838ZM9 19.076C11.3869 19.076 13.6761 18.0712 15.364 16.2824C17.0518 14.4937 18 12.0677 18 9.53802C18 7.00838 17.0518 4.58235 15.364 2.79362C13.6761 1.0049 11.3869 0 9 0C6.61305 0 4.32387 1.0049 2.63604 2.79362C0.948212 4.58235 0 7.00838 0 9.53802C0 12.0677 0.948212 14.4937 2.63604 16.2824C4.32387 18.0712 6.61305 19.076 9 19.076Z" fill="#464646"/>
 <path d="M5.91186 6.89845C5.91032 6.93695 5.91623 6.97538 5.92922 7.01137C5.94221 7.04737 5.96202 7.08016 5.98741 7.10775C6.0128 7.13533 6.04325 7.15711 6.07689 7.17176C6.11052 7.18641 6.14663 7.19362 6.18298 7.19293H7.11111C7.26636 7.19293 7.39011 7.05821 7.41036 6.89487C7.51161 6.11276 8.01786 5.54286 8.92011 5.54286C9.69185 5.54286 10.3984 5.9518 10.3984 6.93541C10.3984 7.69248 9.9776 8.04062 9.31273 8.56998C8.55561 9.15299 7.95598 9.83376 7.99873 10.939L8.00211 11.1977C8.00329 11.2759 8.03344 11.3505 8.08606 11.4054C8.13867 11.4602 8.20954 11.491 8.28336 11.491H9.19573C9.27032 11.491 9.34186 11.4596 9.3946 11.4037C9.44735 11.3478 9.47698 11.272 9.47698 11.1929V11.0677C9.47698 10.2117 9.7841 9.96252 10.6132 9.29605C11.2984 8.74404 12.0127 8.13123 12.0127 6.8448C12.0127 5.04331 10.5772 4.17297 9.00561 4.17297C7.58023 4.17297 6.01874 4.8764 5.91186 6.89845ZM7.66348 13.7694C7.66348 14.4048 8.14161 14.8746 8.79973 14.8746C9.48485 14.8746 9.95623 14.4048 9.95623 13.7694C9.95623 13.1112 9.48373 12.6487 8.79861 12.6487C8.14161 12.6487 7.66348 13.1112 7.66348 13.7694Z" fill="#464646"/>
 </svg></div> 
-            <input type="checkbox" class="real-checkbox" value="${params.carcas[1]}">
+            <input type="checkbox" class="real-checkbox" value="${params.carcas[1]}" data-name="${params.carcas[1]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
@@ -95,7 +95,7 @@ export function render(params) {
 <path d="M9 17.8838C6.91142 17.8838 4.90838 17.0045 3.43153 15.4394C1.95468 13.8742 1.125 11.7515 1.125 9.53802C1.125 7.32459 1.95468 5.20181 3.43153 3.63667C4.90838 2.07154 6.91142 1.19225 9 1.19225C11.0886 1.19225 13.0916 2.07154 14.5685 3.63667C16.0453 5.20181 16.875 7.32459 16.875 9.53802C16.875 11.7515 16.0453 13.8742 14.5685 15.4394C13.0916 17.0045 11.0886 17.8838 9 17.8838ZM9 19.076C11.3869 19.076 13.6761 18.0712 15.364 16.2824C17.0518 14.4937 18 12.0677 18 9.53802C18 7.00838 17.0518 4.58235 15.364 2.79362C13.6761 1.0049 11.3869 0 9 0C6.61305 0 4.32387 1.0049 2.63604 2.79362C0.948212 4.58235 0 7.00838 0 9.53802C0 12.0677 0.948212 14.4937 2.63604 16.2824C4.32387 18.0712 6.61305 19.076 9 19.076Z" fill="#464646"/>
 <path d="M5.91186 6.89845C5.91032 6.93695 5.91623 6.97538 5.92922 7.01137C5.94221 7.04737 5.96202 7.08016 5.98741 7.10775C6.0128 7.13533 6.04325 7.15711 6.07689 7.17176C6.11052 7.18641 6.14663 7.19362 6.18298 7.19293H7.11111C7.26636 7.19293 7.39011 7.05821 7.41036 6.89487C7.51161 6.11276 8.01786 5.54286 8.92011 5.54286C9.69185 5.54286 10.3984 5.9518 10.3984 6.93541C10.3984 7.69248 9.9776 8.04062 9.31273 8.56998C8.55561 9.15299 7.95598 9.83376 7.99873 10.939L8.00211 11.1977C8.00329 11.2759 8.03344 11.3505 8.08606 11.4054C8.13867 11.4602 8.20954 11.491 8.28336 11.491H9.19573C9.27032 11.491 9.34186 11.4596 9.3946 11.4037C9.44735 11.3478 9.47698 11.272 9.47698 11.1929V11.0677C9.47698 10.2117 9.7841 9.96252 10.6132 9.29605C11.2984 8.74404 12.0127 8.13123 12.0127 6.8448C12.0127 5.04331 10.5772 4.17297 9.00561 4.17297C7.58023 4.17297 6.01874 4.8764 5.91186 6.89845ZM7.66348 13.7694C7.66348 14.4048 8.14161 14.8746 8.79973 14.8746C9.48485 14.8746 9.95623 14.4048 9.95623 13.7694C9.95623 13.1112 9.48373 12.6487 8.79861 12.6487C8.14161 12.6487 7.66348 13.1112 7.66348 13.7694Z" fill="#464646"/>
 </svg></div> 
-            <input type="checkbox" class="real-checkbox" value="${params.carcas[2]}">
+            <input type="checkbox" class="real-checkbox" value="${params.carcas[2]}" data-name="${params.carcas[2]}">
             <span class="custom-checkbox"></span>
         </label>
         </li>
@@ -105,12 +105,12 @@ export function render(params) {
     <p>Материал ступеней</р>
         <ul>
             <li><label>${params.stages[0]}
-                <input type="checkbox" class="real-checkbox" value="${params.stages[0]}">
+                <input type="checkbox" class="real-checkbox" value="${params.stages[0]}" data-name="${params.stages[0]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
             <li><label>${params.stages[1]}
-                <input type="checkbox" class="real-checkbox" value="${params.stages[1]}">
+                <input type="checkbox" class="real-checkbox" value="${params.stages[1]}" data-name="${params.stages[1]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
@@ -121,25 +121,25 @@ export function render(params) {
         <ul>
             <li><label>${params.material[0]}
                 
-                <input type="checkbox" class="real-checkbox" value="${params.material[0]}">
+                <input type="checkbox" class="real-checkbox" value="${params.material[0]}" data-name="${params.material[0]}">
             <span class="custom-checkbox"></span>
             </label>
             </li>
             <li><label>${params.material[1]}
                 
-                <input type="checkbox" class="real-checkbox" value="${params.material[1]}">
+                <input type="checkbox" class="real-checkbox" value="${params.material[1]}" data-name="${params.material[1]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
             <li><label>${params.material[2]}
                 
-                <input type="checkbox" class="real-checkbox" value="${params.material[2]}">
+                <input type="checkbox" class="real-checkbox" value="${params.material[2]}" data-name="${params.material[2]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
             <li><label>${params.material[3]}
                 
-                <input type="checkbox" class="real-checkbox" value="${params.material[3]}">
+                <input type="checkbox" class="real-checkbox" value="${params.material[3]}" data-name="${params.material[3]}">
                 <span class="custom-checkbox"></span>
             </label>
             </li>
@@ -154,6 +154,22 @@ export function render(params) {
     .querySelector("#catalog-pattern")
     .querySelector(".catalog-pattern__filter")
     .insertAdjacentHTML("afterbegin", markup);
+}
+
+export function filterCheckInputs(checkboxes){
+    if(localStorage.inputValues){
+        const checkedInputValues = localStorage.getItem("inputValues");
+        const inputValues = JSON.parse(checkedInputValues);
+        
+
+        checkboxes.forEach((checkbox) => {
+            if(inputValues.find((element)=> element === checkbox.dataset.name)){
+                checkbox.checked = true;
+            }
+        })
+
+        localStorage.removeItem("inputValues");
+    }
 }
 
 export const catalogWrapper = document.querySelector(
@@ -232,43 +248,52 @@ export function populateCards(data) {
 
 export function renderCard(element, number) {
   const card = `
-        <div class="catalog-pattern__product">
-                            
-                            <div class="catalog-pattern__text">
-                                <div class="catalog-pattern__title">
-                                    <p>${element.title}</p> 
-                                </div>
-                                <div class="catalog-pattern__number">
-                                   <p>${number}.</p>
-                                </div>
-                            </div>
-                            <div class="catalog-pattern__img">
-                                <img src=${element.src}>
-                                <div class="overlay">
-                                    <a href="./catalog-item.html" class="button button--catalog">Подробнее</a>
+  <div class="catalog-pattern__card">
+      <div class="catalog-pattern__product">
+                      
+                  <div class="catalog-pattern__text">
+                          <div class="catalog-pattern__title">
+                              <p>${element.title}</p> 
+                          </div>
+                          <div class="catalog-pattern__number">
+                             <p>${element.id}.</p>
+                          </div>
+                  </div>
+                  <div class="catalog-pattern__img">
+                      <img src=${element.src}>
+                      
+                  </div>  
+      </div>
+      <div class="overlay-product">
+          
+          <a href="./catalog-item.html" class="button button--catalog"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.2828 11.2828C21.4391 11.1266 21.4391 10.8734 21.2828 10.7172L18.7373 8.17157C18.581 8.01536 18.3278 8.01536 18.1716 8.17157C18.0154 8.32778 18.0154 8.58105 18.1716 8.73726L20.4343 11L18.1716 13.2627C18.0154 13.419 18.0154 13.6722 18.1716 13.8284C18.3278 13.9846 18.581 13.9846 18.7373 13.8284L21.2828 11.2828ZM11 11.4H21V10.6H11V11.4Z" fill="white"/>
+          <path d="M0.717157 10.7172C0.560947 10.8734 0.560947 11.1266 0.717157 11.2828L3.26274 13.8284C3.41895 13.9846 3.67222 13.9846 3.82843 13.8284C3.98464 13.6722 3.98464 13.419 3.82843 13.2627L1.56569 11L3.82843 8.73726C3.98464 8.58105 3.98464 8.32778 3.82843 8.17157C3.67222 8.01536 3.41895 8.01536 3.26274 8.17157L0.717157 10.7172ZM11 10.6L1 10.6L1 11.4L11 11.4L11 10.6Z" fill="white"/>
+          <path d="M11.2828 0.717157C11.1266 0.560947 10.8734 0.560947 10.7172 0.717157L8.17157 3.26274C8.01536 3.41895 8.01536 3.67222 8.17157 3.82843C8.32778 3.98464 8.58105 3.98464 8.73726 3.82843L11 1.56569L13.2627 3.82843C13.419 3.98464 13.6722 3.98464 13.8284 3.82843C13.9846 3.67222 13.9846 3.41895 13.8284 3.26274L11.2828 0.717157ZM11.4 11L11.4 1L10.6 1L10.6 11L11.4 11Z" fill="white"/>
+          <path d="M10.7172 21.2828C10.8734 21.4391 11.1266 21.4391 11.2828 21.2828L13.8284 18.7373C13.9846 18.581 13.9846 18.3278 13.8284 18.1716C13.6722 18.0154 13.419 18.0154 13.2627 18.1716L11 20.4343L8.73726 18.1716C8.58105 18.0154 8.32778 18.0154 8.17157 18.1716C8.01536 18.3278 8.01536 18.581 8.17157 18.7373L10.7172 21.2828ZM10.6 11L10.6 21L11.4 21L11.4 11L10.6 11Z" fill="white"/>
+          </svg>
+          <p>Подробнее</p></a>
+          <div class="catalog-pattern__info">
+              <div class="catalog-pattern__price">
+                  <p><span>Цена:</span>${element.price}</p>
+              </div>
+              <div class="catalog-pattern__label">
+                  <p>Арт: <span>${element.art}</span></p>
+              </div>
+              <div class="catalog-pattern__chars">
+                  <ul>
+                      <li><span>Вид:</span>${element.kind}</li>
+                      <li><span>Тип:</span>${element.type}</li>
+                      <li><span>Каркас:</span>${element.carcas}</li>
+                      <li><span>Ступени:</span>${element.stages}</li>
+                      <li><span>Перила:</span>${element.material}</li>
+                  </ul>
+              </div>
+              <a href="./catalog-item.html" class="overlay-product-link">Заказать расчет?</a>
+      </div>
 
-                                    <div class="catalog-pattern__info">
-                                <div class="catalog-pattern__price">
-                                    <p><span>Цена:</span>${element.price}</p>
-                                </div>
-                                <div class="catalog-pattern__label">
-                                    <p>Арт: <span>${element.art}</span></p>
-                                </div>
-                                <div class="catalog-pattern__chars">
-                                    <ul>
-                                        <li><span>Вид:</span>${element.kind}</li>
-                                        <li><span>Тип:</span>${element.type}</li>
-                                        <li><span>Каркас:</span>${element.carcas}</li>
-                                        <li><span>Ступени:</span>${element.stages}</li>
-                                        <li><span>Перила:</span>${element.material}</li>
-                                    </ul>
-                                </div>   
-                            </div>
-                                </div>  
-                            </div>
-                           
-                            
-                        </div>`;
+  </div>
+ `;
   return card;
 }
 
