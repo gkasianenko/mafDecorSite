@@ -1,10 +1,11 @@
 //Base
+@import "./base/vars.scss";
 @import "./base/base.scss";
 @import "./base/media.scss";
-@import "./base/vars.scss";
 @import "./base/mixins.scss";
 
 //Blocks
+@import "./blocks/mobile-menu.scss";
 @import "./blocks/header-nav.scss";
 @import "./blocks/buttons.scss";
 @import "./blocks/titles.scss";

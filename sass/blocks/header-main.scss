@@ -16,13 +16,18 @@
 
 #main .header-nav__wrapper {
   width: 100%;
-  padding-top: 15px;
+  padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 75px;
   padding-right: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1330px){
+     padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 #main #header.header-scroll-active {
@@ -50,8 +55,7 @@
 }
 
 .header-nav__menu {
-  padding-left: 32px;
-  padding-right: 32px;
+  
   display: flex;
   align-items: center;
 
@@ -83,14 +87,22 @@
     width: 40%;
     transition: 0.5s;
   }
+
+  @media (max-width: $mobile){
+    display: none;
+  }
 }
 
 .header-nav__logo {
-  width: 230px;
+  width: 200px;
 }
 
 .header-nav__right {
   display: flex;
+
+  @media (max-width: $mobile){
+    display: none;
+  }
 }
 
 .header-nav__right > * + * {

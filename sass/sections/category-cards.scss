@@ -1,4 +1,13 @@
 #main .category-cards {
   padding-bottom: 80px;
   margin-top: -260px;
+
+  @media (max-width: $mobile) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: $mobile-small) {
+    margin-top: -70px;
+    padding-bottom: 35px;
+  }
 }

@@ -1,10 +1,29 @@
 #main .text {
   padding-top: 105px;
   padding-bottom: 105px;
+
+  @media (max-width: $mobile-small) {
+    padding-top: 55px;
+    padding-bottom: 45px;
+  }
 }
 
 #main .text .text__content p {
   font-size: 18px;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobile-xs) {
+    font-size: 12px;
+  }
+}
+
+#main .text .text__content p:nth-child(2) {
+  @media (max-width: $mobile-small) {
+    display: none;
+  }
 }
 
 #main .text .text__content p:not(:first-child) {

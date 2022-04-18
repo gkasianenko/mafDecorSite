@@ -10,6 +10,16 @@
   display: flex;
   justify-content: flex-end;
   font-weight: 300;
+
+  
+
+  @media (max-width: 1150px){
+    font-size: 14px;
+  }
+
+  @media (max-width: 990px){
+    font-size: 12px;
+  }
 }
 
 #header.header-scroll-active {
@@ -28,7 +38,7 @@
 }
 
 .header-nav__menu {
-  min-width: 626px;
+  // min-width: 626px;
   padding-left: 32px;
   padding-right: 32px;
   display: flex;
@@ -62,10 +72,40 @@
     width: 40%;
     transition: 0.5s;
   }
+
+  @media (max-width: 1470px){
+
+    padding-left: 0;
+
+    ul li{
+      display: none;
+
+      &:nth-child(1){
+        display: block;
+      }
+
+      &:nth-child(2){
+        display: block;
+      }
+
+      &:nth-child(3){
+        display: block;
+      }
+    }
+
+    
+  }
+
+  @media (max-width: $mobile){
+    display: none;
+  }
 }
+
+
 
 .header-nav__logo {
   width: 230px;
+  flex-shrink: 0;
 
   & img:nth-child(1) {
     display: block;
@@ -91,12 +131,60 @@
 }
 
 .header-nav__icon {
-  margin-bottom: 5px;
+  position: relative;
+  height:20px;
   cursor: pointer;
 }
 
+.header-nav__icon:hover{
+  .header-nav__dropdown{
+    opacity: 1;
+  visibility:visible;
+  }
+}
+
+.header-nav__dropdown{
+  opacity: 0;
+  visibility: hidden;
+
+  padding:15px;
+  position: absolute;
+  top:17px;
+  left:0;
+
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25);
+  
+  background-color: #fff;
+  color: #000;
+
+  & a{
+    position: relative;
+    color: #000 !important;
+
+  }
+
+  & a::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    
+    background-color: #f37833;
+    transition: 0.5s;
+}
+}
+
+.header-nav__dropdown a:hover::before{
+  width: 40%;
+}
+
+.header-nav__dropdown ul > * + *{
+  margin-top: 10px;
+}
+
 .header-nav__right {
-  min-width: 440px;
+  // min-width: 440px;
   display: flex;
   align-items: center;
 }
@@ -147,4 +235,20 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.header__burger-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 63px;
+  height: 48px;
+
+  background-color: #F37833;
+  cursor: pointer;
+
+  @media (max-width: $mobile) {
+    display: flex;
+  }
 }
