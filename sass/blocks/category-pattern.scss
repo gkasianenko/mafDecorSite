@@ -193,7 +193,7 @@
 }
 
 .category-pattern__button {
-  display: flex;
+  display: none;
   align-items: center;
   max-width: 260px;
 
@@ -205,6 +205,10 @@
   background: #00365b;
 
   cursor: pointer;
+
+  @media (max-width: $mobile) {
+    display: flex;
+  }
 }
 
 .category-pattern__button > * + * {
