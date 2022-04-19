@@ -18,6 +18,7 @@ body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
+  font-weight: 300;
   color: #000000; }
 
 body > * {
@@ -74,6 +75,9 @@ legend {
   padding-left: 15px;
   padding-right: 15px; }
 
+@media (min-width: 2000px) {
+  .container--large {
+    width: 1750px; } }
 /* Utility */
 .none {
   display: none !important; }

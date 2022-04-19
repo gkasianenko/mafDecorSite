@@ -1,0 +1,121 @@
+#preload .leaders-filter {
+  padding-bottom: 120px;
+  text-align: center; }
+  #preload .leaders-filter h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px; }
+
+#preload form#ledders-filter {
+  position: relative; }
+
+#preload .leaders-filter__types h2 {
+  margin-bottom: 102px; }
+
+#preload .leaders-filter__types-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+#preload .leaders-filter__item .leaders-filter__img {
+  border: 0.5px solid #d4d4d4; }
+
+#preload .leaders-filter__item .leaders-filter__img:hover {
+  border: 0.5px solid #000; }
+
+#preload .leaders-filter__item {
+  position: relative;
+  width: 32%; }
+
+#preload .leaders-filter__item label {
+  display: block;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.1; }
+
+#preload .leaders-filter__item input {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+#preload .leaders-filter__item label > * + * {
+  margin-top: 18px; }
+
+#preload .leaders-filter__item label input,
+#preload .leaders-filter__item label span {
+  margin-top: unset; }
+
+#preload .leaders-filter__content > * + * {
+  margin-top: 90px; }
+
+#preload .leaders-filter__categories h2 {
+  margin-bottom: 40px; }
+
+#preload .leaders-filter__categories-row {
+  display: flex;
+  justify-content: space-between; }
+
+#preload .leaders-filter__categories-row .leaders-filter__item {
+  width: 15%;
+  height: 170px; }
+
+#preload .leaders-filter__carcases h2 {
+  margin-bottom: 40px; }
+
+#preload .leaders-filter__carcases-row {
+  display: flex;
+  justify-content: space-between; }
+
+#preload .leaders-filter__carcases-row .leaders-filter__item {
+  width: 32%;
+  height: 366px; }
+
+#preload .leaders-filter button.button--catalog {
+  position: absolute;
+  top: 465px;
+  right: -70px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s; }
+
+#preload .leaders-filter button.button--catalog > * + * {
+  margin-left: 35px; }
+
+#preload .leaders-filter .real-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -1; }
+
+.leaders-filter .custom-checkbox {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  display: block; }
+
+.leaders-filter .custom-checkbox--small {
+  top: 11px;
+  right: 11px; }
+
+.leaders-filter .custom-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 19px;
+  background-image: url(../img/preload/form/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in; }
+
+.real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, -50%) scale(1); }
+
+/*# sourceMappingURL=leaders-filter.css.map */

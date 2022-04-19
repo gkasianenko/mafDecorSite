@@ -1,84 +1,69 @@
-#header {
-  position: fixed;
-  top: o;
-  width: 100%;
-  z-index: 999;
-  background-color: #fff; }
+/*
+Error: Undefined variable: "$mobile".
+        on line 99 of /home/german/projects/mafdecorsite/mafDecorSite/sass/blocks/header-nav.scss
 
-.header-nav {
-  display: flex;
-  justify-content: flex-end;
-  font-weight: 500; }
+94:     }
+95: 
+96:     
+97:   }
+98: 
+99:   @media (max-width: $mobile){
+100:     display: none;
+101:   }
+102: }
+103: 
+104: 
 
-#preload .header-nav__wrapper, #category-ledders .header-nav__wrapper {
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 25px;
-  padding-left: 75px;
-  padding-right: 150px;
-  display: flex;
-  align-items: center; }
-
-.header-nav__wrapper > * + * {
-  margin-left: 31px; }
-
-.header-nav__menu {
-  padding-left: 32px;
-  padding-right: 32px;
-  display: flex;
-  align-items: center;
-  min-height: 41px;
-  border-right: 1px solid #d4d4d4; }
-  .header-nav__menu ul {
-    display: flex; }
-  .header-nav__menu a {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: black; }
-  .header-nav__menu a::before {
-    content: "";
-    height: 2px;
-    width: 0%;
-    position: absolute;
-    bottom: -5px;
-    z-index: -1;
-    background-color: #f37833;
-    transition: 0.5s; }
-  .header-nav__menu a:hover::before {
-    width: 40%;
-    transition: 0.5s; }
-
-.header-nav__logo {
-  width: 230px; }
-
-.header-nav__right {
-  display: flex; }
-
-.header-nav__right > * + * {
-  margin-left: 32px; }
-
-.header-nav__contacts {
-  display: flex;
-  align-items: center; }
-  .header-nav__contacts a {
-    color: black; }
-
-.header-nav__contacts > * + * {
-  margin-left: 32px; }
-
-.header-nav__menu > * + * {
-  margin-left: 38px; }
-
-.header-nav__menu ul > * + * {
-  margin-left: 38px; }
-
-.nav-menu__icon {
-  cursor: pointer; }
-  .nav-menu__icon svg {
-    margin-bottom: 3px; }
-
-#preload .header-nav__wrapper, #category-ledders .header-nav__wrapper {
-  width: auto; }
-
-/*# sourceMappingURL=header-nav.css.map */
+Backtrace:
+/home/german/projects/mafdecorsite/mafDecorSite/sass/blocks/header-nav.scss:99
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:553:in `map'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:553:in `run_interp_no_strip'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:560:in `run_interp'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:525:in `visit_media'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+/usr/share/koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+/usr/share/koala/bin/sass:22:in `load'
+/usr/share/koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$mobile\".\A         on line 99 of /home/german/projects/mafdecorsite/mafDecorSite/sass/blocks/header-nav.scss\A \A 94:     }\A 95: \A 96:     \A 97:   }\A 98: \A 99:   @media (max-width: $mobile){\A 100:     display: none;\A 101:   }\A 102: }\A 103: \A 104: "; }

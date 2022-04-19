@@ -20,6 +20,14 @@ body {
   color: #000000;
 }
 
+body #preload{
+  margin-left: 128px;
+
+  @media (max-width: $mobile) {
+    margin-left: auto;
+  }
+}
+
 body > * {
   flex-shrink: 0; /* sticky footer */
 }

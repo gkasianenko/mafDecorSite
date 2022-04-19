@@ -11,6 +11,10 @@
 }
 .benefits__content > * + *{
 margin-top: 92px;
+
+@media (max-width: $mobile) {
+    margin-top: 60px;
+}
 }
 
 .benefits__top, .benefits__bottom{
@@ -37,4 +41,8 @@ margin-top: 18px;
 
 #preload .benefits{
     padding-bottom: 196px;
+
+@media (max-width: $mobile) {
+    padding-bottom: 100px;
+}
 }

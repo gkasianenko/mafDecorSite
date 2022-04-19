@@ -16,6 +16,10 @@
 #preload .leaders-filter__types {
   & h2 {
     margin-bottom: 102px;
+
+    @media(max-width: $mobile){
+      margin-bottom: 70px;
+    }
   }
 }
 
@@ -23,6 +27,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: $mobile) {
+    align-items: flex-start;
+  }
 }
 
 #preload .leaders-filter__item .leaders-filter__img {
@@ -36,6 +44,11 @@
 #preload .leaders-filter__item {
   position: relative;
   width: 32%;
+
+  @media (max-width: $mobile) {
+    width: 30%;
+    
+  }
 }
 
 #preload .leaders-filter__item label {
@@ -43,6 +56,10 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 1.1;
+
+  @media (max-width: $mobile) {
+    font-size: 20px;
+  }
 }
 
 #preload .leaders-filter__item input {
@@ -73,11 +90,20 @@
 #preload .leaders-filter__categories-row {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
 }
 
 #preload .leaders-filter__categories-row .leaders-filter__item {
   width: 15%;
   height: 170px;
+
+  @media(max-width: $mobile){
+    width: 30%;
+    height: 240px;
+  }
 }
 
 #preload .leaders-filter__carcases {
@@ -94,6 +120,10 @@
 #preload .leaders-filter__carcases-row .leaders-filter__item {
   width: 32%;
   height: 366px;
+
+  @media (max-width: $mobile) {
+    height: 240px;
+  }
 }
 
 #preload .leaders-filter button.button--catalog {
@@ -104,6 +134,11 @@
   align-items: center;
   cursor: pointer;
   transition: all 0.2s;
+
+  @media(max-width: $mobile){
+    top: 244px;
+    right: 130px;
+  }
 }
 
 #preload .leaders-filter button.button--catalog > * + * {

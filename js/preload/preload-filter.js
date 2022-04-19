@@ -18,7 +18,14 @@ const forwardButton = document.querySelector(".button--catalog");
 const localData = [];
 
 
+//Mobmenu vars
+const mobMenuButton = document.querySelector(".header__burger-menu");
+const mobMenu = document.querySelector(".mobile-menu");
+const mobMenuClose = document.querySelector(".mobile-menu__close");
 
+//Mobmenu funcs
+mobMenuButton.addEventListener("click", openMobMenu);
+mobMenuClose.addEventListener("click", closeMobMenu);
 
 
 uploadButton.addEventListener("click", initUpload);
@@ -115,4 +122,13 @@ function saveParams() {
   console.log(inputValues)
 
   localStorage.setItem("inputValues", JSON.stringify(inputValues));
+}
+
+
+function openMobMenu() {
+  mobMenu.classList.add("active");
+}
+
+function closeMobMenu() {
+  mobMenu.classList.remove("active");
 }

@@ -1,0 +1,10 @@
+#preload .header-text {
+  padding-top: 160px;
+  padding-bottom: 90px; }
+  #preload .header-text h1 {
+    text-align: center;
+    margin-bottom: 70px; }
+  #preload .header-text .text__content p:not(:first-child) {
+    width: 80%; }
+
+/*# sourceMappingURL=header-text.css.map */

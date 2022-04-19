@@ -4,6 +4,14 @@ const uploadButton = document.querySelector(".contacts-form__file");
 
 const imgDiv = document.querySelector('.product__main-photo');
 
+const mobMenuButton = document.querySelector(".header__burger-menu");
+const mobMenu = document.querySelector(".mobile-menu");
+const mobMenuClose = document.querySelector(".mobile-menu__close");
+
+mobMenuButton.addEventListener("click", openMobMenu);
+mobMenuClose.addEventListener("click", closeMobMenu);
+
+
 imgDiv.addEventListener("click", changeImg)
 
 uploadButton.addEventListener("click", initUpload);
@@ -42,3 +50,12 @@ function changeImg() {
 
 
 }
+
+function openMobMenu() {
+    mobMenu.classList.add("active");
+  }
+  
+  function closeMobMenu() {
+    mobMenu.classList.remove("active");
+  }
+  

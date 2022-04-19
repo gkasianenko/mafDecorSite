@@ -1,0 +1,22 @@
+.benefits-icons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.9; }
+
+.benefits__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  line-height: 2; }
+  .benefits__icon img {
+    width: 54px;
+    height: 54px; }
+
+#product .benefits__icon span {
+  color: orange; }
+
+/*# sourceMappingURL=benefits-icons.css.map */

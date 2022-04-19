@@ -1,0 +1,15 @@
+#catalog-item {
+  margin-left: 128px; }
+
+#catalog-item .header-nav__wrapper {
+  padding-right: 150px; }
+
+#catalog-item .product__slider img {
+  width: 108px;
+  height: 108px; }
+
+#catalog-item .product__main-photo {
+  width: 588px;
+  height: 588px; }
+
+/*# sourceMappingURL=catalog-item.css.map */

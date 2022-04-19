@@ -1,0 +1,91 @@
+@charset "UTF-8";
+#sidebar {
+  width: 128px;
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 9999;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #fff;
+  /* Black */
+  overflow: hidden;
+  /* Disable horizontal scroll */ }
+
+#sidebar .sidebar__content {
+  display: flex;
+  flex-direction: column; }
+
+#sidebar .sidebar__content .sidebar__logo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 128px;
+  height: 128px;
+  background-repeat: no-repeat;
+  background-size: 78px 78px;
+  background-image: url(../img/sidebar/logo-blue.png);
+  background-position: center; }
+  #sidebar .sidebar__content .sidebar__logo:hover {
+    background-image: url(../img/sidebar/logo-white.png);
+    background-color: #f37833; }
+
+#sidebar .sidebar-menu {
+  display: flex;
+  flex-direction: column; }
+
+#sidebar .sidebar-menu .sidebar-menu__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 128px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1.1;
+  transition: transform 0.3s; }
+
+#sidebar .sidebar-menu .sidebar-menu__item.new::after {
+  position: absolute;
+  padding: 3px 7px;
+  content: "Новинки";
+  top: 0;
+  right: 0;
+  background-color: #f5c8fd;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1; }
+
+#sidebar .sidebar-menu .sidebar-menu__item.discount::after {
+  position: absolute;
+  padding: 3px 7px;
+  content: "Акция";
+  top: 0;
+  right: 0;
+  background-color: #c8dafd;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1; }
+
+#sidebar .sidebar-menu .sidebar-menu__item a > * + * {
+  margin-top: 8px; }
+
+#sidebar .sidebar-menu .sidebar-menu__item img {
+  margin-left: auto;
+  margin-right: auto; }
+
+#sidebar .sidebar-menu .sidebar-menu__item:hover {
+  transform: scale(0.9);
+  transition: transform 0.3s; }
+
+#sidebar .sidebar-menu .sidebar-menu__item a {
+  color: #000; }
+
+/*# sourceMappingURL=sidebar.css.map */

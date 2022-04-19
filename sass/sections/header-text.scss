@@ -5,9 +5,19 @@
     & h1{
         text-align: center;
         margin-bottom: 70px;
+
+        @media (max-width: $mobile){
+            font-size: 29px;
+        }
     }
 
     & .text__content p:not(:first-child) {
         width: 80%;
       }
+
+    
+    @media(max-width: $mobile){
+        padding-top: 180px;
+        padding-bottom: 70px;
+    }
 }
