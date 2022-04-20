@@ -20,8 +20,14 @@ body {
   color: #000000;
 }
 
-body #preload{
+body#preload{
   margin-left: 128px;
+
+  footer{
+    margin-left: -128px;
+
+    
+  }
 
   @media (max-width: $mobile) {
     margin-left: auto;
@@ -86,7 +92,7 @@ legend {
 /* Grid styles */
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;

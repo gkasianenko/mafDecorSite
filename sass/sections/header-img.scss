@@ -21,20 +21,18 @@
   }
 
   @media (max-width: $tablet) {
-    height: 68%;
+    height: 70%;
   }
 
   @media (max-width: $mobile) {
-    height: 44%;
+    height: 50%;
   }
 
   @media (max-width: $mobile-small) {
     height: 35%;
   }
 
-  @media (max-width: $mobile-xs) {
-    height: 31%;
-  }
+  
 }
 
 #main .header-img::after {
@@ -50,20 +48,18 @@
   left: 0;
 
   @media (max-width: $tablet) {
-    bottom: 298px;
+    bottom: 225px;
   }
 
   @media (max-width: $mobile) {
-    bottom: 504px;
+    bottom: 375px;
   }
 
   @media (max-width: $mobile-small) {
-    bottom: 585px;
+    bottom: 490px;
   }
 
-  @media (max-width: $mobile-xs) {
-    bottom: 620px;
-  }
+  
 }
 
 #main .header-img__title {

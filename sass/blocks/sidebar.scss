@@ -1,13 +1,14 @@
 #sidebar {
   width: 128px;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
+   /* Full-height: remove this if you want "auto" height */
   /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 9999; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
+  max-height: 2300px;
+  position: absolute;
+  top:0;
+  left:0;
   background-color: #fff; /* Black */
   overflow: hidden; /* Disable horizontal scroll */
+  z-index:999;
 
   @media (max-width: $mobile) {
     display: none;

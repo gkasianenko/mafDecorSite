@@ -2,6 +2,10 @@
   padding-bottom: 80px;
   margin-top: -260px;
 
+  @media(max-width: $tablet){
+    margin-top: -150px;
+  }
+
   @media (max-width: $mobile) {
     margin-top: -100px;
   }
