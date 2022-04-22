@@ -40,6 +40,10 @@
   padding-right: 20px;
   background: #f9f9f9;
   width: 270px;
+
+  @media (max-width: 1000px) {
+    width: 240px;
+  }
 }
 
 #catalog-pattern .show-arrow.show {
@@ -160,6 +164,10 @@
   display: flex;
   flex-direction: column;
   width: 270px;
+
+  @media (max-width: 1000px) {
+    width: 240px;
+  }
 }
 
 #catalog-pattern .catalog-pattern__img {
