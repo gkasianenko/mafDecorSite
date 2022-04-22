@@ -1,23 +1,47 @@
-#preload .header-text{
-    padding-top: 160px;
-    padding-bottom: 90px;
-    
-    & h1{
-        text-align: center;
-        margin-bottom: 70px;
+#preload .header-text {
+  padding-top: 160px;
+  padding-bottom: 90px;
 
-        @media (max-width: $mobile){
-            font-size: 29px;
-        }
+  & h1 {
+    text-align: center;
+    margin-bottom: 70px;
+
+    @media (max-width: $tablet) {
+      font-size: 20px;
     }
 
-    & .text__content p:not(:first-child) {
-        width: 80%;
-      }
+    @media (max-width: $mobile-small) {
+      font-size: 18px;
+    }
 
     
-    @media(max-width: $mobile){
-        padding-top: 180px;
-        padding-bottom: 70px;
+  }
+
+  & .text__content p:not(:first-child) {
+    width: 80%;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 180px;
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: $mobile-small) {
+      padding-top: 160px;
+    padding-bottom: 40px;
+  }
+}
+
+#preload .text__content {
+  @media (max-width: $tablet) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $mobile-small) {
+    font-size: 14px;
+
+    & p:not(:first-child) {
+      display: none;
     }
+  }
 }

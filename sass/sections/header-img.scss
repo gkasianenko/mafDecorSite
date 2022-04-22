@@ -31,8 +31,6 @@
   @media (max-width: $mobile-small) {
     height: 35%;
   }
-
-  
 }
 
 #main .header-img::after {
@@ -48,18 +46,16 @@
   left: 0;
 
   @media (max-width: $tablet) {
-    bottom: 225px;
+    bottom: 255px;
   }
 
   @media (max-width: $mobile) {
-    bottom: 375px;
+    bottom: 480px;
   }
 
   @media (max-width: $mobile-small) {
-    bottom: 490px;
+    bottom: 615px;
   }
-
-  
 }
 
 #main .header-img__title {

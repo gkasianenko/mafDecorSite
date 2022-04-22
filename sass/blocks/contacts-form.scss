@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   padding-bottom: 30px;
   padding-top: 78px;
+
+  @media (max-width: $mobile-small) {
+    padding-top: 40px;
+  }
 }
 
 .contacts-form__wrapper {
@@ -18,17 +22,17 @@
     font-weight: 300;
     font-size: 24px;
     line-height: 1.5;
+
+    @media (max-width: $mobile-small) {
+      font-size: 16px;
+    }
   }
-
-  
 }
 
-.contacts-form__right{
+.contacts-form__right {
   @media (max-width: $mobile) {
-    
-    display:none;
-  
-}
+    display: none;
+  }
 }
 
 .contacts-form__left {
@@ -113,6 +117,10 @@
     font-size: 14px;
     line-height: 1.1;
   }
+
+  @media (max-width: $mobile-small) {
+    width: 24.5%;
+  }
 }
 
 .contacts-form__left
@@ -133,6 +141,10 @@
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
+
+  @media (max-width: $mobile-small) {
+    font-size: 13px;
+  }
 }
 
 .contacts-form__left .contacts-form__stages .contacts-form__stages-item input {
@@ -144,8 +156,12 @@
 .contacts-form__left .contacts-form__left-bottom {
   width: 484px;
 
-  @media(max-width: $mobile){
+  @media (max-width: $mobile) {
     width: 85%;
+  }
+
+  @media (max-width: $mobile-small) {
+    width: 100%;
   }
 }
 
@@ -169,6 +185,10 @@
 
     color: #d4d4d4;
   }
+
+  @media (max-width: $mobile-small) {
+    padding: 23px 23px;
+  }
 }
 
 .contacts-form__left .contacts-form__file p {
@@ -180,12 +200,12 @@
 .contacts-form__left .contacts-form__button {
   display: flex;
   justify-content: flex-end;
-  height: 43px;
 
-  @media(max-width: $mobile){
-    button{font-size: 18px;
-    padding: 15px 30px;
-    height: 50px;
+  @media (max-width: $mobile) {
+    button {
+      font-size: 18px;
+      padding: 15px 30px;
+      height: 50px;
     }
   }
 }

@@ -17,8 +17,13 @@
   & h2 {
     margin-bottom: 102px;
 
-    @media(max-width: $mobile){
+    @media (max-width: $mobile) {
       margin-bottom: 70px;
+    }
+
+    @media (max-width: $mobile-small) {
+      font-size: 18px;
+      margin-bottom: 26px;
     }
   }
 }
@@ -47,7 +52,6 @@
 
   @media (max-width: $mobile) {
     width: 30%;
-    
   }
 }
 
@@ -56,9 +60,14 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 1.1;
+  word-break: break-word;
 
   @media (max-width: $mobile) {
     font-size: 20px;
+  }
+
+  @media (max-width: $mobile-small) {
+    font-size: 14px;
   }
 }
 
@@ -79,11 +88,19 @@
 
 #preload .leaders-filter__content > * + * {
   margin-top: 90px;
+
+  @media (max-width: $mobile-small) {
+    margin-top: 70px;
+  }
 }
 
 #preload .leaders-filter__categories {
   & h2 {
     margin-bottom: 40px;
+
+    @media (max-width: $mobile-small) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -98,17 +115,25 @@
 
 #preload .leaders-filter__categories-row .leaders-filter__item {
   width: 15%;
-  height: 170px;
+  
 
-  @media(max-width: $mobile){
+  @media (max-width: $mobile) {
     width: 30%;
     height: 240px;
+  }
+
+  @media (max-width: $mobile-small) {
+    height: 180px;
   }
 }
 
 #preload .leaders-filter__carcases {
   & h2 {
     margin-bottom: 40px;
+
+    @media (max-width: $mobile-small) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -119,25 +144,49 @@
 
 #preload .leaders-filter__carcases-row .leaders-filter__item {
   width: 32%;
-  height: 366px;
+  
 
   @media (max-width: $mobile) {
     height: 240px;
+  }
+
+  @media (max-width: $mobile-small) {
+    height: 180px;
   }
 }
 
 #preload .leaders-filter button.button--catalog {
   position: absolute;
   top: 465px;
-  right: -70px;
+  right: -50px;
   display: flex;
   align-items: center;
   cursor: pointer;
   transition: all 0.2s;
 
-  @media(max-width: $mobile){
+  @media (max-width: $tablet) {
+    top: 375px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 18px 93px;
     top: 244px;
-    right: 130px;
+    right: 145px;
+
+    svg {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-small) {
+    top: 153px;
+    right: 40px;
+  }
+
+  @media (max-width: 395px) {
+    padding: 10px 55px;
+    top: 145px;
+    right: 43px;
   }
 }
 

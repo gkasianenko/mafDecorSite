@@ -17,7 +17,6 @@ const forwardButton = document.querySelector(".button--catalog");
 
 const localData = [];
 
-
 //Mobmenu vars
 const mobMenuButton = document.querySelector(".header__burger-menu");
 const mobMenu = document.querySelector(".mobile-menu");
@@ -26,7 +25,6 @@ const mobMenuClose = document.querySelector(".mobile-menu__close");
 //Mobmenu funcs
 mobMenuButton.addEventListener("click", openMobMenu);
 mobMenuClose.addEventListener("click", closeMobMenu);
-
 
 uploadButton.addEventListener("click", initUpload);
 
@@ -49,18 +47,62 @@ function setUpLS() {
 function positionCatalogButton(event) {
   event.stopPropagation();
 
+  const windowWidth = window.innerWidth;
+
+  if (!isChecked(kindRow)) {
+    if (windowWidth > 1199) {
+      catalogButton.style.top = "465px";
+    } else if (910 <= windowWidth && windowWidth <= 1199) {
+      catalogButton.style.top = "375px";
+    } else if (600 <= windowWidth && windowWidth <= 909) {
+      catalogButton.style.top = "244px";
+    } else if (395 <= windowWidth && windowWidth <= 599) {
+      catalogButton.style.top = "153px";
+    } else if (windowWidth <= 394) {
+      catalogButton.style.top = "145px";
+    }
+  }
+
   if (isChecked(kindRow)) {
-    catalogButton.style.top = "465px";
-  } else if (!isChecked(kindRow)) {
-    catalogButton.style.top = "465px";
+    if (windowWidth > 1199) {
+      catalogButton.style.top = "465px";
+    } else if (910 <= windowWidth && windowWidth <= 1199) {
+      catalogButton.style.top = "375px";
+    } else if (600 <= windowWidth && windowWidth <= 909) {
+      catalogButton.style.top = "244px";
+    } else if (395 <= windowWidth && windowWidth <= 599) {
+      catalogButton.style.top = "153px";
+    } else if (windowWidth <= 394) {
+      catalogButton.style.top = "145px";
+    }
   }
 
   if (isChecked(kindRow) && isChecked(typeRow)) {
-    catalogButton.style.top = "845px";
+    if (windowWidth > 1199) {
+      catalogButton.style.top = "845px";
+    } else if (910 <= windowWidth && windowWidth <= 1199) {
+      catalogButton.style.top = "720px";
+    } else if (600 <= windowWidth && windowWidth <= 909) {
+      catalogButton.style.top = "875px";
+    } else if (395 <= windowWidth && windowWidth <= 599) {
+      catalogButton.style.top = "645px";
+    } else if (windowWidth <= 394) {
+      catalogButton.style.top = "625px";
+    }
   }
 
   if (isChecked(kindRow) && isChecked(typeRow) && isChecked(carcasTypeRow)) {
-    catalogButton.style.top = "1370px";
+    if (windowWidth > 1199) {
+      catalogButton.style.top = "1410px";
+    } else if (910 <= windowWidth && windowWidth <= 1199) {
+      catalogButton.style.top = "1205px";
+    } else if (600 <= windowWidth && windowWidth <= 909) {
+      catalogButton.style.top = "1280px";
+    } else if (395 <= windowWidth && windowWidth <= 599) {
+      catalogButton.style.top = "975px";
+    } else if (windowWidth <= 394) {
+      catalogButton.style.top = "960px";
+    }
   }
 
   selectedItemStyle(event.target);
@@ -119,11 +161,10 @@ function saveParams() {
     ...getInputData(carcasTypeRow),
   ];
 
-  console.log(inputValues)
+  console.log(inputValues);
 
   localStorage.setItem("inputValues", JSON.stringify(inputValues));
 }
-
 
 function openMobMenu() {
   mobMenu.classList.add("active");
