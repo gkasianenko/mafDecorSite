@@ -214,3 +214,12 @@
 .category-pattern__button > * + * {
   margin-left: 13px;
 }
+
+.filter-show{
+  display: flex;
+  align-items: center;
+}
+
+.filter-show > * + * {
+  margin-left: 10px;
+}

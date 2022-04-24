@@ -53,6 +53,11 @@
 #category-ledders .text {
   padding-top: 94px;
   padding-bottom: 200px;
+
+  @media (max-width: $mobile-small) {
+    padding-top: 68px;
+    padding-bottom: 30px;
+  }
 }
 
 #catalog-item .text {

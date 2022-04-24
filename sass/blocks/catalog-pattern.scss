@@ -1,5 +1,10 @@
 #category-ledders #catalog-pattern {
   padding-top: 90px;
+  padding-bottom: 90px;
+
+  @media (max-width: $mobile-small) {
+    padding-bottom: 50px;
+  }
 }
 
 #catalog-pattern .catalog-pattern__navigation {
@@ -60,6 +65,8 @@
 .catalog-pattern__inner.show {
   max-height: 1500px;
   transition: all 0.4s;
+
+  
 }
 
 .catalog-pattern__inner > * + * {
@@ -136,6 +143,7 @@
   margin-left: -10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #catalog-pattern .catalog-pattern__products-wrapper > * + * {
@@ -155,6 +163,10 @@
 
 #catalog-pattern .catalog-pattern__more {
   cursor: pointer;
+
+  @media (max-width: $mobile-small) {
+    font-size: 14px;
+  }
 }
 
 #catalog-pattern .catalog-pattern__card {
@@ -458,6 +470,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  height: 610px;
 
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
@@ -479,6 +492,10 @@
   padding: 2px;
 
   background-color: #f37833;
+
+  @media (max-width: $mobile-small){
+    width: 68px;
+  }
 }
 
 .catalog-pattern__icon-content {
@@ -493,6 +510,10 @@
   & p {
     color: #fff;
     font-size: 12px;
+
+    @media (max-width: $mobile-small){
+      font-size: 8px;
+    }
   }
 }
 
@@ -510,8 +531,14 @@
   margin-top: 0;
 }
 
+.catalog-pattern__mobile-catalog-btn .catalog-pattern__filter-wrapper {
+  padding-right: 0;
+}
+
 .catalog-pattern__mobile-catalog-btn .catalog-pattern__show {
   position: relative;
+
+  margin-right: 20px;
 }
 
 .catalog-pattern__close-btn {
@@ -520,4 +547,10 @@
   top: 2px;
 
   cursor: pointer;
+}
+
+.catalog-pattern__mobile-catalog-btn .catalog-pattern__inner.show {
+  height: 500px;
+  overflow-y: scroll;
+  padding-right: 5px;
 }

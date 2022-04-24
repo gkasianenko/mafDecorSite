@@ -45,20 +45,33 @@ export default async function (state) {
 
   view.showMoreButton.addEventListener("click", expandProducts);
 
-  //Прослушка кнопки сворачивания фильтра
+  //Прослушка кнопки закрытия моб фильтра
+
+  view.mobFilterIcon.addEventListener("click", view.showMobFilter);
+
+  const mobFilterCloseIcon = document.querySelector(
+    ".catalog-pattern__close-btn"
+  );
+  mobFilterCloseIcon.addEventListener("click", view.closeMobFilter);
+
+  //Прослушка кнопки вертикального сворачивания фильтра
   const hideFilterButton = document.querySelectorAll(
     ".catalog-pattern__show .filter-show"
   );
-
   const filterContent = document.querySelectorAll(".catalog-pattern__inner");
 
   hideFilterButton.forEach((btn) => {
     btn.addEventListener("click", function () {
+      let showed = false;
+
       filterContent.forEach((el) => {
         el.classList.toggle("show");
+        if (el.classList.contains("show")) {
+          showed = true;
+        }
       });
 
-      if (!filterContent.classList.contains("show")) {
+      if (!showed) {
         hideFilterButton.forEach((btn) => {
           btn.innerHTML = "";
 
