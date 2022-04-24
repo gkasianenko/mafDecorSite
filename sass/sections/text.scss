@@ -63,4 +63,9 @@
 #catalog-item .text {
   padding-top: 94px;
   padding-bottom: 200px;
+
+  @media(max-width: $mobile){
+    padding-top: 68px;
+    padding-bottom: 30px;
+  }
 }

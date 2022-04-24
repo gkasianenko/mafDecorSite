@@ -5,6 +5,14 @@
     font-weight: 300;
     font-size: 32px;
     line-height: 1.1;
+
+    @media (max-width: $mobile) {
+      font-size: 23px;
+    }
+
+    @media (max-width: $mobile-small) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -19,27 +27,66 @@
   & span {
     color: #000;
   }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
 }
 
 #product .product__wrapper {
   display: flex;
   justify-content: space-between;
 
-  padding-bottom: 289px;
+  padding-bottom:30px;
+
+  & > * + * {
+    margin-left: 30px;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+
+    & > * + * {
+      margin-top: 20px;
+    }
+  }
 }
 
 #product .product__left {
   display: flex;
   flex-direction: column;
+
+  max-width: 560px;
+
+  @media (max-width: $tablet) {
+    max-width: 505px;
+  }
+
+  @media (max-width: 1050px) {
+    max-width: 440px;
+  }
+
+  @media (max-width: 970px) {
+    max-width: 410px;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 560px;
+  }
 }
 
-#product .product__left > * + * {
-  margin-top: 40px;
-}
+
 
 #product .product__slider {
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
+
+  @media (max-width: $mobile) {
+    margin-top: 20px;
+  }
 }
 
 #product .product__right {
@@ -48,16 +95,39 @@
   flex-direction: column;
 
   & span {
+    margin-right: 8px;
     font-weight: 300;
     font-size: 18px;
     line-height: 1.1;
 
     color: #868686;
   }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 }
 
 #product .product__title {
   margin-bottom: 27px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 0;
+  }
+}
+
+#product .product__left .product__title {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+#product .product__right .product__title {
+  @media (max-width: $mobile) {
+    display: none;
+  }
 }
 
 #product .product__title > * + * {
@@ -76,6 +146,14 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 26px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+
+    & > * + * {
+      margin-top: 20px;
+    }
+  }
 }
 
 #product .product__how-to {
@@ -85,6 +163,35 @@
   text-decoration-line: underline;
   color: #00365b;
   cursor: pointer;
+
+  @media (max-width: $tablet) {
+    width: 35%;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+    width: auto;
+  }
+}
+
+#product .product__how-to-mobile {
+  display: none;
+  padding: 10px 15px;
+  width: 170px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.1;
+
+  text-decoration: none;
+  color: #fff;
+  background-color: #00365b;
+
+  cursor: pointer;
+
+  @media (max-width: $mobile) {
+    display: block;
+  }
 }
 
 #product .product__developer {
@@ -100,6 +207,10 @@
 #product .product__address {
   display: flex;
   margin-bottom: 60px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 40px;
+  }
 }
 
 #product .product__address > * + * {
@@ -107,7 +218,9 @@
 }
 
 #product .product__address p {
-  width: 63%;
+  width: 91%;
+
+  
 }
 
 #product .product__chars li span {
@@ -120,4 +233,18 @@
 
 #product .product__chars ul > * + * {
   margin-top: 8px;
+}
+
+#product .product__price {
+  @media (max-width: $mobile) {
+    font-size: 24px;
+    color: #000;
+  }
+
+  & span {
+    @media (max-width: $mobile) {
+      font-size: 24px;
+      color: #000;
+    }
+  }
 }

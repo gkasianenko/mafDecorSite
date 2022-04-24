@@ -4,14 +4,19 @@
 
 #catalog-item .header-nav__wrapper {
   padding-right: 150px;
+
+  @media (max-width: $mobile) {
+    padding-right: 15px;
+  }
 }
 
 #catalog-item .product__slider img {
-  width: 108px;
-  height: 108px;
+  width: 20.5%;
+  
+
+  @media (max-width: $mobile) {
+    
+  }
 }
 
-#catalog-item .product__main-photo {
-  width: 588px;
-  height: 588px;
-}
+
