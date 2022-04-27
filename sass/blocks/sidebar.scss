@@ -1,18 +1,17 @@
 #sidebar {
-  width: 128px;
-   /* Full-height: remove this if you want "auto" height */
+  width: 110px;
+  /* Full-height: remove this if you want "auto" height */
   /* Set the width of the sidebar */
   max-height: 2300px;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   background-color: #fff; /* Black */
   overflow: hidden; /* Disable horizontal scroll */
-  z-index:999;
+  z-index: 999;
 
   @media (max-width: $mobile) {
     display: none;
-    
   }
 }
 
@@ -22,18 +21,28 @@
 }
 
 #sidebar .sidebar__content .sidebar__logo {
-  margin-left: auto;
-  margin-right: auto;
-  width: 128px;
-  height: 128px;
-  background-repeat: no-repeat;
-  background-size: 78px 78px;
-  background-image: url(../img/sidebar/logo-blue.png);
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 110px;
+  height: 110px;
 
   &:hover {
-    background-image: url(../img/sidebar/logo-white.png);
-    background-color: #f37833;
+    svg {
+      & path:nth-child(1) {
+        fill: #ff5c00;
+      }
+      & path:nth-child(2) {
+        fill: #ff5c00;
+      }
+      & path:nth-child(3) {
+        fill: #00365b;
+      }
+      & path:nth-child(4) {
+        fill: #00365b;
+      }
+    }
   }
 }
 
@@ -50,7 +59,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 128px;
+  height: 110px;
 
   font-family: "Roboto";
   font-style: normal;
@@ -59,25 +68,24 @@
   line-height: 1.1;
 
   transition: transform 0.3s;
+  transform: scale(0.9);
 }
 
-#sidebar .sidebar-menu .sidebar-menu__item svg{
+#sidebar .sidebar-menu .sidebar-menu__item svg {
   margin-left: auto;
   margin-right: auto;
 }
 
-#sidebar .sidebar-menu .sidebar-menu__item svg:nth-child(2){
+#sidebar .sidebar-menu .sidebar-menu__item svg:nth-child(2) {
   display: none;
-  
 }
 
-#sidebar .sidebar-menu .sidebar-menu__item:hover{
-
-  svg:nth-child(1){
+#sidebar .sidebar-menu .sidebar-menu__item:hover {
+  svg:nth-child(1) {
     display: none;
   }
 
-  svg:nth-child(2){
+  svg:nth-child(2) {
     display: block;
   }
 }
@@ -118,7 +126,7 @@
 }
 
 #sidebar .sidebar-menu .sidebar-menu__item:hover {
-  transform: scale(0.9);
+  transform: scale(1);
   transition: transform 0.3s;
 }
 

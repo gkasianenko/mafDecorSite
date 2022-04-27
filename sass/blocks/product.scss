@@ -37,7 +37,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding-bottom:30px;
+  padding-bottom: 30px;
 
   & > * + * {
     margin-left: 30px;
@@ -76,8 +76,6 @@
     max-width: 560px;
   }
 }
-
-
 
 #product .product__slider {
   display: flex;
@@ -158,20 +156,57 @@
 
 #product .product__how-to {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 28px;
   line-height: 1.1;
   text-decoration-line: underline;
+  text-align: center;
+
   color: #00365b;
   cursor: pointer;
 
   @media (max-width: $tablet) {
-    width: 35%;
+    font-size: 20px;
   }
 
   @media (max-width: $mobile) {
     display: none;
     width: auto;
   }
+}
+
+#product .product__tab {
+  margin-bottom: 26px;
+
+  border-top: 0.5px solid #d4d4d4;
+  border-left: 0.5px solid #d4d4d4;
+  border-right: 0.5px solid #d4d4d4;
+
+  text-align: center;
+}
+
+#product .product__tab-title {
+  padding-bottom: 19px;
+  padding-top: 19px;
+}
+
+#product .product__tab-show {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+
+  border-bottom: 2px solid #f37833;
+}
+
+#product .arrow-down {
+  position: absolute;
+  left:53%;
+
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-top: 10px solid #F37833;
 }
 
 #product .product__how-to-mobile {
@@ -219,8 +254,6 @@
 
 #product .product__address p {
   width: 91%;
-
-  
 }
 
 #product .product__chars li span {

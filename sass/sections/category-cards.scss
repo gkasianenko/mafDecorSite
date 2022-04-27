@@ -1,4 +1,5 @@
 #main .category-cards {
+  
   padding-bottom: 80px;
   margin-top: -260px;
 
@@ -14,4 +15,8 @@
     margin-top: -70px;
     padding-bottom: 35px;
   }
+}
+
+#main .category-cards .container{
+  position: relative;
 }

@@ -481,13 +481,13 @@ export function checkProductsNumber() {
 export function renderShowButton(productsNumber, productQuantity) {
   console.log(productQuantity);
   if ((productsNumber === 0, productQuantity > 0)) {
-    console.log("нету");
+    
     showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p>Больше нет товаров по вашему запросу</p>
         
     </div>`;
   } else if (productQuantity === 0) {
-    console.log("больше 6");
+    
     showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p>Показать еще</p>
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -495,13 +495,13 @@ export function renderShowButton(productsNumber, productQuantity) {
             </svg>
     </div>`;
   } else if (productQuantity > 0) {
-    console.log("меньше 6");
+    
     showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p></p>
        
     </div>`;
   } else if (productsNumber < productQuantity && productQuantity === 6) {
-    console.log("меньше 6");
+    
     showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p></p>
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">

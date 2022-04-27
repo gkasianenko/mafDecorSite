@@ -2,7 +2,8 @@ const uploadInput = document.querySelector("#input-upload");
 
 const uploadButton = document.querySelector(".contacts-form__file");
 
-const imgDiv = document.querySelector('.product__main-photo');
+const imgSlider = document.querySelector(".product__slider");
+const photos = imgSlider.querySelectorAll("img");
 
 const mobMenuButton = document.querySelector(".header__burger-menu");
 const mobMenu = document.querySelector(".mobile-menu");
@@ -11,51 +12,26 @@ const mobMenuClose = document.querySelector(".mobile-menu__close");
 mobMenuButton.addEventListener("click", openMobMenu);
 mobMenuClose.addEventListener("click", closeMobMenu);
 
-
-imgDiv.addEventListener("click", changeImg)
+photos.forEach((photo) => {
+  photo.addEventListener("mouseover", changeImg);
+});
 
 uploadButton.addEventListener("click", initUpload);
 
-function initUpload(){
-    uploadInput.click();
+function initUpload() {
+  uploadInput.click();
 }
 
-function changeImg() {
-    const image = document.querySelector('.main-photo');
+function changeImg(event) {
+  const image = document.querySelector(".main-photo");
 
-    if (image.src.match("./img/product/main.jpg")) {
-        image.src = "./img/product/sub-1.jpg";
-        return;
-    }
-
-    if (image.src.match("./img/product/sub-1.jpg")){
-        image.src = "./img/product/sub-2.jpg";
-        return;
-    }
-    
-    if(image.src.match("./img/product/sub-2.jpg")){
-        image.src = "./img/product/sub-3.jpg";
-        return;
-    }
-
-    if(image.src.match("./img/product/sub-3.jpg")){
-        image.src = "./img/product/sub-4.jpg";
-        return;
-    }
-
-    if(image.src.match("./img/product/sub-4.jpg")){
-        image.src = "./img/product/main.jpg";
-        return;
-    }
-
-
+  image.src = event.target.src;
 }
 
 function openMobMenu() {
-    mobMenu.classList.add("active");
-  }
-  
-  function closeMobMenu() {
-    mobMenu.classList.remove("active");
-  }
-  
+  mobMenu.classList.add("active");
+}
+
+function closeMobMenu() {
+  mobMenu.classList.remove("active");
+}

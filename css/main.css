@@ -615,7 +615,7 @@ legend {
   display: flex;
   justify-content: flex-end; }
 
-.category-pattern__button {
+.category-pattern__button-mobile {
   display: none;
   align-items: center;
   max-width: 260px;
@@ -626,10 +626,10 @@ legend {
   background: #00365b;
   cursor: pointer; }
   @media (max-width: 910px) {
-    .category-pattern__button {
+    .category-pattern__button-mobile {
       display: flex; } }
 
-.category-pattern__button > * + * {
+.category-pattern__button-mobile > * + * {
   margin-left: 13px; }
 
 .filter-show {
@@ -637,6 +637,20 @@ legend {
   align-items: center; }
 
 .filter-show > * + * {
+  margin-left: 10px; }
+
+.category-pattern__button {
+  position: absolute;
+  top: 73px;
+  right: -30px;
+  padding: 15px 30px;
+  background: #00365b;
+  font-size: 18px; }
+  @media (max-width: 1199px) {
+    .category-pattern__button {
+      display: none; } }
+
+.category-pattern__button > * + * {
   margin-left: 10px; }
 
 .socials {
@@ -907,7 +921,7 @@ legend {
   padding-top: 78px; }
 
 #sidebar {
-  width: 128px;
+  width: 110px;
   /* Full-height: remove this if you want "auto" height */
   /* Set the width of the sidebar */
   max-height: 2300px;
@@ -928,17 +942,19 @@ legend {
   flex-direction: column; }
 
 #sidebar .sidebar__content .sidebar__logo {
-  margin-left: auto;
-  margin-right: auto;
-  width: 128px;
-  height: 128px;
-  background-repeat: no-repeat;
-  background-size: 78px 78px;
-  background-image: url(../img/sidebar/logo-blue.png);
-  background-position: center; }
-  #sidebar .sidebar__content .sidebar__logo:hover {
-    background-image: url(../img/sidebar/logo-white.png);
-    background-color: #f37833; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 110px; }
+  #sidebar .sidebar__content .sidebar__logo:hover svg path:nth-child(1) {
+    fill: #ff5c00; }
+  #sidebar .sidebar__content .sidebar__logo:hover svg path:nth-child(2) {
+    fill: #ff5c00; }
+  #sidebar .sidebar__content .sidebar__logo:hover svg path:nth-child(3) {
+    fill: #00365b; }
+  #sidebar .sidebar__content .sidebar__logo:hover svg path:nth-child(4) {
+    fill: #00365b; }
 
 #sidebar .sidebar-menu {
   display: flex;
@@ -952,13 +968,14 @@ legend {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 128px;
+  height: 110px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
   font-size: 18px;
   line-height: 1.1;
-  transition: transform 0.3s; }
+  transition: transform 0.3s;
+  transform: scale(0.9); }
 
 #sidebar .sidebar-menu .sidebar-menu__item svg {
   margin-left: auto;
@@ -1002,7 +1019,7 @@ legend {
   margin-right: auto; }
 
 #sidebar .sidebar-menu .sidebar-menu__item:hover {
-  transform: scale(0.9);
+  transform: scale(1);
   transition: transform 0.3s; }
 
 #sidebar .sidebar-menu .sidebar-menu__item a {
@@ -1011,7 +1028,7 @@ legend {
 
 #main header {
   position: fixed;
-  top: o;
+  top: 0;
   width: 100%;
   z-index: 999;
   background-color: unset;
@@ -1655,18 +1672,45 @@ legend {
 
 #product .product__how-to {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 28px;
   line-height: 1.1;
   text-decoration-line: underline;
+  text-align: center;
   color: #00365b;
   cursor: pointer; }
   @media (max-width: 1199px) {
     #product .product__how-to {
-      width: 35%; } }
+      font-size: 20px; } }
   @media (max-width: 910px) {
     #product .product__how-to {
       display: none;
       width: auto; } }
+
+#product .product__tab {
+  margin-bottom: 26px;
+  border-top: 0.5px solid #d4d4d4;
+  border-left: 0.5px solid #d4d4d4;
+  border-right: 0.5px solid #d4d4d4;
+  text-align: center; }
+
+#product .product__tab-title {
+  padding-bottom: 19px;
+  padding-top: 19px; }
+
+#product .product__tab-show {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  border-bottom: 2px solid #f37833; }
+
+#product .arrow-down {
+  position: absolute;
+  left: 53%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #F37833; }
 
 #product .product__how-to-mobile {
   display: none;
@@ -1726,6 +1770,7 @@ legend {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  margin-bottom: 37px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.9; }
@@ -1785,10 +1830,10 @@ legend {
       bottom: 255px; } }
   @media (max-width: 910px) {
     #main .header-img::after {
-      bottom: 480px; } }
+      bottom: 450px; } }
   @media (max-width: 599px) {
     #main .header-img::after {
-      bottom: 615px; } }
+      bottom: 585px; } }
 
 #main .header-img__title {
   display: flex;
@@ -1821,6 +1866,9 @@ legend {
     #main .category-cards {
       margin-top: -70px;
       padding-bottom: 35px; } }
+
+#main .category-cards .container {
+  position: relative; }
 
 #main .info {
   background-color: #f8f8f8;

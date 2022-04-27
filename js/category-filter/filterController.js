@@ -114,7 +114,7 @@ async function filterCards() {
   //Сбор данных чекбоксов
   const checkboxValues = view.grabCheckboxes();
   let productNumber = 1;
-  let productQuantity = pageNumber * 6;
+  let productQuantity = pageNumber * 9;
 
   //Рендер отфильтрованных карточек
   await state.filter.results.forEach((element) => {
