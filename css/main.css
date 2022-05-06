@@ -187,8 +187,8 @@ legend {
     background: transparent; }
 
 .mobile-menu__header-logo {
-  padding-top: 60px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -200,7 +200,7 @@ legend {
   cursor: pointer; }
 
 .mobile-menu .mobile-link {
-  padding: 21px 45px;
+  padding: 16px 45px;
   display: flex;
   align-items: center;
   color: #000;
