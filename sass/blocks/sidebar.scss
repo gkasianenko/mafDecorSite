@@ -8,7 +8,6 @@
   left: 0;
   background-color: #fff; /* Black */
   overflow: hidden; /* Disable horizontal scroll */
-  z-index: 999;
 
   @media (max-width: $mobile) {
     display: none;
@@ -26,7 +25,7 @@
   align-items: center;
 
   width: 110px;
-  height: 110px;
+  height: 80px;
 
   &:hover {
     svg {
@@ -67,7 +66,6 @@
   font-size: 18px;
   line-height: 1.1;
 
-  transition: transform 0.3s;
   transform: scale(0.9);
 }
 
@@ -116,7 +114,7 @@
   line-height: 1.1;
 }
 
-#sidebar .sidebar-menu .sidebar-menu__item a > * + * {
+#sidebar .sidebar-menu .sidebar-menu__item a > * + p {
   margin-top: 8px;
 }
 
@@ -125,12 +123,12 @@
   margin-right: auto;
 }
 
-#sidebar .sidebar-menu .sidebar-menu__item:hover {
-  transform: scale(1);
-  transition: transform 0.3s;
-}
-
 #sidebar .sidebar-menu .sidebar-menu__item a {
   color: #000;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

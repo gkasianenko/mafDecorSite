@@ -522,9 +522,14 @@
 }
 
 .catalog-pattern__mobile-catalog-btn {
+  display: none;
   position: absolute;
   left: 0;
   z-index: 99;
+
+  @media(max-width: $mobile){
+    display: block;
+  }
 }
 
 .catalog-pattern__mobile-catalog-btn .catalog-pattern__filter {
