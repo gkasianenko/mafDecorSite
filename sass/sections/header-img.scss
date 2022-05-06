@@ -25,7 +25,7 @@
   }
 
   @media (max-width: $mobile) {
-    height: 50%;
+    height: 48%;
   }
 
   @media (max-width: $mobile-small) {
@@ -46,15 +46,16 @@
   left: 0;
 
   @media (max-width: $tablet) {
-    bottom: 255px;
+    bottom: 225px;
   }
 
   @media (max-width: $mobile) {
-    bottom: 450px;
+    
+    bottom: 400px;
   }
 
   @media (max-width: $mobile-small) {
-    bottom: 585px;
+    bottom: 500px;
   }
 }
 
