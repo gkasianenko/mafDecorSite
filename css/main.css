@@ -1900,13 +1900,13 @@ legend {
   left: 0; }
   @media (max-width: 1199px) {
     #main .header-img::after {
-      bottom: 225px; } }
+      bottom: 215px; } }
   @media (max-width: 910px) {
     #main .header-img::after {
-      bottom: 400px; } }
+      bottom: 410px; } }
   @media (max-width: 599px) {
     #main .header-img::after {
-      bottom: 500px; } }
+      bottom: 525px; } }
 
 #main .header-img__title {
   display: flex;

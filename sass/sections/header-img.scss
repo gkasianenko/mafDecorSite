@@ -46,16 +46,15 @@
   left: 0;
 
   @media (max-width: $tablet) {
-    bottom: 225px;
+    bottom: 215px;
   }
 
   @media (max-width: $mobile) {
-    
-    bottom: 400px;
+    bottom: 410px;
   }
 
   @media (max-width: $mobile-small) {
-    bottom: 500px;
+    bottom: 525px;
   }
 }
 
