@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,aAAc;EACZ,WAAW,EAAE,KAAK;;AAGpB,kCAAmC;EACjC,aAAa,EAAE,KAAK;;AAGtB,kCAAmC;EACjC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;;AAGf,kCAAmC;EACjC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK",
-"sources": ["../../sass/sections/catalog-item.scss"],
-"names": [],
-"file": "catalog-item.css"
-}

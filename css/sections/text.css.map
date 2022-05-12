@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,WAAY;EACV,WAAW,EAAE,KAAK;EAClB,cAAc,EAAE,KAAK;;AAGvB,4BAA6B;EAC3B,SAAS,EAAE,IAAI;;AAGjB,8CAA+C;EAC7C,KAAK,EAAE,GAAG;;AAGZ,kCAAmC;EACjC,UAAU,EAAE,IAAI;;AAGlB,cAAe;EACb,WAAW,EAAE,KAAK;EAClB,cAAc,EAAE,KAAK",
-"sources": ["../../sass/sections/text.scss"],
-"names": [],
-"file": "text.css"
-}
