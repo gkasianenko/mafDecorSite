@@ -439,6 +439,14 @@ legend {
     .header-nav .sidebar__logo {
       display: none; } }
 
+.header-nav__apply-btn {
+  background: transparent;
+  color: #fff;
+  font-size: 16px; }
+
+.header-nav--secondary .header-nav__apply-btn {
+  color: #000; }
+
 .button {
   padding: 10px 16px;
   transition: all 0.2s ease-in-out;
@@ -679,7 +687,7 @@ legend {
   margin-left: 10px; }
 
 .socials {
-  width: 136px;
+  width: 180px;
   display: flex;
   justify-content: space-between; }
 
@@ -785,7 +793,7 @@ legend {
 .contacts-form__fields > * + * {
   margin-top: 17px; }
 
-.contacts-form__left .contacts-form__fields input {
+.contacts-form__fields input {
   display: block;
   outline: none;
   border: none;
@@ -793,7 +801,7 @@ legend {
   margin-left: 36px;
   background: transparent; }
 
-.contacts-form__left .contacts-form__fields input::placeholder {
+.contacts-form__fields input::placeholder {
   font-weight: 300;
   font-size: 18px;
   line-height: 1.1;
@@ -803,7 +811,7 @@ legend {
   display: flex;
   border-bottom: 0.5px solid #d4d4d4; }
 
-.contacts-form__left .contacts-form__fields label {
+.contacts-form__fields label {
   padding-bottom: 15px;
   display: flex;
   align-items: center; }
@@ -864,24 +872,24 @@ legend {
     .contacts-form__left .contacts-form__left-bottom {
       width: 100%; } }
 
-.contacts-form__left .contacts-form__textarea {
+.contacts-form__textarea {
   padding: 23px 55px;
   margin-bottom: 30px;
   outline: none;
   border: 0.8px solid #d4d4d4; }
-  .contacts-form__left .contacts-form__textarea textarea {
+  .contacts-form__textarea textarea {
     width: 100%;
     height: 21px;
     border: none;
     resize: none;
     background: transparent; }
-  .contacts-form__left .contacts-form__textarea textarea::placeholder {
+  .contacts-form__textarea textarea::placeholder {
     font-weight: 300;
     font-size: 18px;
     line-height: 1.1;
     color: #d4d4d4; }
   @media (max-width: 599px) {
-    .contacts-form__left .contacts-form__textarea {
+    .contacts-form__textarea {
       padding: 23px 23px; } }
 
 .contacts-form__left .contacts-form__file p {
@@ -1053,7 +1061,7 @@ legend {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 97;
   background-color: unset;
   transition: 0.2s ease-in-out; }
 
@@ -1084,6 +1092,9 @@ legend {
   #main #header.header-scroll-active .header-nav {
     box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.25); }
   #main #header.header-scroll-active a {
+    color: #000;
+    transition: 0.2s ease-in-out; }
+  #main #header.header-scroll-active button {
     color: #000;
     transition: 0.2s ease-in-out; }
   #main #header.header-scroll-active .header-nav__icon svg circle {
@@ -1860,6 +1871,79 @@ legend {
   padding-right: 25px;
   z-index: 10;
   text-align: center; }
+
+.header-modal {
+  display: none;
+  position: fixed;
+  top: 20vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden; }
+
+.header-modal.active {
+  display: block; }
+
+.header-modal__wrapper {
+  display: flex; }
+  @media (max-width: 910px) {
+    .header-modal__wrapper {
+      align-items: center;
+      justify-content: center; } }
+
+.header-modal__left {
+  width: 64%;
+  background: #a8a8a8; }
+  @media (max-width: 910px) {
+    .header-modal__left {
+      display: none; } }
+
+.header-modal__right {
+  padding-top: 37px;
+  padding-bottom: 25px;
+  padding-left: 47px;
+  padding-right: 47px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 36%;
+  min-width: 405px;
+  background: #fff; }
+
+.header-modal__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 55px; }
+
+.header-modal__logo img {
+  width: 225px; }
+
+.header-modal .contacts-form__textarea {
+  padding: 15px 25px;
+  width: 100%; }
+
+.header-modal button {
+  font-size: 16px; }
+
+.header-modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.header-modal__close {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer; }
+
+.header-modal .contacts-form__fields {
+  width: 100%; }
 
 #main .header-img {
   background-image: url(../img/main/header-img.png);
