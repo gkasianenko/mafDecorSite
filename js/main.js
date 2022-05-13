@@ -13,7 +13,8 @@ const uploadInput = document.querySelector("#input-upload");
 const uploadButton = document.querySelector(".contacts-form__file");
 
 //Header apply btn
-const headerApplyButton = document.querySelector(".header-nav__apply-btn")
+const headerApplyButton = document.querySelector(".header-nav__apply-btn");
+const mobileHeaderApplyButton = document.querySelector(".mobile-menu__apply-btn");
 const headerModal = document.querySelector(".header-modal");
 const modalClose = document.querySelector(".header-modal__close");
 const overlay = document.getElementById("overlay");
@@ -31,6 +32,7 @@ uploadButton.addEventListener("click", initUpload);
 
 //Header apply handlers
 headerApplyButton.addEventListener("click", showModal);
+mobileHeaderApplyButton.addEventListener("click", showModal);
 modalClose.addEventListener("click", hideModal);
 
 function initUpload() {

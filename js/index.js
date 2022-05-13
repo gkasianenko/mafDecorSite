@@ -3,7 +3,8 @@ const mobMenu = document.querySelector(".mobile-menu");
 const mobMenuClose = document.querySelector(".mobile-menu__close");
 
 //Header apply btn
-const headerApplyButton = document.querySelector(".header-nav__apply-btn")
+const headerApplyButton = document.querySelector(".header-nav__apply-btn");
+const mobileHeaderApplyButton = document.querySelector(".mobile-menu__apply-btn");
 const headerModal = document.querySelector(".header-modal");
 const modalClose = document.querySelector(".header-modal__close");
 const overlay = document.getElementById("overlay");
@@ -16,6 +17,7 @@ mobMenuClose.addEventListener("click", closeMobMenu);
 //Header apply hadler
 headerApplyButton.addEventListener("click", showModal);
 modalClose.addEventListener("click", hideModal);
+mobileHeaderApplyButton.addEventListener("click", showModal);
 
 function changeNavBar() {
   let header = document.querySelector("header");

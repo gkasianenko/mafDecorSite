@@ -2,7 +2,7 @@
   position: fixed;
   top: o;
   width: 100%;
-  z-index: 999;
+  z-index: 97;
   background-color: #fff;
 
   @media (max-width: $mobile) {
@@ -302,13 +302,12 @@
   }
 }
 
-
-.header-nav__apply-btn{
+.header-nav__apply-btn {
   background: transparent;
   color: #fff;
   font-size: 16px;
 }
 
-.header-nav--secondary .header-nav__apply-btn{
+.header-nav--secondary .header-nav__apply-btn {
   color: #000;
 }

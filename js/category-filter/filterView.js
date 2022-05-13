@@ -1,4 +1,6 @@
-export const filter = document.querySelector(".catalog-pattern__filter");
+export const filter = document
+.getElementById("catalog-pattern")
+.querySelector(".catalog-pattern__filter");
 export const filterMobile = document.querySelector(
   ".catalog-pattern__mobile-filter"
 );
@@ -7,12 +9,15 @@ export const showMoreButton = document.querySelector(".catalog-pattern__more");
 export const overlay = document.getElementById("overlay");
 
 //переменные мобфильтра
-export const mobFilterIcon = document.querySelector(".catalog-pattern__mobile-icon");
+export const mobFilterIcon = document.querySelector(
+  ".catalog-pattern__mobile-icon"
+);
 export const mobFilterCloseIcon = document.querySelector(
   ".catalog-pattern__close-btn"
 );
-export const mobFilter = document.querySelector(".catalog-pattern__mobile-filter");
-
+export const mobFilter = document.querySelector(
+  ".catalog-pattern__mobile-filter"
+);
 
 export function render(params) {
   const markup = `<div class="catalog-pattern__filter-wrapper">
@@ -165,7 +170,7 @@ export function render(params) {
 
 </div>`;
 
-const markupMobile = `<div class="catalog-pattern__filter-wrapper">
+  const markupMobile = `<div class="catalog-pattern__filter-wrapper">
 <div class="catalog-pattern__show">
 <div class="catalog-pattern__close-btn">
 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -329,7 +334,9 @@ const markupMobile = `<div class="catalog-pattern__filter-wrapper">
     .insertAdjacentHTML("afterbegin", markup);
 
   document
-    .querySelector(".catalog-pattern__mobile-filter").querySelector(".catalog-pattern__filter").insertAdjacentHTML("afterbegin", markupMobile);
+    .querySelector(".catalog-pattern__mobile-filter")
+    .querySelector(".catalog-pattern__filter")
+    .insertAdjacentHTML("afterbegin", markupMobile);
 }
 
 export function filterCheckInputs(checkboxes) {
@@ -352,7 +359,15 @@ export const catalogWrapper = document.querySelector(
 );
 
 export function grabCheckboxes() {
-  const filter = document.querySelector(".catalog-pattern__filter");
+  let filter = null;
+
+  if (filterMobile.classList.contains("active")) {
+    filter = filterMobile.querySelector(".catalog-pattern__filter");
+  } else {
+    filter = document
+      .getElementById("catalog-pattern")
+      .querySelector(".catalog-pattern__filter");
+  }
 
   const checkboxes = filter.querySelectorAll("input[type='checkbox']");
 
@@ -481,13 +496,11 @@ export function checkProductsNumber() {
 export function renderShowButton(productsNumber, productQuantity) {
   console.log(productQuantity);
   if ((productsNumber === 0, productQuantity > 0)) {
-    
     showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p>Больше нет товаров по вашему запросу</p>
         
     </div>`;
   } else if (productQuantity === 0) {
-    
     showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p>Показать еще</p>
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -495,13 +508,11 @@ export function renderShowButton(productsNumber, productQuantity) {
             </svg>
     </div>`;
   } else if (productQuantity > 0) {
-    
     showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p></p>
        
     </div>`;
   } else if (productsNumber < productQuantity && productQuantity === 6) {
-    
     showMoreButton.innerHTML = `<div class="catalog-pattern__more">
         <p></p>
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -514,18 +525,17 @@ export function renderShowButton(productsNumber, productQuantity) {
 //функции мобфильтра
 
 export function showMobFilter() {
-    overlay.classList.add("active");
-  
-    mobFilter.classList.add("active");
-  
-    document.body.classList.add("noscroll");
-  }
-  
-  export function closeMobFilter() {
-    overlay.classList.remove("active");
-  
-    mobFilter.classList.remove("active");
-  
-    document.body.classList.remove("noscroll");
-  }
-  
+  overlay.classList.add("active");
+
+  mobFilter.classList.add("active");
+
+  document.body.classList.add("noscroll");
+}
+
+export function closeMobFilter() {
+  overlay.classList.remove("active");
+
+  mobFilter.classList.remove("active");
+
+  document.body.classList.remove("noscroll");
+}

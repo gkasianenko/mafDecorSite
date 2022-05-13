@@ -10,7 +10,10 @@ const mobMenu = document.querySelector(".mobile-menu");
 const mobMenuClose = document.querySelector(".mobile-menu__close");
 
 //Header apply btn
-const headerApplyButton = document.querySelector(".header-nav__apply-btn")
+const headerApplyButton = document.querySelector(".header-nav__apply-btn");
+const mobileHeaderApplyButton = document.querySelector(
+  ".mobile-menu__apply-btn"
+);
 const headerModal = document.querySelector(".header-modal");
 const modalClose = document.querySelector(".header-modal__close");
 const overlay = document.getElementById("overlay");
@@ -20,6 +23,7 @@ mobMenuClose.addEventListener("click", closeMobMenu);
 
 //Header apply handlers
 headerApplyButton.addEventListener("click", showModal);
+mobileHeaderApplyButton.addEventListener("click", showModal);
 modalClose.addEventListener("click", hideModal);
 
 photos.forEach((photo) => {
@@ -46,16 +50,13 @@ function closeMobMenu() {
   mobMenu.classList.remove("active");
 }
 
-
-
-function showModal(){
+function showModal() {
   headerModal.classList.add("active");
   overlay.classList.add("active");
   document.body.classList.add("noscroll");
 }
 
-
-function hideModal(){
+function hideModal() {
   headerModal.classList.remove("active");
   overlay.classList.remove("active");
   document.body.classList.remove("noscroll");
