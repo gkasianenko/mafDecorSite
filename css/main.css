@@ -1913,6 +1913,9 @@ legend {
   width: 36%;
   min-width: 405px;
   background: #fff; }
+  @media (max-width: 490px) {
+    .header-modal__right {
+      min-width: 253px; } }
 
 .header-modal__logo {
   display: flex;

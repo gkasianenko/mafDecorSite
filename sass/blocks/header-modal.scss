@@ -48,6 +48,11 @@
     min-width: 405px;
 
     background: #fff;
+
+    @media (max-width:490px) {
+        
+        min-width: 253px;
+    }
 }
 
 .header-modal__logo{
