@@ -44,17 +44,15 @@
 }
 
 .catalog-pattern__filter-wrapper {
- max-height: 1500px;
+  max-height: 1500px;
 
   padding-left: 20px;
   padding-right: 20px;
   background: #f9f9f9;
   width: 270px;
-
-  
 }
 
-.catalog-pattern__mobile-filter .catalog-pattern__filter-wrapper{
+.catalog-pattern__mobile-filter .catalog-pattern__filter-wrapper {
   max-height: 70vh;
   overflow-y: scroll;
   @media (max-width: 1000px) {
@@ -91,7 +89,6 @@
 }
 
 .catalog-pattern__filter {
-  
   & p {
     margin-bottom: 16px;
     font-weight: 400;
@@ -151,9 +148,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  margin-top: 25px;
 }
-
-
 
 #catalog-pattern .catalog-pattern__show,
 #catalog-pattern .catalog-pattern__more {
@@ -180,10 +177,13 @@
 #catalog-pattern .catalog-pattern__card {
   position: relative;
   transition: all 0.2s ease-in-out;
+  margin-bottom: 48px;
 
   @media (max-width: $mobile) {
     width: 189px;
     font-size: 12px;
+
+    margin-bottom: unset;
   }
 }
 
@@ -193,7 +193,6 @@
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 48px;
 
   display: flex;
   flex-direction: column;
@@ -243,19 +242,15 @@
 #catalog-pattern .catalog-pattern__card .overlay-product {
   visibility: hidden;
   opacity: 0;
-  padding-top: 10px;
+
   transition: all 0.2s ease-in-out;
 
   position: absolute;
-  bottom: -67%;
+
   width: 100%;
 
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   z-index: 5;
-
-  @media (max-width: 1000px) {
-    bottom: -80%;
-  }
 
   & .button--catalog {
     display: flex;
@@ -274,7 +269,7 @@
     line-height: 1.1;
 
     @media (max-width: 1000px) {
-      bottom: 118%;
+      bottom: 120%;
     }
 
     @media (max-width: $mobile) {
@@ -319,6 +314,7 @@
 
 #catalog-pattern .overlay-product .catalog-pattern__chars {
   margin-bottom: 27px;
+  min-height: 102px;
 }
 
 #catalog-pattern .overlay-product .catalog-pattern__product {

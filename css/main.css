@@ -1283,7 +1283,8 @@ legend {
   margin-left: -10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 25px; }
 
 #catalog-pattern .catalog-pattern__show,
 #catalog-pattern .catalog-pattern__more {
@@ -1304,18 +1305,19 @@ legend {
 
 #catalog-pattern .catalog-pattern__card {
   position: relative;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 48px; }
   @media (max-width: 910px) {
     #catalog-pattern .catalog-pattern__card {
       width: 189px;
-      font-size: 12px; } }
+      font-size: 12px;
+      margin-bottom: unset; } }
 
 #catalog-pattern .catalog-pattern__product {
   position: relative;
   padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   width: 290px;
@@ -1353,16 +1355,11 @@ legend {
 #catalog-pattern .catalog-pattern__card .overlay-product {
   visibility: hidden;
   opacity: 0;
-  padding-top: 10px;
   transition: all 0.2s ease-in-out;
   position: absolute;
-  bottom: -67%;
   width: 100%;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   z-index: 5; }
-  @media (max-width: 1000px) {
-    #catalog-pattern .catalog-pattern__card .overlay-product {
-      bottom: -80%; } }
   #catalog-pattern .catalog-pattern__card .overlay-product .button--catalog {
     display: flex;
     position: absolute;
@@ -1377,7 +1374,7 @@ legend {
     line-height: 1.1; }
     @media (max-width: 1000px) {
       #catalog-pattern .catalog-pattern__card .overlay-product .button--catalog {
-        bottom: 118%; } }
+        bottom: 120%; } }
     @media (max-width: 910px) {
       #catalog-pattern .catalog-pattern__card .overlay-product .button--catalog {
         display: none; } }
@@ -1410,7 +1407,8 @@ legend {
       box-shadow: unset; } }
 
 #catalog-pattern .overlay-product .catalog-pattern__chars {
-  margin-bottom: 27px; }
+  margin-bottom: 27px;
+  min-height: 102px; }
 
 #catalog-pattern .overlay-product .catalog-pattern__product {
   margin-bottom: 0; }
