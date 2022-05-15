@@ -44,10 +44,12 @@ function changeImg(event) {
 
 function openMobMenu() {
   mobMenu.classList.add("active");
+  document.body.classList.add("noscroll");
 }
 
 function closeMobMenu() {
   mobMenu.classList.remove("active");
+  document.body.classList.remove("noscroll");
 }
 
 function showModal() {

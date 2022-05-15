@@ -176,6 +176,7 @@
 
 #product .product__tab {
   margin-bottom: 26px;
+  position: relative;
 
   border-top: 0.5px solid #d4d4d4;
   border-left: 0.5px solid #d4d4d4;
@@ -190,7 +191,7 @@
 }
 
 #product .product__tab-show {
-  position: relative;
+  
   max-height: 0;
   overflow: hidden;
 
@@ -199,7 +200,8 @@
 
 #product .arrow-down {
   position: absolute;
-  left:53%;
+  left:50%;
+  transform: translate(-50%);
 
   width: 0;
   height: 0;

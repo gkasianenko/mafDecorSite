@@ -13,6 +13,7 @@ body {
   height: 100%; /* sticky footer */
   display: flex; /* sticky footer */
   flex-direction: column; /* sticky footer */
+  justify-content: space-between;
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
