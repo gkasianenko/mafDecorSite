@@ -9,6 +9,15 @@ const mobMenuButton = document.querySelector(".header__burger-menu");
 const mobMenu = document.querySelector(".mobile-menu");
 const mobMenuClose = document.querySelector(".mobile-menu__close");
 
+mobMenuButton.addEventListener("click", openMobMenu);
+mobMenuClose.addEventListener("click", closeMobMenu);
+
+//Catalog description
+const productTab = document.querySelector(".product__tab");
+const productTabTitle = document.querySelector(".product__tab-title");
+
+productTabTitle.addEventListener("click", toggleTab);
+
 //Header apply btn
 const headerApplyButton = document.querySelector(".header-nav__apply-btn");
 const mobileHeaderApplyButton = document.querySelector(
@@ -17,9 +26,6 @@ const mobileHeaderApplyButton = document.querySelector(
 const headerModal = document.querySelector(".header-modal");
 const modalClose = document.querySelector(".header-modal__close");
 const overlay = document.getElementById("overlay");
-
-mobMenuButton.addEventListener("click", openMobMenu);
-mobMenuClose.addEventListener("click", closeMobMenu);
 
 //Header apply handlers
 headerApplyButton.addEventListener("click", showModal);
@@ -62,4 +68,8 @@ function hideModal() {
   headerModal.classList.remove("active");
   overlay.classList.remove("active");
   document.body.classList.remove("noscroll");
+}
+
+function toggleTab() {
+  productTab.querySelector(".product__tab-show").classList.toggle("active");
 }

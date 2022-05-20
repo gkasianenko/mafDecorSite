@@ -157,6 +157,7 @@ legend {
 
 @media (min-width: 2000px) {
   .container--large {
+    max-width: unset;
     width: 1750px;
   }
 }

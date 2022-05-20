@@ -54,6 +54,11 @@
   cursor: pointer;
 }
 
+.mobile-menu .mobile-menu__links{
+  max-height: 450px;
+  overflow-y: auto;
+}
+
 .mobile-menu .mobile-link {
   padding: 16px 45px;
 
@@ -68,7 +73,7 @@
   margin-left: 25px;
 }
 
-.mobile-menu .mobile-menu__links ul li:nth-child(1) {
+.mobile-menu .mobile-link .mobile-link--phone {
   font-weight: 700;
 
   background: #f8f8f8;
