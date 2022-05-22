@@ -253,10 +253,10 @@ legend {
 .mobile-menu .mobile-link > * + * {
   margin-left: 25px; }
 
-.mobile-menu .mobile-link .mobile-link--phone {
+.mobile-menu .mobile-link.mobile-link--phone {
   font-weight: 700;
   background: #f8f8f8; }
-  .mobile-menu .mobile-link .mobile-link--phone a {
+  .mobile-menu .mobile-link.mobile-link--phone a {
     color: #00365b; }
 
 .mobile-menu__contacts {
