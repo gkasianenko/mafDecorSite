@@ -468,13 +468,8 @@
 
 .catalog-pattern__banner {
   width: 100%;
-  min-height: 256px;
 
-  background-color: wheat;
-
-  @media (max-width: $mobile) {
-    height: 117px;
-  }
+  background-color: #a8a8a8;
 }
 
 .catalog-pattern__filter-overlay {

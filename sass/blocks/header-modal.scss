@@ -36,14 +36,13 @@
   padding-left: 47px;
   padding-right: 47px;
 
-
   position: relative;
   display: flex;
   flex-direction: column;
 
   width: 36%;
   min-width: 405px;
-  min-height: 500px;
+  min-height: 547px;
 
   background: #fff;
 
@@ -122,6 +121,14 @@
   margin-top: 30px;
 }
 
-.modal-error__reload img{
-    display: inline-block;
+.modal-error__reload img {
+  display: inline-block;
+}
+
+.header-modal__message > * + * {
+  margin-top: 10px;
+}
+
+.modal-error__reload{
+  cursor: pointer;
 }
