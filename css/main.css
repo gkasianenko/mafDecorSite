@@ -1663,6 +1663,7 @@ legend {
 
 #catalog-pattern .catalog-pattern__img {
   position: relative;
+  display: block;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   #catalog-pattern .catalog-pattern__img img {
@@ -2336,7 +2337,8 @@ legend {
 .header-modal__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  max-height: 548px; }
   @media (max-width: 910px) {
     .header-modal__wrapper {
       -webkit-box-align: center;

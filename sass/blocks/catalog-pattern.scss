@@ -216,6 +216,7 @@
 
 #catalog-pattern .catalog-pattern__img {
   position: relative;
+  display: block;
   transition: all 0.2s ease-in-out;
 
   & img{
