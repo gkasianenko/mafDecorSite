@@ -91,6 +91,22 @@ body#catalog-item {
   }
 }
 
+body#mezzanine {
+  margin-left: 128px;
+
+  footer {
+    margin-left: -128px;
+
+    @media (max-width: $mobile) {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin-left: auto;
+  }
+}
+
 body > * {
   flex-shrink: 0; /* sticky footer */
 }
@@ -153,6 +169,13 @@ legend {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media(min-width: 1919px){
+  .container--large {
+    max-width: unset;
+    width: 1460px;
+  }
 }
 
 @media (min-width: 2000px) {

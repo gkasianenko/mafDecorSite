@@ -80,6 +80,17 @@ body#catalog-item {
     body#catalog-item {
       margin-left: auto; } }
 
+body#mezzanine {
+  margin-left: 128px; }
+  body#mezzanine footer {
+    margin-left: -128px; }
+    @media (max-width: 910px) {
+      body#mezzanine footer {
+        margin-left: 0; } }
+  @media (max-width: 910px) {
+    body#mezzanine {
+      margin-left: auto; } }
+
 body > * {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -135,6 +146,10 @@ legend {
   padding-left: 15px;
   padding-right: 15px; }
 
+@media (min-width: 1919px) {
+  .container--large {
+    max-width: unset;
+    width: 1460px; } }
 @media (min-width: 2000px) {
   .container--large {
     max-width: unset;
@@ -910,18 +925,24 @@ legend {
       .contacts-form__right h3 {
         font-size: 16px; } }
 
-@media (max-width: 910px) {
-  .contacts-form__right {
-    display: none; } }
+.contacts-form__right {
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  @media (max-width: 910px) {
+    .contacts-form__right {
+      display: none; } }
 
 .contacts-form__left {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  min-height: 685px; }
   .contacts-form__left h3 {
     margin-bottom: 60px; }
   @media (max-width: 910px) {
@@ -1050,6 +1071,9 @@ legend {
   position: absolute;
   top: -13px;
   right: 0; }
+
+.contacts-form__left .contacts-form__stages .contacts-form__stages-item img {
+  border-radius: 50px; }
 
 .contacts-form__left .contacts-form__left-bottom {
   width: 484px; }
@@ -1189,6 +1213,45 @@ legend {
 .contacts-form__badge-content > * + * {
   padding-left: 5px; }
 
+.contacts-form__left.completed, .contacts-form__left.error {
+  position: relative; }
+
+.contacts-form__completed-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.contacts-form__completed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center; }
+
+.contacts-form__completed > * + * {
+  margin-top: 50px; }
+
+.contacts-form__message > * + * {
+  margin-top: 22px; }
+
+.contacts-form__reload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer; }
+
 #sidebar {
   width: 110px;
   /* Full-height: remove this if you want "auto" height */
@@ -1271,6 +1334,18 @@ legend {
   line-height: 1.1;
   -webkit-transform: scale(0.9);
           transform: scale(0.9); }
+
+#sidebar .sidebar-menu__item.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  background-image: url(../svg/status/active.svg);
+  background-repeat: no-repeat;
+  background-position: center; }
 
 #sidebar .sidebar-menu .sidebar-menu__item svg {
   margin-left: auto;
@@ -2535,33 +2610,36 @@ legend {
 #main .category-cards .container {
   position: relative; }
 
-#main .info {
+.info {
   background-color: #f8f8f8;
   border-left: 22px solid #f37833;
   background-image: url(../img/main/lavochka.png);
   background-repeat: no-repeat;
   background-position: bottom right; }
   @media (max-width: 1199px) {
-    #main .info {
+    .info {
       background-size: 30%; } }
 
-#main .info .info__content {
+#mezzanine .info {
+  background-image: url(../img/mezzanine/urn1.png); }
+
+.info .info__content {
   padding-bottom: 80px;
   padding-top: 30px; }
 
-#main .info .info__content p {
+.info .info__content p {
   font-size: 18px; }
   @media (max-width: 1199px) {
-    #main .info .info__content p {
+    .info .info__content p {
       font-size: 16px; } }
   @media (max-width: 429px) {
-    #main .info .info__content p {
+    .info .info__content p {
       font-size: 12px; } }
 
-#main .info .info__content p:not(:first-child) {
+.info .info__content p:not(:first-child) {
   width: 80%; }
 
-#main .info .info__content > p + p {
+.info .info__content > p + p {
   margin-top: 40px; }
 
 #main .text {

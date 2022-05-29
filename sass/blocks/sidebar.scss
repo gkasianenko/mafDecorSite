@@ -69,6 +69,20 @@
   transform: scale(0.9);
 }
 
+#sidebar .sidebar-menu__item.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  width: 14px;
+  height: 14px;
+  background-image: url(../svg/status/active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #sidebar .sidebar-menu .sidebar-menu__item svg {
   margin-left: auto;
   margin-right: auto;
