@@ -181,7 +181,6 @@
   border-top: 0.5px solid #d4d4d4;
   border-left: 0.5px solid #d4d4d4;
   border-right: 0.5px solid #d4d4d4;
-
 }
 
 #product .product__tab-title {
@@ -193,7 +192,6 @@
 }
 
 #product .product__tab-show {
-  
   padding-left: 15px;
   padding-right: 15px;
   max-height: 0;
@@ -203,15 +201,15 @@
   transition: all 0.3s ease-in-out;
 }
 
-#product .product__tab-show.active{
+#product .product__tab-show.active {
   max-height: 1500px;
   overflow: unset;
   transition: all 0.3s ease-in-out;
 }
 
-#product .arrow-down {
+.arrow-down {
   position: absolute;
-  left:50%;
+
   transform: translate(-50%);
 
   width: 0;
@@ -219,7 +217,11 @@
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 
-  border-top: 10px solid #F37833;
+  border-top: 10px solid #f37833;
+}
+
+#product .arrow-down {
+  left: 50%;
 }
 
 #product .product__how-to-mobile {

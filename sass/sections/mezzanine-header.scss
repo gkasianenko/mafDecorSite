@@ -1,0 +1,61 @@
+.mezzanine-header {
+  padding-top: 100px;
+}
+.mezzanine-header__wrapper {
+  position: relative;
+}
+
+.mezzanine-header__title {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.mezzanine-header__badge {
+  display: inline-block;
+  padding: 15px 43px;
+  text-align: left;
+  background-color: rgba(224, 224, 224, 0.85);
+}
+
+.mezzanine-header__badge.left {
+  position: absolute;
+  top: 22%;
+  left: 19%;
+}
+
+.mezzanine-header__badge.left .arrow-down {
+  position: absolute;
+  transform: rotate(180deg);
+  top: -10px;
+  left: 0;
+}
+
+.mezzanine-header__badge.bottom {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mezzanine-header__badge.bottom .arrow-down {
+  position: absolute;
+  transform: rotate(-90deg);
+
+  top: 5px;
+  right: -15px;
+}
+
+.mezzanine-header__badge.right {
+  position: absolute;
+  top: 14%;
+  right: 0;
+  transform: translateX(-50%);
+}
+
+.mezzanine-header__badge.right .arrow-down {
+  position: absolute;
+
+  bottom: -10px;
+  left: 10px;
+}

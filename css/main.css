@@ -2253,16 +2253,18 @@ legend {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
-#product .arrow-down {
+.arrow-down {
   position: absolute;
-  left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #F37833; }
+  border-top: 10px solid #f37833; }
+
+#product .arrow-down {
+  left: 50%; }
 
 #product .product__how-to-mobile {
   display: none;
@@ -2621,7 +2623,9 @@ legend {
       background-size: 30%; } }
 
 #mezzanine .info {
-  background-image: url(../img/mezzanine/urn1.png); }
+  background-image: url(../img/mezzanine/urn1.png);
+  margin-left: -80px;
+  padding-left: 60px; }
 
 .info .info__content {
   padding-bottom: 80px;
@@ -3112,5 +3116,60 @@ legend {
 .main-catalog__text {
   padding-top: 100px;
   padding-bottom: 90px; }
+
+.mezzanine-header {
+  padding-top: 100px; }
+
+.mezzanine-header__wrapper {
+  position: relative; }
+
+.mezzanine-header__title {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  text-align: center; }
+
+.mezzanine-header__badge {
+  display: inline-block;
+  padding: 15px 43px;
+  text-align: left;
+  background-color: rgba(224, 224, 224, 0.85); }
+
+.mezzanine-header__badge.left {
+  position: absolute;
+  top: 22%;
+  left: 19%; }
+
+.mezzanine-header__badge.left .arrow-down {
+  position: absolute;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: -10px;
+  left: 0; }
+
+.mezzanine-header__badge.bottom {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
+.mezzanine-header__badge.bottom .arrow-down {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  top: 5px;
+  right: -15px; }
+
+.mezzanine-header__badge.right {
+  position: absolute;
+  top: 14%;
+  right: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
+.mezzanine-header__badge.right .arrow-down {
+  position: absolute;
+  bottom: -10px;
+  left: 10px; }
 
 /*# sourceMappingURL=main.css.map */
