@@ -1,14 +1,33 @@
 .mezzanine-header {
   padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media (max-width: $mobile) {
+    padding-bottom: 14px;
+  }
 }
 .mezzanine-header__wrapper {
   position: relative;
+
+  @media (max-width: $mobile) {
+    text-align: center;
+    
+  }
 }
 
 .mezzanine-header__title {
   margin-top: 50px;
   margin-bottom: 35px;
   text-align: center;
+
+  & .title-h2{
+    line-height: 1.2;
+
+    @media (max-width: $mobile-small) {
+      font-size: 18px;
+    }
+  }
+  
 }
 
 .mezzanine-header__badge {
@@ -16,12 +35,29 @@
   padding: 15px 43px;
   text-align: left;
   background-color: rgba(224, 224, 224, 0.85);
+
+  @media (max-width: $tablet) {
+    padding: 10px 35px;
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+
+  @media (max-width: $mobile-small) {
+    font-size: 8px;
+    padding: 6px 12px;
+  }
 }
 
 .mezzanine-header__badge.left {
   position: absolute;
   top: 22%;
   left: 19%;
+
+  
 }
 
 .mezzanine-header__badge.left .arrow-down {
@@ -36,6 +72,16 @@
   bottom: 25%;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: $mobile-small) {
+    bottom: 32%;
+    left: 46%;
+  }
+
+  @media (max-width: 360px) {
+    bottom: 47%;
+    left: 44%;
+  }
 }
 
 .mezzanine-header__badge.bottom .arrow-down {
@@ -51,6 +97,11 @@
   top: 14%;
   right: 0;
   transform: translateX(-50%);
+
+  @media (max-width: $mobile-small) {
+    top: 11%;
+    right: 0%;
+  }
 }
 
 .mezzanine-header__badge.right .arrow-down {
@@ -58,4 +109,66 @@
 
   bottom: -10px;
   left: 10px;
+}
+
+.mezzanine-header__apply{
+  
+
+  @media (max-width: $mobile) {
+    display: inline-block;
+    
+    margin-top: 17px;
+  }
+}
+
+.mezzanine-header__apply .contacts-form__button {
+  padding: 24px 47px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  align-items: center;
+
+  background-color: #fff;
+
+  @media (max-width: $tablet) {
+    padding: 18px 36px;
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobile) {
+    position: static;
+    
+    padding: 9px 18px;
+    border: 0.5px solid #D4D4D4;
+
+    .button{
+      padding: 10px 30px;
+      font-size: 12px;
+      background: #f37833;
+
+      @media (max-width: $mobile-small) {
+        padding: 10px 20px;
+      }
+    }
+
+    .contacts-form__file{
+      font-size: 9px;
+
+      & br{
+        display: none;
+      }
+
+      & svg{
+        width: 15px;
+        height: 20px;
+      }
+    }
+
+    & > * + * {
+      margin-left: 16px;
+  }
+  }
+
+  
 }

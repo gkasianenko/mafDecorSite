@@ -130,6 +130,34 @@
   margin-top: 10px;
 }
 
-.modal-error__reload{
+.modal-error__reload {
   cursor: pointer;
+}
+
+#mezzanine .contacts-form .header-modal__right {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: unset;
+
+  & .contacts-form__button{
+    align-items: center;
+
+    @media (max-width: $mobile-small) {
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+  
+
+  border: 0.8px solid rgba(212, 212, 212, 0.5);
+
+  & h3 {
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-small) {
+    width: 100%;
+  }
 }
