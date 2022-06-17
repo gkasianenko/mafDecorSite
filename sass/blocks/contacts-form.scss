@@ -346,10 +346,10 @@
   background: unset;
 
   @media (max-width: $mobile) {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 47px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     padding-bottom: 10px;
+    padding-top: 50px;
     background-image: url(../../img/mezzanine/bg-form.jpg);
   }
 }
@@ -400,6 +400,9 @@
 }
 
 #mezzanine .contacts-form .contacts-form__button {
+
+ 
+
   @media (max-width: $mobile-xs) {
     justify-content: center;
     flex-direction: column;
@@ -412,4 +415,30 @@
       margin-top: 15px;
     }
   }
+}
+
+#mezzanine .contacts-form__file {
+  font-size: 12px;
+}
+
+#mezzanine .contacts-form__whatsapp{
+  margin-top: 40px;
+}
+
+#mezzanine .contacts-form__whatsapp a{
+  display: block;
+  color: #000;
+}
+
+#mezzanine .contacts-form__whatsapp a{
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
+}
+
+#mezzanine .contacts-form__whatsapp a > * + * {
+  margin-left: 14px;
 }

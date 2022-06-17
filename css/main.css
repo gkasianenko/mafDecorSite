@@ -898,7 +898,12 @@ legend {
       padding-bottom: 60px; } }
 
 #mezzanine .benefits {
-  margin-top: 50px; }
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media (max-width: 910px) {
+    #mezzanine .benefits {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
 
 .contacts-form {
   background-image: url(../img/preload/form/bg-form.jpg);
@@ -1261,10 +1266,10 @@ legend {
   background: unset; }
   @media (max-width: 910px) {
     #mezzanine .contacts-form {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding-top: 47px;
+      margin-top: 10px;
+      margin-bottom: 50px;
       padding-bottom: 10px;
+      padding-top: 50px;
       background-image: url(../../img/mezzanine/bg-form.jpg); } }
 
 #mezzanine .contacts-form__wrapper {
@@ -1320,6 +1325,32 @@ legend {
     #mezzanine .contacts-form .contacts-form__button > * + * {
       margin-left: unset;
       margin-top: 15px; } }
+
+#mezzanine .contacts-form__file {
+  font-size: 12px; }
+
+#mezzanine .contacts-form__whatsapp {
+  margin-top: 40px; }
+
+#mezzanine .contacts-form__whatsapp a {
+  display: block;
+  color: #000; }
+
+#mezzanine .contacts-form__whatsapp a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 910px) {
+    #mezzanine .contacts-form__whatsapp a {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+
+#mezzanine .contacts-form__whatsapp a > * + * {
+  margin-left: 14px; }
 
 #sidebar {
   width: 110px;
@@ -3326,10 +3357,14 @@ legend {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff; }
+  .mezzanine-header__apply .contacts-form__button .button {
+    font-size: 18px !important; }
   @media (max-width: 1199px) {
     .mezzanine-header__apply .contacts-form__button {
       padding: 18px 36px;
-      font-size: 16px; } }
+      font-size: 16px; }
+      .mezzanine-header__apply .contacts-form__button .button {
+        font-size: 12px !important; } }
   @media (max-width: 910px) {
     .mezzanine-header__apply .contacts-form__button {
       position: static;
@@ -3352,5 +3387,49 @@ legend {
           height: 20px; }
       .mezzanine-header__apply .contacts-form__button > * + * {
         margin-left: 16px; } }
+
+.our-projects {
+  padding-top: 100px; }
+  @media (max-width: 910px) {
+    .our-projects {
+      padding-top: 50px; } }
+
+.our-projects__title h2 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 50px; }
+
+.swiper-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.swiper-prev, .swiper-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  padding: 20px 0; }
+  .swiper-prev > * + *, .swiper-next > * + * {
+    margin-left: 24px; }
+  @media (max-width: 910px) {
+    .swiper-prev, .swiper-next {
+      display: none; } }
+
+@media (max-width: 910px) {
+  .swiper-slide img {
+    width: 100%; } }
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  color: white; }
+
+@media (max-width: 910px) {
+  .swiper-slide.first {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,52 @@
+.our-projects{
+    padding-top: 100px;
+    
+    @media (max-width: $mobile) {
+        padding-top: 50px;
+    }
+}
+
+.our-projects__title h2{
+    font-weight: 300;
+font-size: 24px;
+line-height: 1.5;
+text-align: center;
+
+margin-bottom: 50px;
+}
+
+.swiper-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-prev, .swiper-next{
+    display: flex;
+    cursor: pointer;
+
+    padding: 20px 0;
+
+    & > * + * {
+        margin-left: 24px;
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.swiper-slide img {
+    @media (max-width: $mobile) {
+        width:100%;
+    }
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: white;
+}
+
+.swiper-slide.first{
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}

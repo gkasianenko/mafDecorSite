@@ -60,24 +60,34 @@ function hideModal() {
   document.body.classList.remove("noscroll");
 }
 
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "vertical",
-  loop: true,
+const swiper = new Swiper(".mySwiper", {
+  
+  slidesPerView: 3, // or 'auto'
+      
+      spaceBetween: 30,
+      slidesPerView: 1,
+          grid:{
+            rows: 1,
+            fill: "row"
+          },
+     
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+      breakpoints: {
+        911: {
+          slidesPerView: 3,
+          grid: {
+            rows: 2,
+            fill: "row"
+          },
+          navigation: {
+            nextEl: ".swiper-next",
+            prevEl: ".swiper-prev",
+          },
+        }
+      },
+  
 });
