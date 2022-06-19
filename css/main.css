@@ -2672,6 +2672,12 @@ legend {
     #mezzanine .contacts-form .header-modal__right {
       width: 100%; } }
 
+.swiper-button-prev, .swiper-button-next {
+  display: none; }
+  @media (max-width: 910px) {
+    .swiper-button-prev, .swiper-button-next {
+      display: block; } }
+
 #main .header-img {
   background-image: url(../img/main/header-img.png);
   height: 100%;

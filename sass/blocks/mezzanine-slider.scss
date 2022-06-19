@@ -1,3 +1,6 @@
-.mezzanine-slider__item {
-    
+.swiper-button-prev, .swiper-button-next {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+    }
 }
