@@ -136,10 +136,27 @@
 
 .catalog-pattern__content {
   display: flex;
+
+  @media(max-width: $mobile){
+    width: 570px;
+  }
+
+  @media (max-width: $mobile-small) {
+    width: 400px;
+  }
+
+  @media(max-width: $mobile-xs){
+    width: 100%;
+  }
+ 
 }
 
 .catalog-pattern__content > * + * {
   margin-left: 20px;
+
+  @media (max-width: $mobile) {
+    margin-left: 0;
+  }
 }
 
 #catalog-pattern .catalog-pattern__products-wrapper {
@@ -147,9 +164,13 @@
   margin-left: -10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  
 
   margin-top: 25px;
+
+  @media (max-width: $mobile-xs) {
+    justify-content: center;
+  }
 }
 
 #catalog-pattern .catalog-pattern__show,
@@ -188,6 +209,14 @@
     font-size: 12px;
 
     margin-bottom: unset;
+  }
+
+  @media (max-width: $mobile-small) {
+    width: 210px;
+  }
+
+  @media (max-width: $mobile-xs) {
+    width:45vw;
   }
 }
 
@@ -315,8 +344,7 @@
       border: 1px solid #00365b;
       text-decoration: unset;
 
-      margin-left: 4px;
-      margin-right: 4px;
+     
       font-size: 17px;
     }
   }
@@ -333,6 +361,15 @@
 #catalog-pattern .overlay-product .catalog-pattern__chars {
   margin-bottom: 27px;
   min-height: 102px;
+
+  & li{
+
+    @media (max-width: $mobile) {
+      white-space: nowrap; /* Запрещаем перенос строк */
+      overflow: hidden; /* Обрезаем все, что не помещается в область */
+      text-overflow: ellipsis; /* Добавляем многоточие */
+    }
+  }
 }
 
 #catalog-pattern .overlay-product .catalog-pattern__product {
@@ -372,11 +409,20 @@
   
   max-height: 40px;
   min-height: 40px;
+
+  @media (max-width: $mobile) {
+    max-height: 30px;
+    min-height: 30px;
+  }
 }
 
 #catalog-pattern .catalog-pattern__product .catalog-pattern__title {
   width: 235px;
   margin-bottom: 5px;
+
+  @media (max-width: $mobile) {
+    width: 145px;
+  }
   
 }
 
