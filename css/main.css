@@ -667,7 +667,6 @@ legend {
   line-height: 1.1;
   overflow: hidden; }
   #main .category-pattern .category-card img {
-    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-transition: all 0.5s ease-in;
@@ -2512,7 +2511,6 @@ legend {
   max-height: 467px; }
 
 .catalog-card img {
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.5s ease-in;
@@ -3246,7 +3244,11 @@ legend {
     padding-right: 15px; } }
 
 #catalog-item .product__slider img {
-  width: 20.5%; }
+  width: 20.5%;
+  max-height: 115px; }
+  @media (max-width: 910px) {
+    #catalog-item .product__slider img {
+      max-height: 82px; } }
 
 .main-catalog {
   padding-top: 100px; }
