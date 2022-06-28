@@ -1,5 +1,9 @@
 .socials {
   width: 180px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.socials > * + * {
+  margin-left: 10px;
 }

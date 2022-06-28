@@ -48,6 +48,11 @@
   & button{
     color: #000;
     transition: 0.2s ease-in-out;
+
+    &:hover{
+      color: #fff;
+      transition: 0.2s ease-in-out;
+    }
   }
 
   & .header-nav__icon {

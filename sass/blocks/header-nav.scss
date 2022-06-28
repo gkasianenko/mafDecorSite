@@ -20,6 +20,10 @@
   }
 }
 
+#catalog #header.header--secondary{
+  margin-left: 0;
+}
+
 .header-nav {
   display: flex;
   justify-content: flex-end;
@@ -94,6 +98,10 @@
   & a:hover::before {
     width: 40%;
     transition: 0.5s;
+  }
+
+  & a:focus{
+    color: #f37833;
   }
 
   @media (max-width: 1470px) {
@@ -271,6 +279,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  font-weight: 300;
 }
 
 .header__burger-menu {
@@ -310,8 +319,16 @@
   background: transparent;
   color: #fff;
   font-size: 16px;
+
+  
 }
 
 .header-nav--secondary .header-nav__apply-btn {
   color: #000;
+  transition: all 0.2s ease-in-out;
+
+  &:hover{
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+  }
 }

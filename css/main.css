@@ -308,6 +308,9 @@ legend {
     #header.header--secondary {
       margin-left: 0; } }
 
+#catalog #header.header--secondary {
+  margin-left: 0; }
+
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,6 +387,8 @@ legend {
     width: 40%;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
+  .header-nav__menu a:focus {
+    color: #f37833; }
   @media (max-width: 1470px) {
     .header-nav__menu {
       padding-left: 0; }
@@ -513,7 +518,8 @@ legend {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end; }
+          justify-content: flex-end;
+  font-weight: 300; }
 
 .header__burger-menu {
   display: none;
@@ -553,7 +559,13 @@ legend {
   font-size: 16px; }
 
 .header-nav--secondary .header-nav__apply-btn {
-  color: #000; }
+  color: #000;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .header-nav--secondary .header-nav__apply-btn:hover {
+    color: #fff;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
 
 .button {
   padding: 10px 16px;
@@ -831,9 +843,12 @@ legend {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.socials > * + * {
+  margin-left: 10px; }
 
 .benefits {
   text-align: center; }
@@ -1560,6 +1575,10 @@ legend {
     color: #000;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out; }
+    #main #header.header-scroll-active button:hover {
+      color: #fff;
+      -webkit-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out; }
   #main #header.header-scroll-active .header-nav__icon svg circle {
     fill: #000; }
 
@@ -1656,6 +1675,8 @@ legend {
   color: #d4d4d4; }
   #catalog-pattern .catalog-pattern__navigation span {
     color: #000; }
+  #catalog-pattern .catalog-pattern__navigation a {
+    color: #d4d4d4; }
 
 .catalog-pattern__show {
   padding-top: 20px;
@@ -2225,6 +2246,8 @@ legend {
   color: #d4d4d4; }
   #product .product__pagination span {
     color: #000; }
+  #product .product__pagination a {
+    color: #d4d4d4; }
   @media (max-width: 910px) {
     #product .product__pagination {
       display: none; } }
@@ -3274,6 +3297,8 @@ legend {
   color: #d4d4d4; }
   .main-catalog .product__pagination span {
     color: #000; }
+  .main-catalog .product__pagination a {
+    color: #d4d4d4; }
   @media (max-width: 910px) {
     .main-catalog .product__pagination {
       display: none; } }
