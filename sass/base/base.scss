@@ -107,6 +107,22 @@ body#mezzanine {
   }
 }
 
+body#contacts{
+  margin-left: 110px;
+
+  footer {
+    margin-left: -110px;
+
+    @media (max-width: $mobile) {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin-left: auto;
+  }
+}
+
 body > * {
   flex-shrink: 0; /* sticky footer */
 }
@@ -193,11 +209,8 @@ legend {
 
 /* Sticky Footer */
 
-.footer {
+#footer {
   margin-top: auto; /* sticky footer */
 
-  /* Just for fun */
-  text-align: center;
-  background-color: #e2e2e2;
-  padding: 50px 0;
+  
 }
