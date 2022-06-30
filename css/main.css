@@ -904,9 +904,11 @@ legend {
   width: 32%;
   line-height: 2; }
   @media (max-width: 599px) {
-    .benefits__item img {
-      width: 35px;
-      height: 35px; } }
+    .benefits__item {
+      font-size: 12px; }
+      .benefits__item img {
+        width: 35px;
+        height: 35px; } }
 
 .benefits__item > * + * {
   margin-top: 18px; }
@@ -2392,11 +2394,19 @@ legend {
   font-weight: 500;
   font-size: 28px;
   line-height: 1.1;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
   text-align: center;
-  color: #00365b;
-  cursor: pointer; }
+  margin: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #00365b;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  #product .product__how-to:hover {
+    background-color: #00233C;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
   @media (max-width: 1199px) {
     #product .product__how-to {
       font-size: 20px; } }
@@ -2856,7 +2866,7 @@ legend {
   font-size: 18px; }
   @media (max-width: 1199px) {
     .info .info__content p {
-      font-size: 16px; } }
+      font-size: 14px; } }
   @media (max-width: 429px) {
     .info .info__content p {
       font-size: 12px; } }
@@ -2875,13 +2885,13 @@ legend {
       padding-top: 55px;
       padding-bottom: 45px; } }
 
-#main .text .text__content p {
+.text .text__content p {
   font-size: 18px; }
   @media (max-width: 1199px) {
-    #main .text .text__content p {
+    .text .text__content p {
       font-size: 16px; } }
   @media (max-width: 429px) {
-    #main .text .text__content p {
+    .text .text__content p {
       font-size: 12px; } }
 
 @media (max-width: 599px) {
