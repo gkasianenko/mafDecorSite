@@ -1,5 +1,6 @@
 .swiper-button-prev, .swiper-button-next {
-    display: none;
+   display: none;
+
     @media (max-width: $mobile) {
         display: block;
     }

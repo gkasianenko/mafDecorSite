@@ -15,9 +15,29 @@ text-align: center;
 margin-bottom: 50px;
 }
 
-.swiper-buttons{
-    display: flex;
-    justify-content: space-between;
+// .swiper-buttons{
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+.our-projects .container{
+    position: relative;
+}
+
+.swiper-prev{
+position: absolute;
+top: 57%;
+left: -3%;
+transform: translateY(-50%);
+z-index: 3;
+}
+
+.swiper-next{
+    position: absolute;
+top: 57%;
+right: -3%;
+transform: translateY(-50%);
+z-index: 3;
 }
 
 .swiper-prev, .swiper-next{
@@ -25,6 +45,10 @@ margin-bottom: 50px;
     cursor: pointer;
 
     padding: 20px 0;
+
+    & img{
+        width: 30px;
+    }
 
     & > * + * {
         margin-left: 24px;
