@@ -1,9 +1,15 @@
 #header {
   position: fixed;
-  top: o;
+  top: 0;
   width: 100%;
   z-index: 97;
   background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+#header.nav-up{
+  top: -$headerHeight;
+  transition: all 0.2s ease-in-out;
 }
 
 #header.header--main {

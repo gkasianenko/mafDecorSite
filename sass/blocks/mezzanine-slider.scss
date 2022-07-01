@@ -1,7 +1,8 @@
-.swiper-button-prev, .swiper-button-next {
-   display: none;
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
 
-    @media (max-width: $mobile) {
-        display: block;
-    }
+  @media (max-width: $mobile) {
+    display: block !important;
+  }
 }

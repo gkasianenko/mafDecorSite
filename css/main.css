@@ -299,10 +299,17 @@ legend {
 
 #header {
   position: fixed;
-  top: o;
+  top: 0;
   width: 100%;
   z-index: 97;
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+#header.nav-up {
+  top: -100px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 @media (max-width: 910px) {
   #header.header--main {
@@ -1702,8 +1709,6 @@ legend {
   position: relative;
   padding-bottom: 16px;
   border-bottom: 0.8px solid #d4d4d4;
-  position: -webkit-sticky;
-  position: sticky;
   z-index: 96;
   top: 0;
   background: #f9f9f9; }
@@ -2753,11 +2758,13 @@ legend {
     #mezzanine .contacts-form .header-modal__right {
       width: 100%; } }
 
-.swiper-button-prev, .swiper-button-next {
-  display: none; }
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important; }
   @media (max-width: 910px) {
-    .swiper-button-prev, .swiper-button-next {
-      display: block; } }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: block !important; } }
 
 #main .header-img {
   background-image: url(../img/main/header-img.png);
