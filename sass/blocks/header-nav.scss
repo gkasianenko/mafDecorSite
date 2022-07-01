@@ -7,7 +7,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-#header.nav-up{
+#header.nav-up {
   top: -$headerHeight;
   transition: all 0.2s ease-in-out;
 }
@@ -59,9 +59,7 @@
   align-items: center;
 
   @media (max-width: $mobile) {
-    padding-top: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
   }
 }
 
@@ -146,6 +144,10 @@
 
   & img:nth-child(2) {
     display: none;
+  }
+
+  @media (max-width: $mobile) {
+    width: 150px;
   }
 }
 
@@ -299,8 +301,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 63px;
-  height: 48px;
+  width: 55px;
+  height: 40px;
 
   background-color: #f37833;
   cursor: pointer;

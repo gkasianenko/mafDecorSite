@@ -360,9 +360,7 @@ legend {
   @media (max-width: 910px) {
     .header-nav--secondary .header-nav__wrapper,
     .header-nav--secondary .header-nav__wrapper {
-      padding-top: 25px;
-      padding-left: 15px;
-      padding-right: 15px; } }
+      padding: 15px; } }
 
 #catalog .header-nav--secondary .header-nav__wrapper {
   padding-left: 30px;
@@ -426,6 +424,9 @@ legend {
     display: block; }
   .header-nav__logo img:nth-child(2) {
     display: none; }
+  @media (max-width: 910px) {
+    .header-nav__logo {
+      width: 150px; } }
 
 .header-nav .sidebar__logo:hover svg path:nth-child(1) {
   fill: #ff5c00; }
@@ -547,8 +548,8 @@ legend {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 63px;
-  height: 48px;
+  width: 55px;
+  height: 40px;
   background-color: #f37833;
   cursor: pointer; }
   @media (max-width: 910px) {
@@ -1580,6 +1581,10 @@ legend {
     #main .header-nav__wrapper {
       padding-left: 15px;
       padding-right: 15px; } }
+  @media (max-width: 910px) {
+    #main .header-nav__wrapper {
+      padding-top: 15px;
+      padding-bottom: 15px; } }
 
 #main #header.header-scroll-active {
   color: #000;

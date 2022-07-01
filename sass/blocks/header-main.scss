@@ -28,6 +28,11 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  @media (max-width: $mobile) {
+    padding-top: 15px;  
+    padding-bottom: 15px;
+  }
 }
 
 #main #header.header-scroll-active {
