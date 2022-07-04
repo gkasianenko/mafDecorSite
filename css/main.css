@@ -317,7 +317,7 @@ legend {
             box-shadow: unset; } }
 
 #header.header--secondary {
-  margin-left: -110px; }
+  margin-left: -128px; }
   @media (max-width: 910px) {
     #header.header--secondary {
       margin-left: 0; } }
@@ -3771,7 +3771,7 @@ legend {
     height: 6px;
     margin-bottom: 2px;
     margin-right: 10px;
-    background-image: url(../../svg/status/li-style.svg);
+    background-image: url(../svg/status/li-style.svg);
     background-repeat: no-repeat; }
 
 .delivery__payment-cards {
