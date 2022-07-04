@@ -24,6 +24,15 @@ margin-top: 40px;
     margin-top: 18px;
 }
 
+.delivery__content h1{
+    @media (max-width: $mobile) {
+        text-align: center;
+        color: #00365b;
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
 .delivery li{
     padding-left: 10px;
 

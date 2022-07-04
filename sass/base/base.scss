@@ -41,6 +41,12 @@ body.noscroll {
 
 #overlay.active {
   display: block;
+  z-index: 98;
+}
+
+#overlay.active-modal {
+  display: block;
+  z-index: 99;
 }
 
 body#preload {

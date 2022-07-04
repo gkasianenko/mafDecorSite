@@ -45,7 +45,12 @@ body.noscroll {
   display: none; }
 
 #overlay.active {
-  display: block; }
+  display: block;
+  z-index: 98; }
+
+#overlay.active-modal {
+  display: block;
+  z-index: 99; }
 
 body#preload {
   margin-left: 128px; }
@@ -3589,7 +3594,8 @@ legend {
   @media (max-width: 910px) {
     .contacts-map__title h1 {
       color: #00365b;
-      font-size: 24px; } }
+      font-size: 24px;
+      font-weight: 400; } }
 
 .contacts-map__wrapper {
   position: relative;
@@ -3761,6 +3767,13 @@ legend {
 
 .delivery .delivery__content ul > * + * {
   margin-top: 18px; }
+
+@media (max-width: 910px) {
+  .delivery__content h1 {
+    text-align: center;
+    color: #00365b;
+    font-size: 24px;
+    font-weight: 400; } }
 
 .delivery li {
   padding-left: 10px; }

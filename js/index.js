@@ -81,21 +81,23 @@ function checkNavBar() {
 function openMobMenu() {
   mobMenu.classList.add("active");
   document.body.classList.add("noscroll");
+  overlay.classList.add("active");
 }
 
 function closeMobMenu() {
   mobMenu.classList.remove("active");
   document.body.classList.remove("noscroll");
+  overlay.classList.remove("active");
 }
 
 function showModal() {
   headerModal.classList.add("active");
-  overlay.classList.add("active");
+  overlay.classList.add("active-modal");
   document.body.classList.add("noscroll");
 }
 
 function hideModal() {
   headerModal.classList.remove("active");
-  overlay.classList.remove("active");
-  document.body.classList.remove("noscroll");
+  overlay.classList.remove("active-modal");
+ 
 }
