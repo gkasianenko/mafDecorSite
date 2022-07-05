@@ -207,6 +207,10 @@
   }
 }
 
+#mezzanine .contacts-form__textarea{
+  margin-bottom: 9px;
+}
+
 .contacts-form__left .contacts-form__file p {
   font-weight: 300;
   font-size: 12px;
@@ -341,6 +345,14 @@
   cursor: pointer;
 }
 
+.contacts-form__info {
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 1.2;
+
+  color: rgba(31, 31, 31, 0.35);
+}
+
 #mezzanine .contacts-form {
   padding-top: 100px;
   background: unset;
@@ -400,9 +412,6 @@
 }
 
 #mezzanine .contacts-form .contacts-form__button {
-
- 
-
   @media (max-width: $mobile-xs) {
     justify-content: center;
     flex-direction: column;
@@ -421,22 +430,22 @@
   font-size: 12px;
 }
 
-#mezzanine .contacts-form__whatsapp{
+#mezzanine .contacts-form__whatsapp {
   margin-top: 40px;
 }
 
-#mezzanine .contacts-form__whatsapp a{
+#mezzanine .contacts-form__whatsapp a {
   display: block;
   color: #000;
 }
 
-#mezzanine .contacts-form__whatsapp a{
-    display: flex;
-    align-items: center;
+#mezzanine .contacts-form__whatsapp a {
+  display: flex;
+  align-items: center;
 
-    @media (max-width: $mobile) {
-      justify-content: center;
-    }
+  @media (max-width: $mobile) {
+    justify-content: center;
+  }
 }
 
 #mezzanine .contacts-form__whatsapp a > * + * {
