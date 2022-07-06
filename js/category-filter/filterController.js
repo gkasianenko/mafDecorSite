@@ -53,6 +53,7 @@ export default async function (state) {
     ".catalog-pattern__close-btn"
   );
   mobFilterCloseIcon.addEventListener("click", view.closeMobFilter);
+  view.overlay.addEventListener("click", view.closeMobFilter);
 
   //Прослушка кнопки вертикального сворачивания фильтра
   const hideFilterButton = document.querySelectorAll(

@@ -1,6 +1,6 @@
 export const filter = document
-.getElementById("catalog-pattern")
-.querySelector(".catalog-pattern__filter");
+  .getElementById("catalog-pattern")
+  .querySelector(".catalog-pattern__filter");
 export const filterMobile = document.querySelector(
   ".catalog-pattern__mobile-filter"
 );
@@ -532,7 +532,15 @@ export function showMobFilter() {
   document.body.classList.add("noscroll");
 }
 
-export function closeMobFilter() {
+export function closeMobFilter(event) {
+  if (event.target === overlay) {
+    overlay.classList.remove("active");
+
+    mobFilter.classList.remove("active");
+
+    document.body.classList.remove("noscroll");
+  }
+
   overlay.classList.remove("active");
 
   mobFilter.classList.remove("active");
