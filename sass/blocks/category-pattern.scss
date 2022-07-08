@@ -47,6 +47,7 @@
   min-height: 350px;
   color: #000;
 
+  background-color: #fff;
   border: 0.8px solid #d4d4d4;
 
   font-weight: 300;
@@ -55,7 +56,11 @@
   overflow: hidden;
 
   img {
+    position: absolute;
+    bottom: -17px;
+    
     // height: 100%;
+    transform: scale(0.9);
     object-fit: cover;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.3s ease-in;
@@ -78,14 +83,14 @@
 
 #main .category-pattern .category-card:hover {
   img {
-    transform: scale(1.1);
+    transform: scale(1);
     /* IE 9 */
-    -webkit-transform: scale(1.1);
+    -webkit-transform: scale(1);
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
-    -ms-transform: scale(1.5, 1.5);
+    -ms-transform: scale(1, 1);
   }
 }
 

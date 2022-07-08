@@ -18,7 +18,8 @@ mobMenuClose.addEventListener("click", closeMobMenu);
 const productTab = document.querySelector(".product__tab");
 const productTabTitle = document.querySelector(".product__tab-title");
 
-productTabTitle.addEventListener("click", toggleTab);
+//TaB show logic
+// productTabTitle.addEventListener("click", toggleTab);
 
 //Header apply btn
 const headerApplyButton = document.querySelector(".header-nav__apply-btn");
@@ -70,7 +71,6 @@ function showModal() {
 function hideModal() {
   headerModal.classList.remove("active");
   overlay.classList.remove("active-modal");
- 
 }
 
 function toggleTab() {
