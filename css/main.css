@@ -3687,6 +3687,10 @@ legend {
   .swiper-slide.first {
     display: none; } }
 
+.swiper-grid > .swiper-wrapper {
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important; }
+
 .contacts-map {
   padding-top: 90px;
   padding-bottom: 90px; }
