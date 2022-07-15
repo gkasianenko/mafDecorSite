@@ -19,12 +19,25 @@
 }
 
 .contacts-form.main {
+  background-image: unset;
+
   & .contacts-form__stages {
     display: none;
   }
 
   & .contacts-form__textarea {
     min-height: 206px;
+  }
+
+  & .contacts-form__fields {
+    width: 85%;
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
+    @media (max-width: $mobile) {
+      width: 85%;
+    }
   }
 
   & .contacts-form__textarea textarea {
@@ -114,10 +127,6 @@
 .contacts-form__fields {
   width: 302px;
   margin-bottom: 40px;
-
-  @media (max-width: $mobile) {
-    width: 70%;
-  }
 }
 
 .contacts-form__fields > * + * {
