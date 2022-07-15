@@ -958,9 +958,44 @@ legend {
   background-repeat: no-repeat;
   padding-bottom: 30px;
   padding-top: 78px; }
+  .contacts-form h3.main {
+    display: none; }
+  .contacts-form img.main {
+    display: none; }
   @media (max-width: 599px) {
     .contacts-form {
       padding-top: 40px; } }
+
+.contacts-form.main .contacts-form__stages {
+  display: none; }
+.contacts-form.main .contacts-form__textarea {
+  min-height: 206px; }
+.contacts-form.main .contacts-form__textarea textarea {
+  min-height: 150px; }
+.contacts-form.main h3 {
+  display: none; }
+.contacts-form.main h3.main {
+  display: block; }
+.contacts-form.main img {
+  display: none; }
+.contacts-form.main img.main {
+  display: block; }
+.contacts-form.main .contacts-form__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 910px) {
+    .contacts-form.main .contacts-form__right {
+      display: none; } }
+@media (max-width: 1199px) {
+  .contacts-form.main .contacts-form__wrapper > * + * {
+    margin-left: 30px; } }
 
 .contacts-form__wrapper {
   display: -webkit-box;
