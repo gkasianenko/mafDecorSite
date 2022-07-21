@@ -968,6 +968,13 @@ legend {
 
 .contacts-form.main {
   background-image: unset; }
+  .contacts-form.main .contacts-form__left {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 910px) {
+      .contacts-form.main .contacts-form__left {
+        min-height: 570px; } }
   .contacts-form.main .contacts-form__stages {
     display: none; }
   .contacts-form.main .contacts-form__textarea {
@@ -1006,6 +1013,10 @@ legend {
   @media (max-width: 1199px) {
     .contacts-form.main .contacts-form__wrapper > * + * {
       margin-left: 30px; } }
+  @media (max-width: 910px) {
+    .contacts-form.main {
+      padding-top: 0;
+      padding-bottom: 78px; } }
 
 .contacts-form__wrapper {
   display: -webkit-box;

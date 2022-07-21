@@ -21,6 +21,14 @@
 .contacts-form.main {
   background-image: unset;
 
+  & .contacts-form__left{
+    justify-content: center;
+
+    @media (max-width:$mobile) {
+      min-height: 570px;
+    }
+  }
+
   & .contacts-form__stages {
     display: none;
   }
@@ -74,6 +82,11 @@
     .contacts-form__wrapper > * + * {
       margin-left: 30px;
     }
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 0;
+    padding-bottom: 78px;
   }
 }
 
