@@ -9,15 +9,28 @@
 }
 
 .text .text__content p {
-  font-size: 18px;
+  font-size: 16px;
 
   @media (max-width: $tablet) {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   @media (max-width: $mobile-xs) {
     font-size: 12px;
   }
+}
+
+.text .text__content ul {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.text .text__content ul li {
+  list-style: outside;
+}
+
+.text .text__content ul > li + li {
+  margin-top: 15px;
 }
 
 #main .text .text__content p:nth-child(2) {
@@ -30,21 +43,24 @@
   width: 80%;
 }
 
-#main .text .text__content > p + p {
-  margin-top: 40px;
+#main .text .text__content .text-item > * + * {
+  margin-top: 20px;
+}
+
+#main .text .text__content .text-item:not(:last-child) {
+  margin-bottom: 50px;
 }
 
 #preload .text {
   padding-top: 167px;
   padding-bottom: 205px;
 
-  @media(max-width: $mobile){
+  @media (max-width: $mobile) {
     padding-top: 100px;
     padding-bottom: 100px;
-
   }
 
-  @media (max-width: $mobile-small){
+  @media (max-width: $mobile-small) {
     padding-top: 40px;
     padding-bottom: 30px;
   }
@@ -64,7 +80,7 @@
   padding-top: 94px;
   padding-bottom: 200px;
 
-  @media(max-width: $mobile){
+  @media (max-width: $mobile) {
     padding-top: 68px;
     padding-bottom: 30px;
   }

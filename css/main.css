@@ -27,7 +27,7 @@ body {
           justify-content: space-between;
   margin: 0;
   font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   color: #000000; }
 
@@ -642,6 +642,13 @@ legend {
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
+  line-height: 1.1; }
+
+.title-h3 {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 1.1; }
 
 #main .category-pattern > * + * {
@@ -2989,15 +2996,18 @@ legend {
       background-size: 55%; } }
 
 .info .info__content {
-  padding-bottom: 80px;
-  padding-top: 30px; }
+  padding-bottom: 50px;
+  padding-top: 50px; }
   @media (max-width: 910px) {
     .info .info__content {
       font-size: 14px;
       line-height: 1.2; } }
 
+#main .info__content h2 {
+  padding-bottom: 20px; }
+
 .info .info__content p {
-  font-size: 18px; }
+  font-size: 16px; }
   @media (max-width: 1199px) {
     .info .info__content p {
       font-size: 14px; } }
@@ -3009,7 +3019,7 @@ legend {
   width: 80%; }
 
 .info .info__content > p + p {
-  margin-top: 40px; }
+  margin-top: 20px; }
 
 #main .text {
   padding-top: 105px;
@@ -3020,13 +3030,23 @@ legend {
       padding-bottom: 45px; } }
 
 .text .text__content p {
-  font-size: 18px; }
+  font-size: 16px; }
   @media (max-width: 1199px) {
     .text .text__content p {
-      font-size: 16px; } }
+      font-size: 14px; } }
   @media (max-width: 429px) {
     .text .text__content p {
       font-size: 12px; } }
+
+.text .text__content ul {
+  margin-left: 20px;
+  margin-top: 30px; }
+
+.text .text__content ul li {
+  list-style: outside; }
+
+.text .text__content ul > li + li {
+  margin-top: 15px; }
 
 @media (max-width: 599px) {
   #main .text .text__content p:nth-child(2) {
@@ -3035,8 +3055,11 @@ legend {
 #main .text .text__content p:not(:first-child) {
   width: 80%; }
 
-#main .text .text__content > p + p {
-  margin-top: 40px; }
+#main .text .text__content .text-item > * + * {
+  margin-top: 20px; }
+
+#main .text .text__content .text-item:not(:last-child) {
+  margin-bottom: 50px; }
 
 #preload .text {
   padding-top: 167px;

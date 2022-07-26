@@ -13,7 +13,7 @@
 
 #mezzanine .info {
   background-image: url(../img/mezzanine/urn1.png);
- 
+
   background-position: 50vw 100%;
 
   @media (max-width: $mobile) {
@@ -22,15 +22,14 @@
     background-image: url(../img/mezzanine/urn2.png);
   }
 
-  @media(max-width: $tablet){
+  @media (max-width: $tablet) {
     background-size: 55%;
   }
 }
 
 .info .info__content {
-  padding-bottom: 80px;
-  padding-top: 30px;
-  
+  padding-bottom: 50px;
+  padding-top: 50px;
 
   @media (max-width: $mobile) {
     font-size: 14px;
@@ -38,8 +37,14 @@
   }
 }
 
+#main .info__content{
+  & h2{
+    padding-bottom: 20px;
+  }
+}
+
 .info .info__content p {
-  font-size: 18px;
+  font-size: 16px;
 
   @media (max-width: $tablet) {
     font-size: 14px;
@@ -55,5 +60,5 @@
 }
 
 .info .info__content > p + p {
-  margin-top: 40px;
+  margin-top: 20px;
 }
